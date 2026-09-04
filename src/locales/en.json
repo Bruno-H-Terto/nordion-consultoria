@@ -1,14 +1,169 @@
 {
-"nav":["Home","How it works","Services","Why Brazil?","About","Contact"],"consult":"Talk to a consultant",
-"eyebrow":"GLOBAL CONNECTIONS. LOCAL POSSIBILITIES.","hero":"Your business in Brazil,","heroAccent":"without making Brazil a challenge.","intro":"We help international companies plan, structure and launch their Brazilian operations with confidence, strategy and expert guidance.","primary":"Plan your entry into Brazil","secondary":"Meet our consultancy","heroNote":"International perspective. Local knowledge. One partner.","world":"Your company, worldwide","destination":"Your next market","brazil":"Brazil","connection":"Strategy that connects","operation":"A well-structured operation","visualNote":"FROM PLANNING TO OPERATIONS","pillars":["Market entry strategy","Integrated coordination","Ongoing support"],
-"problemLabel":"A NEW MARKET, NEW QUESTIONS","problemTitle":"Entering a new market should not mean facing it alone.","problemText":"Legal, cultural, financial and administrative differences make entering Brazil complex. With guidance, every challenge becomes a clear step.","problems":["Legislation and regulation","Taxation","Hiring and employment relations","Operational setup"],
-"valueLabel":"YOUR CONNECTION TO BRAZIL","valueTitle":"One consultancy. Your entire path to Brazil.","valueText":"We centralize the planning and coordination of your market entry, connecting the right people at every stage.","valueQuote":"You understand your business. We understand how to make it work in Brazil.","journey":["Your company","Nordion","Operations in Brazil"],
-"processLabel":"CLARITY AT EVERY STAGE","processTitle":"A new market. A clear path.","processText":"From your first plan to your first operational steps. We are with you.","steps":[["Assessment","We understand your business model, objectives, current structure and company needs."],["Entry planning","We map legal, tax, employment, financial and operational requirements."],["Implementation","We coordinate the steps needed to establish your Brazilian operation."],["Ongoing support","We support your company as operations begin and you adapt to the Brazilian market."]],
-"servicesLabel":"EXPERTISE THAT CONNECTS","servicesTitle":"The structure your expansion needs.","servicesText":"A complete perspective for more confident decisions, from planning to execution.","services":[["Business structuring","Guidance on establishing and structuring your Brazilian operation."],["Legal and regulatory","Mapping the requirements and regulations applicable to your business."],["Tax and finance","Analysis of the tax structure and financial implications of your operation."],["Hiring in Brazil","Guidance on employment relations, hiring and team structures."],["Foreign exchange and international operations","Support in understanding financial movements between countries."],["Implementation and support","Coordination of the steps needed to put your strategy into operation."]],"partners":"Integrated work with qualified lawyers, accountants and other licensed partners, according to each operation’s needs.",
-"differenceLabel":"CONNECTION MAKES THE DIFFERENCE","differenceTitle":"Fewer providers. More coordination.","differenceText":"Instead of figuring out who to contact at every stage, you have a single point of reference throughout the process.","traditional":"Traditional model","integrated":"With Nordion","suppliers":["Legal","Accounting","HR","Banking","Consultants"],"fragmented":"Different providers, separate processes","coordinated":"Connected specialists. Integrated strategy.",
-"brazilLabel":"A MARKET OF POSSIBILITIES","brazilTitle":"Your company’s next chapter could start here.","brazilText":"Brazil offers opportunities for companies arriving with strategy, context and a solid structure.","opportunities":["One of Latin America’s largest economies","A large consumer market","A diverse business ecosystem","A strategic gateway to the region"],
-"audienceLabel":"FOR THOSE LOOKING BEYOND BORDERS","audienceTitle":"Your expansion stage. Our starting point.","audiences":["Companies entering Brazil for the first time","International companies expanding their operations","Companies looking to hire or build teams in Brazil"],
-"scenarioLabel":"FROM IDEA TO PRACTICE","scenarioTitle":"Imagine this scenario","scenarioText":"John runs a company in the United States and wants to open an operation in Brazil. He knows his business, but is unfamiliar with the legislation, taxation, employment relations and processes needed to operate in the country.","scenarioAnswer":"That is where we come in.","scenarioSteps":["United States","Consultancy","Planning","Structuring","Operations in Brazil"],"scenarioNote":"An illustrative scenario to explain our approach.",
-"aboutLabel":"WE ARE NORDION","aboutTitle":"Brazil does not have to be a barrier to your expansion.","aboutText":"We are a business consultancy focused on reducing the complexity of bringing foreign companies into the Brazilian market. We combine strategy, guidance and coordination to turn a complex process into a structured journey.","values":["Clarity","Confidence","Strategy","Transparency","Close support"],
-"ctaLabel":"LET’S BUILD YOUR NEXT STEP","ctaTitle":"Ready to make Brazil your next market?","ctaText":"Understand the first steps to establishing your operation in the country.","ctaPrimary":"Talk to our team","ctaSecondary":"Explore our process","footerText":"Connecting your global ambition with the possibilities of the Brazilian market.","company":"Company","location":"Brazil | International service","privacy":"Privacy Policy","terms":"Terms of use","rights":"All rights reserved.","skip":"Skip to content","menu":"Open menu","close":"Close","contactTitle":"Let’s discuss your expansion.","contactText":"Complete the fields to prepare an overview of your operation.","name":"Your name","email":"Business email","business":"Company and home country","message":"How can we help?","send":"Prepare inquiry","contactNote":"Demo: this form does not send or store data. Our contact channel will be available at launch.","success":"Overview prepared. Sending is not yet available in this demo.","privacyText":"This demo does not send form data to servers. Your language preference is stored only in this browser. The final policy, including the data controller and contact details, will be available before commercial launch.","termsText":"This website presents a business consultancy proposal. Its content is informational and does not replace individual professional advice. Services, scope and conditions require a specific agreement. The scenario shown is fictional.","linkedinText":"Our official LinkedIn profile will be available at launch."
+  "nav": [
+    "Home",
+    "How it works",
+    "Services",
+    "Why Brazil?",
+    "About",
+    "Contact"
+  ],
+  "consult": "Talk to a consultant",
+  "eyebrow": "GLOBAL CONNECTIONS. LOCAL POSSIBILITIES.",
+  "hero": "Your business in Brazil,",
+  "heroAccent": "without making Brazil a challenge.",
+  "intro": "We help international companies plan, structure and launch their Brazilian operations with confidence, strategy and expert guidance.",
+  "primary": "Plan your entry into Brazil",
+  "secondary": "Meet our consultancy",
+  "heroNote": "International perspective. Local knowledge. One partner.",
+  "world": "Your company, worldwide",
+  "destination": "Your next market",
+  "brazil": "Brazil",
+  "connection": "Strategy that connects",
+  "operation": "A well-structured operation",
+  "visualNote": "FROM PLANNING TO OPERATIONS",
+  "pillars": [
+    "Market entry strategy",
+    "Integrated coordination",
+    "Ongoing support"
+  ],
+  "problemLabel": "A NEW MARKET, NEW QUESTIONS",
+  "problemTitle": "Entering a new market should not mean facing it alone.",
+  "problemText": "Legal, cultural, financial and administrative differences make entering Brazil complex. With guidance, every challenge becomes a clear step.",
+  "problems": [
+    "Legislation and regulation",
+    "Taxation",
+    "Hiring and employment relations",
+    "Operational setup"
+  ],
+  "valueLabel": "YOUR CONNECTION TO BRAZIL",
+  "valueTitle": "One consultancy. Your entire path to Brazil.",
+  "valueText": "We centralize the planning and coordination of your market entry, connecting the right people at every stage.",
+  "valueQuote": "You understand your business. We understand how to make it work in Brazil.",
+  "journey": ["Your company", "Nordion", "Operations in Brazil"],
+  "processLabel": "CLARITY AT EVERY STAGE",
+  "processTitle": "A new market. A clear path.",
+  "processText": "From your first plan to your first operational steps. We are with you.",
+  "steps": [
+    [
+      "Assessment",
+      "We understand your business model, objectives, current structure and company needs."
+    ],
+    [
+      "Entry planning",
+      "We map legal, tax, employment, financial and operational requirements."
+    ],
+    [
+      "Implementation",
+      "We coordinate the steps needed to establish your Brazilian operation."
+    ],
+    [
+      "Ongoing support",
+      "We support your company as operations begin and you adapt to the Brazilian market."
+    ]
+  ],
+  "servicesLabel": "EXPERTISE THAT CONNECTS",
+  "servicesTitle": "The structure your expansion needs.",
+  "servicesText": "A complete perspective for more confident decisions, from planning to execution.",
+  "services": [
+    [
+      "Business structuring",
+      "Guidance on establishing and structuring your Brazilian operation."
+    ],
+    [
+      "Legal and regulatory",
+      "Mapping the requirements and regulations applicable to your business."
+    ],
+    [
+      "Tax and finance",
+      "Analysis of the tax structure and financial implications of your operation."
+    ],
+    [
+      "Hiring in Brazil",
+      "Guidance on employment relations, hiring and team structures."
+    ],
+    [
+      "Foreign exchange and international operations",
+      "Support in understanding financial movements between countries."
+    ],
+    [
+      "Implementation and support",
+      "Coordination of the steps needed to put your strategy into operation."
+    ]
+  ],
+  "partners": "Integrated work with qualified lawyers, accountants and other licensed partners, according to each operation’s needs.",
+  "differenceLabel": "CONNECTION MAKES THE DIFFERENCE",
+  "differenceTitle": "Fewer providers. More coordination.",
+  "differenceText": "Instead of figuring out who to contact at every stage, you have a single point of reference throughout the process.",
+  "traditional": "Traditional model",
+  "integrated": "With Nordion",
+  "suppliers": ["Legal", "Accounting", "HR", "Banking", "Consultants"],
+  "fragmented": "Different providers, separate processes",
+  "coordinated": "Connected specialists. Integrated strategy.",
+  "brazilLabel": "A MARKET OF POSSIBILITIES",
+  "brazilTitle": "Your company’s next chapter could start here.",
+  "brazilText": "Brazil offers opportunities for companies arriving with strategy, context and a solid structure.",
+  "opportunities": [
+    "One of Latin America’s largest economies",
+    "A large consumer market",
+    "A diverse business ecosystem",
+    "A strategic gateway to the region"
+  ],
+  "audienceLabel": "FOR THOSE LOOKING BEYOND BORDERS",
+  "audienceTitle": "Your expansion stage. Our starting point.",
+  "audiences": [
+    "Companies entering Brazil for the first time",
+    "International companies expanding their operations",
+    "Companies looking to hire or build teams in Brazil"
+  ],
+  "scenarioLabel": "FROM IDEA TO PRACTICE",
+  "scenarioTitle": "Imagine this scenario",
+  "scenarioText": "John runs a company in the United States and wants to open an operation in Brazil. He knows his business, but is unfamiliar with the legislation, taxation, employment relations and processes needed to operate in the country.",
+  "scenarioAnswer": "That is where we come in.",
+  "scenarioSteps": [
+    "United States",
+    "Consultancy",
+    "Planning",
+    "Structuring",
+    "Operations in Brazil"
+  ],
+  "scenarioNote": "An illustrative scenario to explain our approach.",
+  "aboutLabel": "WE ARE NORDION",
+  "aboutTitle": "Brazil does not have to be a barrier to your expansion.",
+  "aboutText": "We are a business consultancy focused on reducing the complexity of bringing foreign companies into the Brazilian market. We combine strategy, guidance and coordination to turn a complex process into a structured journey.",
+  "values": [
+    "Clarity",
+    "Confidence",
+    "Strategy",
+    "Transparency",
+    "Close support"
+  ],
+  "ctaLabel": "LET’S BUILD YOUR NEXT STEP",
+  "ctaTitle": "Ready to make Brazil your next market?",
+  "ctaText": "Understand the first steps to establishing your operation in the country.",
+  "ctaPrimary": "Talk to our team",
+  "ctaSecondary": "Explore our process",
+  "footerText": "Connecting your global ambition with the possibilities of the Brazilian market.",
+  "company": "Company",
+  "location": "Brazil | International service",
+  "privacy": "Privacy Policy",
+  "terms": "Terms of use",
+  "rights": "All rights reserved.",
+  "skip": "Skip to content",
+  "menu": "Open menu",
+  "close": "Close",
+  "contactTitle": "Let’s discuss your expansion.",
+  "contactText": "Complete the fields to prepare an overview of your operation.",
+  "name": "Your name",
+  "email": "Business email",
+  "business": "Company and home country",
+  "message": "How can we help?",
+  "send": "Prepare inquiry",
+  "contactNote": "Demo: this form does not send or store data. Our contact channel will be available at launch.",
+  "success": "Overview prepared. Sending is not yet available in this demo.",
+  "privacyText": "This demo does not send form data to servers. Your language preference is stored only in this browser. The final policy, including the data controller and contact details, will be available before commercial launch.",
+  "termsText": "This website presents a business consultancy proposal. Its content is informational and does not replace individual professional advice. Services, scope and conditions require a specific agreement. The scenario shown is fictional.",
+  "linkedinText": "Our official LinkedIn profile will be available at launch.",
+  "carousel": "Carousel",
+  "previous": "Previous service",
+  "next": "Next service"
 }

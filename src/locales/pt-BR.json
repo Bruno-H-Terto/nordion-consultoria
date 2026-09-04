@@ -1,5 +1,12 @@
 {
-  "nav": ["Início", "Como funciona", "Serviços", "Por que o Brasil?", "Sobre", "Contato"],
+  "nav": [
+    "Início",
+    "Como funciona",
+    "Serviços",
+    "Por que o Brasil?",
+    "Sobre",
+    "Contato"
+  ],
   "consult": "Fale com um consultor",
   "eyebrow": "CONEXÕES GLOBAIS. POSSIBILIDADES LOCAIS.",
   "hero": "Seu negócio no Brasil,",
@@ -14,11 +21,20 @@
   "connection": "Estratégia que conecta",
   "operation": "Uma operação bem estruturada",
   "visualNote": "DO PLANEJAMENTO À OPERAÇÃO",
-  "pillars": ["Estratégia de entrada", "Coordenação integrada", "Acompanhamento próximo"],
+  "pillars": [
+    "Estratégia de entrada",
+    "Coordenação integrada",
+    "Acompanhamento próximo"
+  ],
   "problemLabel": "UM NOVO MERCADO, NOVAS PERGUNTAS",
   "problemTitle": "Entrar em um novo mercado não deveria significar enfrentar tudo sozinho.",
   "problemText": "Diferenças legais, culturais, financeiras e burocráticas tornam a entrada no Brasil complexa. Com orientação, cada desafio se transforma em uma etapa clara.",
-  "problems": ["Legislação e regulamentação", "Tributação", "Contratação e relações trabalhistas", "Estruturação da operação"],
+  "problems": [
+    "Legislação e regulamentação",
+    "Tributação",
+    "Contratação e relações trabalhistas",
+    "Estruturação da operação"
+  ],
   "valueLabel": "SEU PONTO DE CONEXÃO COM O BRASIL",
   "valueTitle": "Uma única consultoria. Todo o caminho até o Brasil.",
   "valueText": "Centralizamos o planejamento e a coordenação da sua entrada no mercado brasileiro, conectando as pessoas certas em cada etapa.",
@@ -28,21 +44,51 @@
   "processTitle": "Um novo mercado. Um caminho claro.",
   "processText": "Do primeiro plano aos primeiros passos da operação. Estamos com você.",
   "steps": [
-    ["Diagnóstico", "Entendemos o modelo de negócio, objetivos, estrutura atual e necessidades da empresa."],
-    ["Planejamento de entrada", "Mapeamos exigências jurídicas, tributárias, trabalhistas, financeiras e operacionais."],
-    ["Implantação", "Coordenamos as etapas necessárias para estruturar a operação brasileira."],
-    ["Acompanhamento", "Apoiamos a empresa durante o início da operação e adaptação ao mercado brasileiro."]
+    [
+      "Diagnóstico",
+      "Entendemos o modelo de negócio, objetivos, estrutura atual e necessidades da empresa."
+    ],
+    [
+      "Planejamento de entrada",
+      "Mapeamos exigências jurídicas, tributárias, trabalhistas, financeiras e operacionais."
+    ],
+    [
+      "Implantação",
+      "Coordenamos as etapas necessárias para estruturar a operação brasileira."
+    ],
+    [
+      "Acompanhamento",
+      "Apoiamos a empresa durante o início da operação e adaptação ao mercado brasileiro."
+    ]
   ],
   "servicesLabel": "ESPECIALIDADES QUE SE CONECTAM",
   "servicesTitle": "A estrutura que sua expansão precisa.",
   "servicesText": "Uma visão completa para decisões mais seguras, do planejamento à execução.",
   "services": [
-    ["Estruturação empresarial", "Orientação para abertura e estruturação da operação brasileira."],
-    ["Jurídico e regulatório", "Mapeamento das exigências e normas aplicáveis ao negócio."],
-    ["Tributário e financeiro", "Análise da estrutura tributária e dos impactos financeiros da operação."],
-    ["Contratação no Brasil", "Orientação sobre relações trabalhistas, contratação e estrutura de equipes."],
-    ["Câmbio e operações internacionais", "Apoio no entendimento das movimentações financeiras entre países."],
-    ["Implantação e acompanhamento", "Coordenação das etapas necessárias para colocar a estratégia em operação."]
+    [
+      "Estruturação empresarial",
+      "Orientação para abertura e estruturação da operação brasileira."
+    ],
+    [
+      "Jurídico e regulatório",
+      "Mapeamento das exigências e normas aplicáveis ao negócio."
+    ],
+    [
+      "Tributário e financeiro",
+      "Análise da estrutura tributária e dos impactos financeiros da operação."
+    ],
+    [
+      "Contratação no Brasil",
+      "Orientação sobre relações trabalhistas, contratação e estrutura de equipes."
+    ],
+    [
+      "Câmbio e operações internacionais",
+      "Apoio no entendimento das movimentações financeiras entre países."
+    ],
+    [
+      "Implantação e acompanhamento",
+      "Coordenação das etapas necessárias para colocar a estratégia em operação."
+    ]
   ],
   "partners": "Atuação integrada com advogados, contadores e outros parceiros habilitados, conforme as necessidades de cada operação.",
   "differenceLabel": "CONEXÃO FAZ A DIFERENÇA",
@@ -56,20 +102,41 @@
   "brazilLabel": "UM MERCADO DE POSSIBILIDADES",
   "brazilTitle": "O próximo capítulo da sua empresa pode ser aqui.",
   "brazilText": "O Brasil reúne oportunidades para empresas que chegam com estratégia, contexto e uma estrutura preparada.",
-  "opportunities": ["Uma das maiores economias da América Latina", "Grande mercado consumidor", "Ecossistema empresarial diversificado", "Porta de entrada estratégica para a região"],
+  "opportunities": [
+    "Uma das maiores economias da América Latina",
+    "Grande mercado consumidor",
+    "Ecossistema empresarial diversificado",
+    "Porta de entrada estratégica para a região"
+  ],
   "audienceLabel": "PARA QUEM OLHA ALÉM DAS FRONTEIRAS",
   "audienceTitle": "Seu momento de expansão. Nosso ponto de partida.",
-  "audiences": ["Empresas entrando no Brasil pela primeira vez", "Empresas internacionais expandindo suas operações", "Empresas que desejam contratar ou estruturar equipes no Brasil"],
+  "audiences": [
+    "Empresas entrando no Brasil pela primeira vez",
+    "Empresas internacionais expandindo suas operações",
+    "Empresas que desejam contratar ou estruturar equipes no Brasil"
+  ],
   "scenarioLabel": "DA IDEIA À PRÁTICA",
   "scenarioTitle": "Imagine o seguinte cenário",
   "scenarioText": "John administra uma empresa nos Estados Unidos e deseja abrir uma operação no Brasil. Ele conhece seu negócio, mas não conhece profundamente a legislação, tributação, relações trabalhistas ou processos necessários para operar no país.",
   "scenarioAnswer": "É nesse momento que entramos.",
-  "scenarioSteps": ["Estados Unidos", "Consultoria", "Planejamento", "Estruturação", "Operação no Brasil"],
+  "scenarioSteps": [
+    "Estados Unidos",
+    "Consultoria",
+    "Planejamento",
+    "Estruturação",
+    "Operação no Brasil"
+  ],
   "scenarioNote": "Cenário ilustrativo para apresentar nossa atuação.",
   "aboutLabel": "SOMOS A NORDION",
   "aboutTitle": "O Brasil não precisa ser uma barreira para sua expansão.",
   "aboutText": "Somos uma consultoria empresarial focada em reduzir a complexidade da entrada de empresas estrangeiras no mercado brasileiro. Reunimos estratégia, orientação e coordenação para transformar um processo complexo em uma jornada estruturada.",
-  "values": ["Clareza", "Segurança", "Estratégia", "Transparência", "Proximidade"],
+  "values": [
+    "Clareza",
+    "Segurança",
+    "Estratégia",
+    "Transparência",
+    "Proximidade"
+  ],
   "ctaLabel": "VAMOS CONSTRUIR O PRÓXIMO PASSO",
   "ctaTitle": "Pronto para transformar o Brasil no seu próximo mercado?",
   "ctaText": "Entenda os primeiros passos para estruturar sua operação no país.",
@@ -95,5 +162,8 @@
   "success": "Resumo preparado. O envio ainda não está disponível nesta demonstração.",
   "privacyText": "Esta demonstração não envia dados do formulário a servidores. A preferência de idioma é armazenada apenas neste navegador. A política definitiva, com identificação do responsável e canais de atendimento, será disponibilizada antes do lançamento comercial.",
   "termsText": "Este site apresenta uma proposta de consultoria empresarial. O conteúdo é informativo e não substitui análise profissional individualizada. Serviços, escopo e condições dependem de contratação específica. O cenário apresentado é fictício.",
-  "linkedinText": "O perfil oficial no LinkedIn será disponibilizado no lançamento."
+  "linkedinText": "O perfil oficial no LinkedIn será disponibilizado no lançamento.",
+  "carousel": "Carrossel",
+  "previous": "Serviço anterior",
+  "next": "Próximo serviço"
 }

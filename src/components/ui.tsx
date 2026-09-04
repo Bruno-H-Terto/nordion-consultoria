@@ -1,24 +1,141 @@
-import type { ReactNode } from 'react';
-import { ArrowUpRight } from '@untitledui/icons';
-import { TextField, Label, Input, TextArea } from 'react-aria-components';
-import { twMerge } from 'tailwind-merge';
+import type { ReactNode } from "react";
+import { ArrowUpRight } from "@untitledui/icons";
+import { TextField, Label, Input, TextArea } from "react-aria-components";
+import { twMerge } from "tailwind-merge";
 
 export function Logo({ light = false }: { light?: boolean }) {
-  return <a className={twMerge('logo', light && 'logo-light')} href="#inicio" aria-label="Nordion"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M5 29V7h7l12 16V7h7v22h-7L12 13v16H5Z" fill="currentColor"/><path d="m24 7 7-5v5h-7Z" fill="#D6AE61"/></svg><span>nordion<span className="logo-dot">.</span></span></a>;
+  return (
+    <a
+      className={twMerge("logo", light && "logo-light")}
+      href="#inicio"
+      aria-label="Nordion"
+    >
+      <svg viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <path d="M5 29V7h7l12 16V7h7v22h-7L12 13v16H5Z" fill="currentColor" />
+        <path d="m24 7 7-5v5h-7Z" fill="#AD6438" />
+      </svg>
+      <span>
+        nordion<span className="logo-dot">.</span>
+      </span>
+    </a>
+  );
 }
-export function Button({ children, href, onClick, secondary = false, className = '' }: { children: ReactNode; href?: string; onClick?: () => void; secondary?: boolean; className?: string }) {
-  const classes = twMerge('button', secondary && 'button-secondary', className);
-  return href ? <a className={classes} href={href}>{children}<ArrowUpRight aria-hidden="true" size={18}/></a> : <button className={classes} onClick={onClick}>{children}<ArrowUpRight aria-hidden="true" size={18}/></button>;
+export function Button({
+  children,
+  href,
+  onClick,
+  secondary = false,
+  className = "",
+}: {
+  children: ReactNode;
+  href?: string;
+  onClick?: () => void;
+  secondary?: boolean;
+  className?: string;
+}) {
+  const classes = twMerge("button", secondary && "button-secondary", className);
+  return href ? (
+    <a className={classes} href={href}>
+      {children}
+      <ArrowUpRight aria-hidden="true" size={18} />
+    </a>
+  ) : (
+    <button className={classes} onClick={onClick}>
+      {children}
+      <ArrowUpRight aria-hidden="true" size={18} />
+    </button>
+  );
 }
-export function Badge({ children }: { children: ReactNode }) { return <span className="badge"><span/>{children}</span>; }
-export function Heading({ label, title, text, centered = false }: { label: string; title: string; text?: string; centered?: boolean }) {
-  return <div className={twMerge('section-heading', centered && 'centered')}><span className="eyebrow">{label}</span><h2>{title}</h2>{text && <p>{text}</p>}</div>;
+export function Badge({ children }: { children: ReactNode }) {
+  return (
+    <span className="badge">
+      <span />
+      {children}
+    </span>
+  );
 }
-export function Card({ children, className }: { children: ReactNode; className?: string }) { return <article className={twMerge('card', className)}>{children}</article>; }
-export function ServiceCard({ icon, title, text, number }: { icon: ReactNode; title: string; text: string; number: number }) {
-  return <Card className="service-card"><div className="card-top"><span className="icon-box">{icon}</span><span className="card-number">0{number}</span></div><h3>{title}</h3><p>{text}</p></Card>;
+export function Heading({
+  label,
+  title,
+  text,
+  centered = false,
+}: {
+  label: string;
+  title: string;
+  text?: string;
+  centered?: boolean;
+}) {
+  return (
+    <div className={twMerge("section-heading", centered && "centered")}>
+      <span className="eyebrow">{label}</span>
+      <h2>{title}</h2>
+      {text && <p>{text}</p>}
+    </div>
+  );
 }
-export function TimelineStep({ number, title, text }: { number: number; title: string; text: string }) { return <li className="timeline-step"><span className="step-number">0{number}</span><h3>{title}</h3><p>{text}</p></li>; }
-export function FormField({ label, name, multiline = false, type = 'text' }: { label: string; name: string; multiline?: boolean; type?: 'text' | 'email' }) {
-  return <TextField name={name} type={type} isRequired className="form-field"><Label>{label}</Label>{multiline ? <TextArea rows={4}/> : <Input/>}</TextField>;
+export function Card({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <article className={twMerge("card", className)}>{children}</article>;
+}
+export function ServiceCard({
+  icon,
+  title,
+  text,
+  number,
+}: {
+  icon: ReactNode;
+  title: string;
+  text: string;
+  number: number;
+}) {
+  return (
+    <Card className="service-card">
+      <div className="card-top">
+        <span className="icon-box">{icon}</span>
+        <span className="card-number">0{number}</span>
+      </div>
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </Card>
+  );
+}
+export function TimelineStep({
+  number,
+  title,
+  text,
+}: {
+  number: number;
+  title: string;
+  text: string;
+}) {
+  return (
+    <li className="timeline-step">
+      <span className="step-number">0{number}</span>
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </li>
+  );
+}
+export function FormField({
+  label,
+  name,
+  multiline = false,
+  type = "text",
+}: {
+  label: string;
+  name: string;
+  multiline?: boolean;
+  type?: "text" | "email";
+}) {
+  return (
+    <TextField name={name} type={type} isRequired className="form-field">
+      <Label>{label}</Label>
+      {multiline ? <TextArea rows={4} /> : <Input />}
+    </TextField>
+  );
 }

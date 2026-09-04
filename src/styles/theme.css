@@ -1,9 +1,9 @@
 @theme {
-  --color-primary: #16324F;
-  --color-secondary: #2F6F65;
-  --color-accent: #D6AE61;
-  --color-background: #F6F8F7;
-  --color-foreground: #202C36;
-  --color-support: #74828C;
-  --font-sans: 'Poppins', sans-serif;
+  --color-primary: #252d35;
+  --color-secondary: #ad6438;
+  --color-accent: #d6ae61;
+  --color-background: #f8f3ed;
+  --color-foreground: #252d35;
+  --color-support: #74828c;
+  --font-sans: "Poppins", sans-serif;
 }
