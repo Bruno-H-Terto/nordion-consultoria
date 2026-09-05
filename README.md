@@ -1,57 +1,106 @@
 # Nordion
 
-Landing page conceitual de uma consultoria internacional que conecta empresas ao mercado brasileiro. Projeto de portfólio com identidade própria, navegação linear, cenas interativas e conteúdo em português brasileiro, inglês e espanhol.
+Responsive React application for an international business consultancy, with multilingual content, interactive 3D scenes, and client-side briefing export.
 
-## Executar
+## Screenshots
 
-Requer Node.js 22.12+ e npm.
+### Desktop
+
+![Home — desktop](docs/screenshots/home-desktop.png)
+
+![Brazil map — desktop](docs/screenshots/brazil-map-desktop.png)
+
+![Business approach — desktop](docs/screenshots/approach-desktop.png)
+
+![Process — desktop](docs/screenshots/process-desktop.png)
+
+### Mobile
+
+| Home | Process |
+| --- | --- |
+| ![Home — mobile](docs/screenshots/home-mobile.png) | ![Process — mobile](docs/screenshots/process-mobile.png) |
+
+## Requirements
+
+- Node.js 22.12 or later
+- npm
+
+## Installation
 
 ```sh
 npm ci
 npm run dev
 ```
 
-```sh
-npm run lint     # Falha em erros e avisos
-npm run build    # Verificação TypeScript e build de produção
-npm run preview # Prévia local do build
+## Commands
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server. |
+| `npm run lint` | Run Oxlint; errors and warnings fail the command. |
+| `npm run build` | Run TypeScript checks and generate the production build in `dist/`. |
+| `npm run preview` | Serve the production build locally. |
+
+## Technology Stack
+
+| Layer | Technology |
+| --- | --- |
+| UI | React 19, TypeScript |
+| Build | Vite, React Vite plugin |
+| Styling | Tailwind CSS, CSS stylesheets, locally hosted Poppins |
+| Accessible controls | React Aria Components |
+| Carousels | Embla Carousel |
+| 3D rendering | Three.js, React Three Fiber |
+| Static analysis | Oxlint, TypeScript |
+
+## Project Structure
+
+```text
+src/
+  components/   UI controls, section components, and visual scenes
+  config/       Contact configuration
+  data/         Geographic outline, city geometry, and team profiles
+  locales/      Brazilian Portuguese, English, and Spanish content
+  styles/       Layout, animation, and responsive styles
+  App.tsx       Page composition and dialog state
+  main.tsx      Application entry point
+public/
+  brand/        Brand assets
+  images/       Local photographs
+docs/
+  screenshots/  Desktop and mobile captures
 ```
 
-## Experiência
+## Application Behavior
 
-Nove seções consecutivas: início, Brasil, abordagem, processo, serviços, empresa, equipe, contato e FAQ. Layout responsivo para desktop, tablet e mobile, com rolagem nativa, controles por teclado e respeito à preferência por movimento reduzido.
+The page contains nine sequential sections: home, Brazil, approach, process, services, company, team, contact, and FAQ. Section navigation uses native scrolling and anchor targets.
 
-- Constelação oblíqua com o símbolo Nordion, órbitas de países e interação por ponteiro e teclado.
-- Marca animada e cinco mensagens com efeito de digitação.
-- Mapa brasileiro e cidade em React Three Fiber, com alternativas estáticas e animação limitada à área visível.
-- Mosaico de sete imagens, tooltips, processo interativo e carrosséis com controles manuais.
-- Sete perfis conceituais selecionáveis em constelação; não representam funcionários reais.
-- FAQ com expansão nativa e seletor de idiomas com bandeiras e preferência persistida.
-- Formulário que valida os campos e gera um arquivo de texto para download. Nenhuma mensagem é enviada, nenhum dado do formulário é armazenado ou transmitido.
+Language content is defined in `src/locales`. The selected locale persists in browser local storage under `nordion-language`.
 
-## Tecnologias e organização
+The opening constellation supports pointer and keyboard interaction. The Brazil map and city use separately loaded React Three Fiber scenes. Animation is limited to visible scenes, with static alternatives for reduced-motion preferences or unavailable WebGL.
 
-React 19, TypeScript, Vite, Tailwind CSS, React Aria, Embla, Three.js e React Three Fiber. Tipografia Poppins hospedada localmente e lint com Oxlint.
+The briefing form validates required fields and exports their values as `nordion-briefing.txt`. File generation runs in the browser through the Blob API; it does not require an API endpoint.
 
-| Diretório | Conteúdo |
-| --- | --- |
-| `src/components` | Componentes de interface e cenas interativas |
-| `src/locales` | Textos e traduções PT-BR, EN e ES |
-| `src/data` | Contorno geográfico, cidade e perfis conceituais |
-| `src/styles` | Composição visual e adaptações responsivas |
-| `src/config` | Configuração opcional de contato |
-| `public` | Imagens e símbolo da marca locais |
+## Environment Variables
 
-## Publicação
+Create `.env.local` using `.env.example` as a reference.
 
-O comando `npm run build` gera o site estático em `dist`. O repositório inclui configuração para Vercel. Não exige backend, credenciais ou serviços externos para a experiência de portfólio.
+| Variable | Required | Description |
+| --- | --- | --- |
+| `VITE_WHATSAPP_NUMBER` | No | International telephone number, including country code, using digits only. Enables the floating WhatsApp link when valid. |
 
-Opcionalmente, configure `VITE_WHATSAPP_NUMBER` antes do build para ativar o contato via WhatsApp, conforme `.env.example`. Sem número válido, a interface mantém o formulário local. Não é utilizado um número fictício.
+Vite reads environment variables at startup and build time. Restart the development server after changes. Set production variables before running the build.
 
-As cenas 3D são carregadas separadamente. O build informa um aviso de tamanho referente ao pacote compartilhado de Three.js; o aviso não impede a compilação.
+## Deployment
 
-## Créditos
+```sh
+npm ci
+npm run lint
+npm run build
+```
 
-Nordion é uma marca conceitual neste projeto. Fotos são ilustrativas e não representam clientes, instalações ou funcionários da consultoria. As licenças de fotografias de acervo não equivalem a domínio público.
+Deploy the contents of `dist/` to a static host. `vercel.json` includes a rewrite to `index.html` for Vercel deployments.
 
-Consulte [créditos das imagens](docs/image-credits.md) e [direção visual](docs/visual-direction.md). O símbolo da marca e parte das fotografias foram fornecidos para o projeto.
+## Asset Sources
+
+See [image and geographic data credits](docs/image-credits.md) for asset attribution and license references.
