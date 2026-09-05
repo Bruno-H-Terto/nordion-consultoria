@@ -37,6 +37,20 @@ export function Footer({
           </div>
           <div>
             <h3>{t.nav[5]}</h3>
+            <a
+              className="footer-item"
+              href="mailto:nordinconsultoria@gmail.com"
+            >
+              nordinconsultoria@gmail.com
+            </a>
+            <a
+              className="footer-item"
+              href="https://www.instagram.com/nordionconsultoria/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram <ArrowUpRight size={14} />
+            </a>
             <button onClick={onContact}>
               {t.ctaPrimary} <ArrowUpRight size={14} />
             </button>

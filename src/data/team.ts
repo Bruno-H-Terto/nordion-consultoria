@@ -9,15 +9,23 @@ export type TeamMember = {
   profile?: string;
 };
 
-// Conceptual portfolio profiles; deliberately do not impersonate real staff.
+const names = [
+  "Camila Delfino",
+  "Faby",
+  "Fernando",
+  "Ana Carolina Lage",
+  "Ricardo",
+  "Eliza",
+  "Camilla",
+];
 export function createTeamMembers(t: Copy): TeamMember[] {
   return Array.from({ length: 7 }, (_, index) => {
     const number = String(index + 1).padStart(2, "0");
     return {
       id: `team-${number}`,
-      name: `${t.teamMember} ${number}`,
-      role: t.teamRole,
-      bio: t.teamBio,
+      name: names[index],
+      role: t.teamRoles[index],
+      bio: t.teamBios[index],
     };
   });
 }

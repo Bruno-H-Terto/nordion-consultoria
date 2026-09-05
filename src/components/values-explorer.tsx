@@ -2,7 +2,14 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight } from "@untitledui/icons";
 import type { Copy } from "../locales";
 
-const photos = ["boardroom", "collaboration", "portrait", "founder", "team"];
+const photos = [
+  "boardroom",
+  "collaboration",
+  "portrait",
+  "founder",
+  "team",
+  "skyline",
+];
 const AUTO_ADVANCE_MS = 10_000;
 
 export function ValuesExplorer({ t }: { t: Copy }) {

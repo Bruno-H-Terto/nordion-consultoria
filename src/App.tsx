@@ -28,7 +28,7 @@ import { PhotoSection } from "./components/photo-section";
 import { ServicesCarousel } from "./components/services-carousel";
 import { OrbitScene } from "./components/orbit-scene";
 import { PeopleBubbles } from "./components/people-bubbles";
-import { WhatsAppContact } from "./components/whatsapp-contact";
+import { OrganizationChart } from "./components/organization-chart";
 import { CityLoop } from "./components/city-loop";
 import { BrandUniverse } from "./components/brand-universe";
 import { BusinessMosaic } from "./components/business-mosaic";
@@ -223,6 +223,16 @@ function App() {
             <div className="about-story">
               <Heading label={t.aboutLabel} title={t.aboutTitle} />
               <p className="about-text">{t.aboutText}</p>
+              <div className="purpose-grid">
+                <div>
+                  <h3>{t.missionLabel}</h3>
+                  <p>{t.mission}</p>
+                </div>
+                <div>
+                  <h3>{t.visionLabel}</h3>
+                  <p>{t.vision}</p>
+                </div>
+              </div>
               <ValuesExplorer t={t} />
             </div>
           </div>
@@ -241,6 +251,7 @@ function App() {
               <h2>{t.teamTitle}</h2>
             </div>
             <PeopleBubbles t={t} />
+            <OrganizationChart t={t} />
           </div>
         </PhotoSection>
 
@@ -258,6 +269,12 @@ function App() {
               <p>{t.ctaText}</p>
               <div className="button-row">
                 <Button onClick={openContact}>{t.ctaPrimary}</Button>
+                <a
+                  className="contact-email"
+                  href="mailto:nordinconsultoria@gmail.com"
+                >
+                  nordinconsultoria@gmail.com
+                </a>
               </div>
               <span className="cta-decoration" aria-hidden="true">
                 ↗
@@ -399,7 +416,7 @@ function App() {
           </div>
         </PhotoSection>
       </main>
-      <WhatsAppContact t={t} />
+
       <Footer t={t} onInfo={setModal} onContact={openContact} />
       <ModalOverlay
         className="modal-overlay"
@@ -428,6 +445,12 @@ function App() {
             {modal === "contact" ? (
               <>
                 <p>{t.contactText}</p>
+                <a
+                  className="contact-email"
+                  href="mailto:nordinconsultoria@gmail.com"
+                >
+                  {t.emailAction}: nordinconsultoria@gmail.com
+                </a>
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();

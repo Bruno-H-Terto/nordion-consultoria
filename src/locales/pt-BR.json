@@ -36,29 +36,29 @@
     "Estruturação da operação"
   ],
   "valueLabel": "SEU PONTO DE CONEXÃO COM O BRASIL",
-  "valueTitle": "Uma única consultoria. Todo o caminho até o Brasil.",
-  "valueText": "Centralizamos o planejamento e a coordenação da sua entrada no mercado brasileiro, conectando as pessoas certas em cada etapa.",
-  "valueQuote": "Você entende seu negócio. Nós entendemos o caminho para fazê-lo funcionar no Brasil.",
+  "valueTitle": "Sua empresa conhece o negócio. A Nordion conhece o Brasil.",
+  "valueText": "Cruzamos essas duas realidades para desenvolver um planejamento personalizado de entrada e expansão no país.",
+  "valueQuote": "Como o Brasil se aplica ao seu negócio?",
   "journey": ["Sua empresa", "Nordion", "Operação no Brasil"],
   "processLabel": "CLAREZA EM CADA ETAPA",
   "processTitle": "Um novo mercado. Um caminho claro.",
-  "processText": "Do primeiro plano aos primeiros passos da operação. Estamos com você.",
+  "processText": "Compreendemos o negócio, interpretamos o ambiente brasileiro e conectamos os especialistas necessários.",
   "steps": [
     [
       "Diagnóstico",
-      "Entendemos o modelo de negócio, objetivos, estrutura atual e necessidades da empresa."
+      "Analisamos objetivos, produtos, fornecedores, recursos e modelo de operação para compreender o negócio."
     ],
     [
-      "Planejamento de entrada",
-      "Mapeamos exigências jurídicas, tributárias, trabalhistas, financeiras e operacionais."
+      "Planejamento",
+      "Organizamos etapas, prazos, custos e riscos em um plano personalizado para o mercado brasileiro."
     ],
     [
-      "Implantação",
-      "Coordenamos as etapas necessárias para estruturar a operação brasileira."
+      "Conexão com especialistas",
+      "Conectamos o cliente a profissionais habilitados de acordo com as necessidades identificadas."
     ],
     [
       "Acompanhamento",
-      "Apoiamos a empresa durante o início da operação e adaptação ao mercado brasileiro."
+      "Mantemos uma visão integrada da evolução do projeto e das novas necessidades da operação."
     ]
   ],
   "servicesLabel": "ESPECIALIDADES QUE SE CONECTAM",
@@ -66,31 +66,35 @@
   "servicesText": "Uma visão completa para decisões mais seguras, do planejamento à execução.",
   "services": [
     [
-      "Estruturação empresarial",
-      "Orientação para abertura e estruturação da operação brasileira."
+      "Tributação",
+      "Análise dos impactos tributários conforme atividade, produtos e modelo de operação, com apoio especializado."
     ],
     [
-      "Jurídico e regulatório",
-      "Mapeamento das exigências e normas aplicáveis ao negócio."
+      "Estrutura societária",
+      "Identificação das necessidades jurídicas e societárias para a forma de entrada e os investimentos previstos."
     ],
     [
-      "Tributário e financeiro",
-      "Análise da estrutura tributária e dos impactos financeiros da operação."
+      "Câmbio e movimentação financeira",
+      "Planejamento da origem dos recursos, pagamentos internacionais, investimentos e conversão de moedas."
     ],
     [
-      "Contratação no Brasil",
-      "Orientação sobre relações trabalhistas, contratação e estrutura de equipes."
+      "Importação e logística",
+      "Integração de fornecedores, transporte, importação, armazenamento e distribuição ao modelo do negócio."
     ],
     [
-      "Câmbio e operações internacionais",
-      "Apoio no entendimento das movimentações financeiras entre países."
+      "Pessoas e operação",
+      "Mapeamento da equipe e da estrutura operacional, conectando profissionais de RH, contabilidade e legislação trabalhista."
     ],
     [
-      "Implantação e acompanhamento",
-      "Coordenação das etapas necessárias para colocar a estratégia em operação."
+      "Mercado brasileiro",
+      "Análise de público-alvo, concorrência, posicionamento, canais de venda e adaptação do produto."
+    ],
+    [
+      "Riscos e custos",
+      "Identificação de investimentos, custos, prazos e riscos que podem afetar a implantação."
     ]
   ],
-  "partners": "Atuação integrada com advogados, contadores e outros parceiros habilitados, conforme as necessidades de cada operação.",
+  "partners": "A execução técnica cabe aos profissionais especializados. A Nordion integra o diagnóstico, o planejamento e a conexão entre as áreas.",
   "differenceLabel": "CONEXÃO FAZ A DIFERENÇA",
   "differenceTitle": "Menos fornecedores. Mais coordenação.",
   "differenceText": "Em vez de descobrir sozinho quem procurar em cada etapa, você conta com um único ponto de referência durante todo o processo.",
@@ -117,25 +121,26 @@
   ],
   "scenarioLabel": "DA IDEIA À PRÁTICA",
   "scenarioTitle": "Imagine o seguinte cenário",
-  "scenarioText": "John administra uma empresa nos Estados Unidos e deseja abrir uma operação no Brasil. Ele conhece seu negócio, mas não conhece profundamente a legislação, tributação, relações trabalhistas ou processos necessários para operar no país.",
+  "scenarioText": "Uma empresa estrangeira de calçados deseja entrar no Brasil. Antes de planejar a implantação, analisamos produção, fornecedores, importação, logística, público-alvo, canais de venda, investimentos e movimentações financeiras. Cada decisão considera a realidade específica do negócio.",
   "scenarioAnswer": "É nesse momento que entramos.",
   "scenarioSteps": [
-    "Estados Unidos",
-    "Consultoria",
+    "Empresa de calçados",
+    "Diagnóstico",
     "Planejamento",
-    "Estruturação",
-    "Operação no Brasil"
+    "Especialistas",
+    "Mercado brasileiro"
   ],
   "scenarioNote": "Cenário ilustrativo para apresentar nossa atuação.",
   "aboutLabel": "SOMOS A NORDION",
   "aboutTitle": "O Brasil não precisa ser uma barreira para sua expansão.",
-  "aboutText": "Somos uma consultoria empresarial focada em reduzir a complexidade da entrada de empresas estrangeiras no mercado brasileiro. Reunimos estratégia, orientação e coordenação para transformar um processo complexo em uma jornada estruturada.",
+  "aboutText": "A Nordion surgiu em setembro de 2026, em uma atividade acadêmica de sete estudantes de Ciências Contábeis da UFJF, proposta pelo professor Rodrigo Vieira em Princípios da Administração II. A proposta conecta inteligência estratégica e especialistas locais para apoiar empresas estrangeiras no Brasil.",
   "values": [
-    "Clareza",
-    "Segurança",
-    "Estratégia",
-    "Transparência",
-    "Proximidade"
+    "Visão holística",
+    "Segurança e rigor regulatório",
+    "Facilitação e conectividade",
+    "Parceria estratégica",
+    "Transparência e confiança",
+    "Orientação por evidências"
   ],
   "ctaLabel": "VAMOS CONSTRUIR O PRÓXIMO PASSO",
   "ctaTitle": "Pronto para transformar o Brasil no seu próximo mercado?",
@@ -158,7 +163,7 @@
   "business": "Empresa e país de origem",
   "message": "Como podemos ajudar?",
   "send": "Baixar resumo",
-  "contactNote": "Projeto de portfólio: o resumo é baixado no seu dispositivo. Nenhum dado é enviado.",
+  "contactNote": "Baixe seu resumo ou entre em contato por e-mail. O formulário não envia dados automaticamente.",
   "success": "Resumo gerado para download. Seus dados permanecem no seu dispositivo.",
   "privacyText": "Este projeto de portfólio não envia dados do formulário a servidores. O resumo é gerado localmente e a preferência de idioma é armazenada neste navegador.",
   "termsText": "Este site apresenta uma proposta de consultoria empresarial. O conteúdo é informativo e não substitui análise profissional individualizada. Serviços, escopo e condições dependem de contratação específica. O cenário apresentado é fictício.",
@@ -196,18 +201,19 @@
   ],
   "processFocus": "CADA ETAPA TEM UM PROPÓSITO",
   "deliverables": [
-    "Uma visão compartilhada dos objetivos e das necessidades.",
-    "Um roteiro com prioridades e requisitos da operação.",
-    "Coordenação entre sua empresa e os especialistas envolvidos.",
-    "Orientação próxima para os primeiros passos no mercado."
+    "Analisamos objetivos, produtos, fornecedores, recursos e modelo de operação para compreender o negócio.",
+    "Organizamos etapas, prazos, custos e riscos em um plano personalizado para o mercado brasileiro.",
+    "Conectamos o cliente a profissionais habilitados de acordo com as necessidades identificadas.",
+    "Mantemos uma visão integrada da evolução do projeto e das novas necessidades da operação."
   ],
   "valuesLabel": "Nossos valores",
   "valueDetails": [
-    "Informações compreensíveis para decidir com confiança.",
-    "Cuidado com os requisitos e riscos de cada etapa.",
-    "Decisões conectadas aos objetivos da sua empresa.",
-    "Escopo, responsabilidades e próximos passos bem definidos.",
-    "Diálogo contínuo durante o planejamento e a implantação."
+    "Acompanhar a jornada do início ao fim com uma visão integrada.",
+    "Conectar profissionais especializados em documentação, custos e regulamentação.",
+    "Aproximar a empresa das áreas e profissionais necessários.",
+    "Compreender de perto as necessidades e os objetivos do cliente.",
+    "Dar clareza a custos, prazos, riscos, limitações e viabilidade.",
+    "Utilizar informações e resultados de pesquisa para aprimorar decisões."
   ],
   "heroPhrases": [
     "sem transformar o Brasil em um problema.",
@@ -219,8 +225,8 @@
   "teamLabel": "Equipe",
   "teamTitle": "As pessoas por trás da Nordion.",
   "teamMember": "Integrante",
-  "teamRole": "Perfil ilustrativo",
-  "teamBio": "Equipe conceitual criada para demonstrar a experiência de uma consultoria integrada. Não representa um profissional real.",
+  "teamRole": "Equipe Nordion",
+  "teamBio": "Integração das áreas para uma atuação coordenada.",
   "teamPortrait": "Retrato de",
   "valuesPrevious": "Valor anterior",
   "valuesNext": "Próximo valor",
@@ -245,5 +251,30 @@
     "Profissional com sua equipe no escritório",
     "Planejamento de negócios e análise financeira",
     "Porto e operações internacionais"
+  ],
+  "missionLabel": "Missão",
+  "mission": "Simplificar a expansão de negócios estrangeiros no Brasil, conectando inteligência estratégica e especialistas locais do diagnóstico à consolidação.",
+  "visionLabel": "Visão",
+  "vision": "Ser referência na gestão integrada de projetos de entrada e expansão de empresas estrangeiras no Brasil.",
+  "orgTitle": "Estrutura organizacional",
+  "orgText": "Direção geral, duas diretorias e quatro gerências conectadas para integrar estratégia e execução.",
+  "emailAction": "Enviar e-mail",
+  "teamRoles": [
+    "CEO — Direção geral",
+    "Diretoria de Inteligência e Estratégia",
+    "Diretoria de Operações e Implantação",
+    "Gerência Jurídico-Regulatória",
+    "Gerência de Relações Institucionais e Parcerias",
+    "Gerência de Marketing e Experiência do Cliente",
+    "Gerência Financeira e de Riscos"
+  ],
+  "teamBios": [
+    "Direção geral e integração das áreas da Nordion.",
+    "Decisões e dados estratégicos para o planejamento.",
+    "Coordenação da execução e entrega dos projetos.",
+    "Conformidade e identificação de riscos legais.",
+    "Conexão com parceiros e órgãos públicos.",
+    "Marca e experiência do cliente durante a jornada.",
+    "Organização de custos e análise de riscos financeiros."
   ]
 }

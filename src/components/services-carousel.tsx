@@ -58,7 +58,7 @@ export function ServicesCarousel({ t }: { t: Copy }) {
       <div className="carousel-viewport" ref={ref} tabIndex={0}>
         <div className="carousel-track">
           {t.services.map(([title, text], i) => {
-            const Icon = icons[i];
+            const Icon = icons[i % icons.length];
             return (
               <div
                 className="carousel-slide"
