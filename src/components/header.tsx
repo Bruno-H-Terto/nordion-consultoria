@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { WhatsAppContact } from "./whatsapp-contact";
 import { hasWhatsApp } from "../config/contact";
 import { Logo } from "./ui";
 import { CountryFlag } from "./country-flag";
@@ -47,15 +48,19 @@ export function Header({
     updateHeader();
     window.addEventListener("scroll", onScroll, { passive: true });
 
-    const footer = document.querySelector("footer.footer");
-    const footerObserver = footer
-      ? new IntersectionObserver(
-          ([entry]) => setFooterVisible(entry.isIntersecting),
-          { threshold: 0.01 },
-        )
-      : null;
-
-    if (footer && footerObserver) footerObserver.observe(footer);
+    const contactAreas = document.querySelectorAll("#contato, footer.footer");
+    const visibleAreas = new Set<Element>();
+    const footerObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) visibleAreas.add(entry.target);
+          else visibleAreas.delete(entry.target);
+        });
+        setFooterVisible(visibleAreas.size > 0);
+      },
+      { threshold: 0.01 },
+    );
+    contactAreas.forEach((area) => footerObserver.observe(area));
 
     return () => {
       window.removeEventListener("scroll", onScroll);
@@ -149,6 +154,7 @@ export function Header({
         </Popover>
       </Select>
 
+      {hasWhatsApp && floatingActionsVisible && <WhatsAppContact t={t} />}
       {!hasWhatsApp && (
         <button
           type="button"
