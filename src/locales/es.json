@@ -152,18 +152,101 @@
   "menu": "Abrir menú",
   "close": "Cerrar",
   "contactTitle": "Hablemos de tu expansión.",
-  "contactText": "Completa los campos para preparar un resumen de tu operación.",
+  "contactText": "Completa los campos para crear tu resumen de entrada a Brasil.",
   "name": "Tu nombre",
   "email": "Correo profesional",
   "business": "Empresa y país de origen",
   "message": "¿Cómo podemos ayudarte?",
-  "send": "Preparar consulta",
-  "contactNote": "Demostración: este formulario no envía ni almacena datos. El canal de atención estará disponible en el lanzamiento.",
-  "success": "Resumen preparado. El envío aún no está disponible en esta demostración.",
-  "privacyText": "Esta demostración no envía datos del formulario a servidores. La preferencia de idioma se almacena solo en este navegador. La política definitiva, con la identificación del responsable y los canales de atención, estará disponible antes del lanzamiento comercial.",
+  "send": "Descargar resumen",
+  "contactNote": "Proyecto de portafolio: el resumen se descarga en tu dispositivo. No se envían datos.",
+  "success": "Resumen generado para descargar. Tus datos permanecen en tu dispositivo.",
+  "privacyText": "Este proyecto de portafolio no envía datos del formulario a servidores. El resumen se genera localmente y la preferencia de idioma se almacena en este navegador.",
   "termsText": "Este sitio presenta una propuesta de consultoría empresarial. El contenido es informativo y no sustituye un análisis profesional individualizado. Los servicios, el alcance y las condiciones requieren un contrato específico. El escenario presentado es ficticio.",
-  "linkedinText": "El perfil oficial de LinkedIn estará disponible en el lanzamiento.",
   "carousel": "Carrusel",
   "previous": "Servicio anterior",
-  "next": "Siguiente servicio"
+  "next": "Siguiente servicio",
+  "chapters": [
+    "Presentación",
+    "El mercado brasileño",
+    "Nuestro enfoque",
+    "Cómo funciona",
+    "Servicios",
+    "Sobre Nordion",
+    "Conversemos"
+  ],
+  "explore": "Conoce el camino hacia Brasil",
+  "scrollHint": "Desplázate para explorar",
+  "continueLabel": "A continuación",
+  "challengesLabel": "¿Qué desafíos ayudamos a organizar?",
+  "coordinationLabel": "Cómo coordinamos a los especialistas",
+  "exampleLabel": "Mira un ejemplo de entrada en Brasil",
+  "audienceSummary": "Para qué empresas trabajamos",
+  "readingProgress": "Progreso de la presentación",
+  "contactShort": "Conversemos",
+  "peopleTitle": "Los negocios conectan personas.",
+  "peopleIntro": "Explora las conexiones que acercan tu empresa a Brasil.",
+  "portraitNote": "Retratos ilustrativos.",
+  "people": [
+    [
+      "Visión global",
+      "Tu estrategia de expansión comienza con una conversación."
+    ],
+    [
+      "Contexto local",
+      "Transformamos el contexto brasileño en próximos pasos claros."
+    ],
+    ["Cercanía", "Acompañamiento humano durante todo el recorrido."]
+  ],
+  "processFocus": "CADA ETAPA TIENE UN PROPÓSITO",
+  "deliverables": [
+    "Una visión compartida de los objetivos y las necesidades.",
+    "Una hoja de ruta con prioridades y requisitos operativos.",
+    "Coordinación entre tu empresa y los especialistas involucrados.",
+    "Orientación cercana para los primeros pasos en el mercado."
+  ],
+  "valuesLabel": "Nuestros valores",
+  "valueDetails": [
+    "Información comprensible para decidir con confianza.",
+    "Atención a los requisitos y riesgos de cada etapa.",
+    "Decisiones conectadas con los objetivos de tu empresa.",
+    "Alcance, responsabilidades y próximos pasos bien definidos.",
+    "Diálogo continuo durante la planificación y la implantación."
+  ],
+  "heroPhrases": [
+    "sin convertir Brasil en un problema.",
+    "con estrategia para dar el siguiente paso.",
+    "con conexiones que acercan mercados.",
+    "con claridad en cada etapa de expansión.",
+    "con apoyo del plan a la operación."
+  ],
+  "teamLabel": "Equipo",
+  "teamTitle": "Las personas detrás de Nordion.",
+  "teamMember": "Integrante",
+  "teamRole": "Perfil ilustrativo",
+  "teamBio": "Equipo conceptual creado para demostrar una experiencia de consultoría integrada. No representa a un profesional real.",
+  "teamPortrait": "Retrato de",
+  "valuesPrevious": "Valor anterior",
+  "valuesNext": "Siguiente valor",
+  "whatsappContact": "Conversar por WhatsApp",
+  "teamIllustration": "Retratos ilustrativos. Conexiones humanas, visión internacional.",
+  "faqTitle": "Preguntas frecuentes",
+  "faqIntro": "Los detalles para planificar tu siguiente paso.",
+  "heroImages": "Perspectivas internacionales",
+  "pauseImages": "Pausar imágenes",
+  "playImages": "Reanudar imágenes",
+  "brandInteraction": "Interactúa con el logo Nordion. Mueve el puntero o usa las flechas; Escape restablece la posición.",
+  "journeyHints": [
+    "Entendemos tu negocio, objetivos y estructura empresarial.",
+    "Coordinamos especialistas y organizamos cada etapa de entrada.",
+    "Acompañamos la implantación y el inicio de operaciones en Brasil."
+  ],
+  "mosaicDescriptions": [
+    "Puente atirantado en São Paulo",
+    "Profesionales colaborando en un proyecto",
+    "Arquitectura de edificios empresariales",
+    "Paisaje urbano y costa de Río de Janeiro",
+    "Profesional con su equipo en la oficina",
+    "Planificación de negocios y análisis financiero",
+    "Puerto y operaciones internacionales"
+  ]
 }

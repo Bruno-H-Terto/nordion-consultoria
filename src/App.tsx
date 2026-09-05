@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import {
   ArrowRight,
+  ArrowDown,
   ArrowUpRight,
   Building07,
   Globe02,
   Scale01,
   Coins01,
   Users01,
-  LayersThree01,
   ShieldTick,
   Check,
   Compass03,
@@ -23,26 +23,36 @@ import {
 import { locales, initialLanguage, type Language } from "./locales";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
-import {
-  Badge,
-  Button,
-  Heading,
-  Card,
-  TimelineStep,
-  FormField,
-} from "./components/ui";
+import { Badge, Button, Heading, Card, FormField } from "./components/ui";
 import { PhotoSection } from "./components/photo-section";
 import { ServicesCarousel } from "./components/services-carousel";
 import { OrbitScene } from "./components/orbit-scene";
+import { PeopleBubbles } from "./components/people-bubbles";
+import { WhatsAppContact } from "./components/whatsapp-contact";
+import { CityLoop } from "./components/city-loop";
+import { BrandUniverse } from "./components/brand-universe";
+import { BusinessMosaic } from "./components/business-mosaic";
+import { JourneyIcon } from "./components/journey-icon";
+import { Typewriter } from "./components/typewriter";
+import { ProcessExplorer } from "./components/process-explorer";
+import { ValuesExplorer } from "./components/values-explorer";
 import "./App.css";
+import "./styles/editorial.css";
+import "./styles/graphic.css";
+import "./styles/scenes.css";
+import "./styles/refinements.css";
 
 function App() {
   const [language, setLanguage] = useState<Language>(initialLanguage);
-  const [modal, setModal] = useState<
-    "contact" | "privacy" | "terms" | "linkedin" | null
-  >(null);
+  const [modal, setModal] = useState<"contact" | "privacy" | "terms" | null>(
+    null,
+  );
   const [prepared, setPrepared] = useState(false);
   const t = locales[language];
+  const openContact = () => {
+    setPrepared(false);
+    setModal("contact");
+  };
   useEffect(() => {
     document.documentElement.lang = language;
     document.title = `Nordion | ${t.hero}`;
@@ -60,12 +70,16 @@ function App() {
       <a className="skip-link" href="#main">
         {t.skip}
       </a>
-      <Header t={t} language={language} onLanguage={setLanguage} />
+      <Header
+        t={t}
+        language={language}
+        onLanguage={setLanguage}
+        onContact={openContact}
+      />
       <main id="main">
         <PhotoSection
           id="inicio"
-          className="hero-section"
-          image="portrait"
+          className="hero-section graphic-hero"
           priority
         >
           <div className="container hero-grid">
@@ -74,14 +88,13 @@ function App() {
               <h1>
                 {t.hero}
                 <br />
-                <span>{t.heroAccent}</span>
+                <Typewriter key={language} phrases={t.heroPhrases} />
               </h1>
               <p>{t.intro}</p>
               <div className="button-row">
-                <Button href="#contato">{t.primary}</Button>
-                <a className="text-link" href="#sobre">
-                  {t.secondary}
-                  <ArrowRight size={17} />
+                <a className="button" href="#brasil">
+                  {t.explore}
+                  <ArrowDown size={18} aria-hidden="true" />
                 </a>
               </div>
               <div className="hero-note">
@@ -89,151 +102,20 @@ function App() {
                 {t.heroNote}
               </div>
             </div>
+            <BrandUniverse t={t} />
             <div className="hero-side-note">
-              <span>01 / NORDION</span>
+              <span>{t.scrollHint} ↓</span>
               <span>{t.heroNote}</span>
             </div>
           </div>
         </PhotoSection>
-        <PhotoSection className="problem-section" image="architecture">
-          <div className="container">
-            <div className="split-heading">
-              <Heading label={t.problemLabel} title={t.problemTitle} />
-              <p>{t.problemText}</p>
-            </div>
-            <div className="grid four">
-              {t.problems.map((title, i) => {
-                const Icon = [Scale01, Coins01, Users01, Building07][i];
-                return (
-                  <Card key={title} className="problem-card">
-                    <Icon size={25} />
-                    <h3>{title}</h3>
-                    <span className="small-arrow">↗</span>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </PhotoSection>
-        <PhotoSection className="value-section" image="team">
-          <div className="container value-grid">
-            <div>
-              <Heading
-                label={t.valueLabel}
-                title={t.valueTitle}
-                text={t.valueText}
-              />
-              <p className="value-quote">{t.valueQuote}</p>
-            </div>
-            <div className="journey">
-              {t.journey.map((item, i) => (
-                <div key={item} className={`journey-node node-${i}`}>
-                  <span>
-                    {i === 0 ? (
-                      <Building07 />
-                    ) : i === 1 ? (
-                      <Compass03 />
-                    ) : (
-                      <Globe02 />
-                    )}
-                  </span>
-                  <strong>{item}</strong>
-                  {i < 2 && <ArrowRight className="journey-arrow" />}
-                </div>
-              ))}
-            </div>
-          </div>
-        </PhotoSection>
         <PhotoSection
-          id="como-funciona"
-          className="process-section"
-          image="planning"
-        >
-          <div className="container">
-            <Heading
-              label={t.processLabel}
-              title={t.processTitle}
-              text={t.processText}
-              centered
-            />
-            <ol className="timeline">
-              {t.steps.map(([title, text], i) => (
-                <TimelineStep
-                  key={title}
-                  number={i + 1}
-                  title={title}
-                  text={text}
-                />
-              ))}
-            </ol>
-          </div>
-        </PhotoSection>
-        <PhotoSection
-          id="servicos"
-          className="services-section"
-          image="planning"
-        >
-          <div className="container">
-            <div className="split-heading">
-              <Heading label={t.servicesLabel} title={t.servicesTitle} />
-              <p>{t.servicesText}</p>
-            </div>
-            <ServicesCarousel t={t} />
-            <p className="partners-note">
-              <ShieldTick size={20} />
-              {t.partners}
-            </p>
-          </div>
-        </PhotoSection>
-        <PhotoSection className="difference-section" image="team">
-          <div className="container">
-            <Heading
-              label={t.differenceLabel}
-              title={t.differenceTitle}
-              text={t.differenceText}
-              centered
-            />
-            <div className="comparison">
-              <Card className="traditional">
-                <span className="eyebrow">{t.traditional}</span>
-                <div className="company-node">
-                  <Building07 size={22} />
-                  {t.journey[0]}
-                </div>
-                <div className="supplier-grid">
-                  {t.suppliers.map((s) => (
-                    <span key={s}>{s}</span>
-                  ))}
-                </div>
-                <p>{t.fragmented}</p>
-              </Card>
-              <Card className="integrated">
-                <span className="eyebrow">{t.integrated}</span>
-                <div className="company-node">
-                  <Building07 size={22} />
-                  {t.journey[0]}
-                </div>
-                <div className="coordination-node">
-                  <Compass03 size={22} />
-                  nordion.
-                </div>
-                <div className="supplier-grid">
-                  {t.suppliers.map((s) => (
-                    <span key={s}>{s}</span>
-                  ))}
-                </div>
-                <p>
-                  <Check size={17} />
-                  {t.coordinated}
-                </p>
-              </Card>
-            </div>
-          </div>
-        </PhotoSection>
-        <PhotoSection
+          nextId="abordagem"
+          nextLabel={t.chapters[2]}
+          continueLabel={t.continueLabel}
           id="brasil"
           className="brazil-section"
-          image="architecture"
+          image="skyline"
         >
           <div className="container brazil-grid">
             <OrbitScene />
@@ -254,89 +136,271 @@ function App() {
             </div>
           </div>
         </PhotoSection>
-        <PhotoSection className="audience-section" image="founder">
+        <PhotoSection
+          nextId="como-funciona"
+          nextLabel={t.chapters[3]}
+          continueLabel={t.continueLabel}
+          id="abordagem"
+          className="value-section graphic-value"
+        >
+          <div className="container value-grid">
+            <div>
+              <Heading
+                label={t.valueLabel}
+                title={t.valueTitle}
+                text={t.valueText}
+              />
+              <p className="value-quote">{t.valueQuote}</p>
+            </div>
+            <div className="journey">
+              {t.journey.map((item, i) => (
+                <div key={item} className={`journey-node node-${i}`}>
+                  <JourneyIcon
+                    label={item}
+                    description={t.journeyHints[i]}
+                    id={`journey-hint-${i}`}
+                  >
+                    {i === 0 ? (
+                      <Building07 />
+                    ) : i === 1 ? (
+                      <Compass03 />
+                    ) : (
+                      <Globe02 />
+                    )}
+                  </JourneyIcon>
+                  <strong>{item}</strong>
+                  {i < 2 && <ArrowRight className="journey-arrow" />}
+                </div>
+              ))}
+            </div>
+          </div>
+          <BusinessMosaic t={t} />
+        </PhotoSection>
+        <PhotoSection
+          nextId="servicos"
+          nextLabel={t.chapters[4]}
+          continueLabel={t.continueLabel}
+          id="como-funciona"
+          className="process-section surface-ivory"
+        >
           <div className="container">
-            <Heading label={t.audienceLabel} title={t.audienceTitle} centered />
-            <div className="grid three audiences">
-              {t.audiences.map((title, i) => {
-                const Icon = [Globe02, Building07, Users01][i];
-                return (
-                  <Card key={title}>
-                    <span className="icon-box">
-                      <Icon />
-                    </span>
-                    <h3>{title}</h3>
-                    <a href="#contato" aria-label={`${t.ctaPrimary}: ${title}`}>
-                      <ArrowUpRight />
-                    </a>
-                  </Card>
-                );
-              })}
-            </div>
+            <Heading
+              label={t.processLabel}
+              title={t.processTitle}
+              text={t.processText}
+              centered
+            />
+            <ProcessExplorer t={t} />
           </div>
         </PhotoSection>
-        <PhotoSection className="scenario-section" image="founder">
-          <div className="container scenario-box">
-            <div>
-              <Heading label={t.scenarioLabel} title={t.scenarioTitle} />
-              <p>{t.scenarioText}</p>
-              <h3>{t.scenarioAnswer}</h3>
+        <PhotoSection
+          nextId="sobre"
+          nextLabel={t.chapters[5]}
+          continueLabel={t.continueLabel}
+          id="servicos"
+          className="services-section graphic-services"
+        >
+          <div className="container">
+            <div className="split-heading">
+              <Heading label={t.servicesLabel} title={t.servicesTitle} />
+              <p>{t.servicesText}</p>
             </div>
-            <div>
-              <ol className="scenario-path">
-                {t.scenarioSteps.map((s, i) => (
-                  <li key={s}>
-                    <span>{i === 4 ? <Check size={16} /> : `0${i + 1}`}</span>
-                    {s}
-                    {i < 4 && <ArrowRight size={16} />}
-                  </li>
-                ))}
-              </ol>
-              <p className="scenario-note">{t.scenarioNote}</p>
-            </div>
+            <ServicesCarousel t={t} />
+            <p className="partners-note">
+              <ShieldTick size={20} />
+              {t.partners}
+            </p>
           </div>
         </PhotoSection>
-        <PhotoSection id="sobre" className="about-section" image="portrait">
-          <div className="container about-grid">
-            <Heading label={t.aboutLabel} title={t.aboutTitle} />
-            <div>
+        <PhotoSection
+          nextId="equipe"
+          nextLabel={t.teamLabel}
+          continueLabel={t.continueLabel}
+          id="sobre"
+          className="about-section surface-ivory graphic-about"
+        >
+          <div className="container about-experience">
+            <div className="about-story">
+              <Heading label={t.aboutLabel} title={t.aboutTitle} />
               <p className="about-text">{t.aboutText}</p>
-              <div className="values">
-                {t.values.map((v) => (
-                  <span key={v}>
-                    <Check size={15} />
-                    {v}
-                  </span>
-                ))}
-              </div>
+              <ValuesExplorer t={t} />
             </div>
           </div>
         </PhotoSection>
-        <PhotoSection id="contato" className="cta-section" image="team">
-          <div className="container cta-inner">
-            <span className="eyebrow">{t.ctaLabel}</span>
-            <h2>{t.ctaTitle}</h2>
-            <p>{t.ctaText}</p>
-            <div className="button-row">
-              <Button
-                onClick={() => {
-                  setPrepared(false);
-                  setModal("contact");
-                }}
-              >
-                {t.ctaPrimary}
-              </Button>
-              <Button href="#como-funciona" secondary>
-                {t.ctaSecondary}
-              </Button>
+
+        <PhotoSection
+          nextId="contato"
+          nextLabel={t.chapters[6]}
+          continueLabel={t.continueLabel}
+          id="equipe"
+          className="team-section graphic-team"
+        >
+          <div className="container team-section-inner">
+            <div className="team-section-heading">
+              <span className="eyebrow">{t.teamLabel}</span>
+              <h2>{t.teamTitle}</h2>
             </div>
-            <span className="cta-decoration" aria-hidden="true">
-              ↗
-            </span>
+            <PeopleBubbles t={t} />
+          </div>
+        </PhotoSection>
+
+        <PhotoSection
+          id="contato"
+          className="cta-section graphic-cta"
+          nextId="faq"
+          nextLabel={t.faqTitle}
+          continueLabel={t.continueLabel}
+        >
+          <div className="container cta-experience">
+            <div className="cta-copy">
+              <span className="eyebrow">{t.ctaLabel}</span>
+              <h2>{t.ctaTitle}</h2>
+              <p>{t.ctaText}</p>
+              <div className="button-row">
+                <Button onClick={openContact}>{t.ctaPrimary}</Button>
+              </div>
+              <span className="cta-decoration" aria-hidden="true">
+                ↗
+              </span>
+            </div>
+            <CityLoop />
+          </div>
+        </PhotoSection>
+        <PhotoSection id="faq" className="faq-section">
+          <div className="container">
+            <Heading label="FAQ" title={t.faqTitle} text={t.faqIntro} />
+            <div className="faq-list">
+              <details className="faq-item">
+                <summary>
+                  {t.challengesLabel}
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <div className="disclosure-content">
+                  <div className="detail-inner">
+                    <div className="split-heading">
+                      <h3>{t.problemTitle}</h3>
+                      <p>{t.problemText}</p>
+                    </div>
+                    <div className="grid four">
+                      {t.problems.map((title, i) => {
+                        const Icon = [Scale01, Coins01, Users01, Building07][i];
+                        return (
+                          <Card key={title} className="problem-card">
+                            <Icon size={25} />
+                            <h3>{title}</h3>
+                          </Card>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details className="faq-item">
+                <summary>
+                  {t.coordinationLabel}
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <div className="disclosure-content">
+                  <div className="detail-inner">
+                    <h3>{t.differenceTitle}</h3>
+                    <p>{t.differenceText}</p>
+                    <div className="comparison">
+                      <Card className="traditional">
+                        <span className="eyebrow">{t.traditional}</span>
+                        <div className="company-node">
+                          <Building07 size={22} />
+                          {t.journey[0]}
+                        </div>
+                        <div className="supplier-grid">
+                          {t.suppliers.map((s) => (
+                            <span key={s}>{s}</span>
+                          ))}
+                        </div>
+                        <p>{t.fragmented}</p>
+                      </Card>
+                      <Card className="integrated">
+                        <span className="eyebrow">{t.integrated}</span>
+                        <div className="company-node">
+                          <Building07 size={22} />
+                          {t.journey[0]}
+                        </div>
+                        <div className="coordination-node">
+                          <Compass03 size={22} />
+                          nordion.
+                        </div>
+                        <div className="supplier-grid">
+                          {t.suppliers.map((s) => (
+                            <span key={s}>{s}</span>
+                          ))}
+                        </div>
+                        <p>
+                          <Check size={17} />
+                          {t.coordinated}
+                        </p>
+                      </Card>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details className="faq-item">
+                <summary>
+                  {t.exampleLabel}
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <div className="disclosure-content">
+                  <div className="scenario-box">
+                    <div>
+                      <h3>{t.scenarioTitle}</h3>
+                      <p>{t.scenarioText}</p>
+                      <h3>{t.scenarioAnswer}</h3>
+                    </div>
+                    <div>
+                      <ol className="scenario-path">
+                        {t.scenarioSteps.map((s, i) => (
+                          <li key={s}>
+                            <span>
+                              {i === 4 ? <Check size={16} /> : `0${i + 1}`}
+                            </span>
+                            {s}
+                            {i < 4 && <ArrowRight size={16} />}
+                          </li>
+                        ))}
+                      </ol>
+                      <p className="scenario-note">{t.scenarioNote}</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details className="faq-item">
+                <summary>
+                  {t.audienceSummary}
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <div className="disclosure-content">
+                  <div className="detail-inner">
+                    <h3>{t.audienceTitle}</h3>
+                    <div className="grid three audiences">
+                      {t.audiences.map((title, i) => {
+                        const Icon = [Globe02, Building07, Users01][i];
+                        return (
+                          <Card key={title}>
+                            <span className="icon-box">
+                              <Icon />
+                            </span>
+                            <h3>{title}</h3>
+                          </Card>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
           </div>
         </PhotoSection>
       </main>
-      <Footer t={t} onInfo={setModal} />
+      <WhatsAppContact t={t} />
+      <Footer t={t} onInfo={setModal} onContact={openContact} />
       <ModalOverlay
         className="modal-overlay"
         isOpen={modal !== null}
@@ -359,9 +423,7 @@ function App() {
                 ? t.contactTitle
                 : modal === "privacy"
                   ? t.privacy
-                  : modal === "terms"
-                    ? t.terms
-                    : "LinkedIn"}
+                  : t.terms}
             </DialogHeading>
             {modal === "contact" ? (
               <>
@@ -369,6 +431,23 @@ function App() {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
+                    const data = new FormData(e.currentTarget);
+                    const summary = [
+                      [t.name, "name"],
+                      [t.email, "email"],
+                      [t.business, "business"],
+                      [t.message, "message"],
+                    ]
+                      .map(([label, key]) => `${label}: ${data.get(key) ?? ""}`)
+                      .join("\n\n");
+                    const url = URL.createObjectURL(
+                      new Blob([summary], { type: "text/plain;charset=utf-8" }),
+                    );
+                    const link = document.createElement("a");
+                    link.href = url;
+                    link.download = "nordion-briefing.txt";
+                    link.click();
+                    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
                     setPrepared(true);
                   }}
                 >
@@ -389,13 +468,7 @@ function App() {
                 </form>
               </>
             ) : (
-              <p>
-                {modal === "privacy"
-                  ? t.privacyText
-                  : modal === "terms"
-                    ? t.termsText
-                    : t.linkedinText}
-              </p>
+              <p>{modal === "privacy" ? t.privacyText : t.termsText}</p>
             )}
           </Dialog>
         </Modal>
