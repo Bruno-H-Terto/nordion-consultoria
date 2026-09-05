@@ -31,7 +31,7 @@ All three were verified as free to use under the [Pexels License](https://www.pe
 
 `bridge-1920.webp` and `bridge-960.webp`: [Odinei Ramone — Ponte Octávio Frias de Oliveira](https://unsplash.com/photos/a-bridge-with-a-road-and-buildings-e86s9jQTsFg), free commercial use under the [Unsplash License](https://unsplash.com/license). Reviewed 2026-09-04. Monochrome architectural lines fit the graphite palette; CSS controls framing without modifying the source photograph.
 
-The team section uses seven conceptual profiles with silhouette illustrations. No identities are presented as actual staff. Profile data lives in `src/data/team.ts`.
+The team section uses the seven names and roles supplied for Nordion, with silhouette illustrations instead of photographs. Profile data lives in `src/data/team.ts`.
 
 ## Supplied brand symbol
 

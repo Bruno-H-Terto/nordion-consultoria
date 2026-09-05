@@ -73,11 +73,13 @@ docs/
 
 ## Application Behavior
 
-The page contains nine sequential sections: home, Brazil, approach, process, services, company, team, contact, and FAQ. Section navigation uses native scrolling and anchor targets.
+Sections use content-driven height with a minimum of one viewport to support smaller displays and browser zoom. The page contains nine sequential sections: home, Brazil, approach, process, services, company, team, contact, and FAQ. Section navigation uses native scrolling and anchor targets.
 
 Language content is defined in `src/locales`. The selected locale persists in browser local storage under `nordion-language`.
 
 The opening constellation supports pointer and keyboard interaction. The Brazil map and city use separately loaded React Three Fiber scenes. Animation is limited to visible scenes, with static alternatives for reduced-motion preferences or unavailable WebGL.
+
+The team section includes seven named roles and a responsive organizational chart. Company email and Instagram links are available in the contact interface and footer. Floating contact controls appear after scrolling and hide when the contact section or footer is visible.
 
 The briefing form validates required fields and exports their values as `nordion-briefing.txt`. File generation runs in the browser through the Blob API; it does not require an API endpoint.
 
