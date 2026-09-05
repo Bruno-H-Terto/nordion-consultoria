@@ -4,9 +4,11 @@ import type { Copy } from "../locales";
 export function Footer({
   t,
   onInfo,
+  onContact,
 }: {
   t: Copy;
-  onInfo: (type: "privacy" | "terms" | "linkedin") => void;
+  onContact: () => void;
+  onInfo: (type: "privacy" | "terms") => void;
 }) {
   return (
     <footer className="footer">
@@ -23,24 +25,20 @@ export function Footer({
           <div>
             <h3>{t.nav[2]}</h3>
             {t.services.slice(0, 3).map(([title]) => (
-              <a key={title} href="#servicos">
+              <span className="footer-item" key={title}>
                 {title}
-              </a>
+              </span>
             ))}
           </div>
           <div>
             <h3>{t.company}</h3>
-            <a href="#sobre">{t.nav[4]}</a>
-            <a href="#como-funciona">{t.nav[1]}</a>
-            <a href="#brasil">{t.nav[3]}</a>
+            <span className="footer-item">{t.aboutLabel}</span>
+            <span className="footer-item">{t.heroNote}</span>
           </div>
           <div>
             <h3>{t.nav[5]}</h3>
-            <a href="#contato">
+            <button onClick={onContact}>
               {t.ctaPrimary} <ArrowUpRight size={14} />
-            </a>
-            <button onClick={() => onInfo("linkedin")}>
-              LinkedIn <ArrowUpRight size={14} />
             </button>
           </div>
         </div>

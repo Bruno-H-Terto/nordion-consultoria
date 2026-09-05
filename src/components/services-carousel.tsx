@@ -14,16 +14,28 @@ import { ServiceCard } from "./ui";
 import type { Copy } from "../locales";
 const icons = [Building07, Scale01, Coins01, Users01, Globe02, LayersThree01];
 export function ServicesCarousel({ t }: { t: Copy }) {
-  const [ref, api] = useEmblaCarousel({ align: "start", loop: true });
-  const [selected, setSelected] = useState(0);
+  const [ref, api] = useEmblaCarousel({ align: "start", loop: false });
+  const [position, setPosition] = useState({
+    selected: 0,
+    count: 1,
+    previous: false,
+    next: false,
+  });
   const update = useCallback(() => {
-    if (api) setSelected(api.selectedScrollSnap());
+    if (api)
+      setPosition({
+        selected: api.selectedScrollSnap(),
+        count: api.scrollSnapList().length,
+        previous: api.canScrollPrev(),
+        next: api.canScrollNext(),
+      });
   }, [api]);
   useEffect(() => {
     if (!api) return;
-    update();
+    const frame = requestAnimationFrame(update);
     api.on("select", update).on("reInit", update);
     return () => {
+      cancelAnimationFrame(frame);
       api.off("select", update).off("reInit", update);
     };
   }, [api, update]);
@@ -67,27 +79,27 @@ export function ServicesCarousel({ t }: { t: Copy }) {
       </div>
       <div className="carousel-controls">
         <span aria-live="polite">
-          0{selected + 1} <span>/ 06</span>
+          {String(position.selected + 1).padStart(2, "0")}{" "}
+          <span>/ {String(position.count).padStart(2, "0")}</span>
         </span>
-        <div className="carousel-dots">
-          {t.services.map(([title], i) => (
-            <button
-              key={title}
-              aria-label={title}
-              aria-current={selected === i ? "true" : undefined}
-              onClick={() => api?.scrollTo(i, reduced())}
-            />
-          ))}
+        <div className="carousel-track-progress" aria-hidden="true">
+          <span
+            style={{
+              width: `${((position.selected + 1) / position.count) * 100}%`,
+            }}
+          />
         </div>
         <div className="carousel-arrows">
           <button
             aria-label={t.previous}
+            disabled={!position.previous}
             onClick={() => api?.scrollPrev(reduced())}
           >
             <ArrowLeft />
           </button>
           <button
             aria-label={t.next}
+            disabled={!position.next}
             onClick={() => api?.scrollNext(reduced())}
           >
             <ArrowRight />

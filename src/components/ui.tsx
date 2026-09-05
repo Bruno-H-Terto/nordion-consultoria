@@ -3,10 +3,20 @@ import { ArrowUpRight } from "@untitledui/icons";
 import { TextField, Label, Input, TextArea } from "react-aria-components";
 import { twMerge } from "tailwind-merge";
 
-export function Logo({ light = false }: { light?: boolean }) {
+export function Logo({
+  light = false,
+  animated = false,
+}: {
+  light?: boolean;
+  animated?: boolean;
+}) {
   return (
     <a
-      className={twMerge("logo", light && "logo-light")}
+      className={twMerge(
+        "logo",
+        light && "logo-light",
+        animated && "logo-animated",
+      )}
       href="#inicio"
       aria-label="Nordion"
     >
@@ -14,8 +24,9 @@ export function Logo({ light = false }: { light?: boolean }) {
         <path d="M5 29V7h7l12 16V7h7v22h-7L12 13v16H5Z" fill="currentColor" />
         <path d="m24 7 7-5v5h-7Z" fill="#AD6438" />
       </svg>
-      <span>
-        nordion<span className="logo-dot">.</span>
+      <span className={animated ? "logo-word" : undefined} aria-hidden="true">
+        {animated ? "ordion" : "nordion"}
+        <span className="logo-dot">.</span>
       </span>
     </a>
   );
