@@ -64,7 +64,7 @@ export function PeopleBubbles({
               {
                 "--delay": `${index * -1.4}s`,
                 "--star-x": `${50 + Math.sin((index * Math.PI * 2) / 7) * 36}%`,
-                "--star-y": `${47 - Math.cos((index * Math.PI * 2) / 7) * 35}%`,
+                "--star-y": `${50 - Math.cos((index * Math.PI * 2) / 7) * 36}%`,
               } as CSSProperties
             }
           >

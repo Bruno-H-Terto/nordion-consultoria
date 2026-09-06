@@ -540,3 +540,106 @@ main > .photo-section > .section-linework {
     padding: 16px 20px;
   }
 }
+
+.graphic-team .team-section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+.graphic-team .team-section-heading h2 {
+  margin: 0;
+  max-width: 100%;
+}
+.graphic-team .professional-team {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(24px, 3vw, 48px);
+}
+.graphic-team .professional-selector {
+  width: min(100%, 65svh, 470px);
+  margin: 0;
+  padding: 0;
+}
+.graphic-team .professional-float {
+  width: 21%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  animation: none;
+}
+.graphic-team .constellation-logo {
+  top: 40%;
+}
+.graphic-team .professional-card {
+  min-height: 0;
+}
+.graphic-team
+  .professional-card
+  > span:not(.professional-portrait):not(.professional-number) {
+  height: 42px;
+  min-height: 42px;
+  font-size: 11px;
+}
+.graphic-team .professional-detail {
+  max-width: 680px;
+  width: 100%;
+}
+.graphic-team .professional-detail-content {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-rows: auto;
+  min-height: min(65svh, 500px);
+}
+.graphic-team .professional-photo {
+  height: 100%;
+  min-height: min(65svh, 500px);
+}
+.graphic-team .professional-photo img {
+  object-position: 50% 32%;
+}
+.graphic-team .professional-copy {
+  align-self: center;
+  padding: 28px;
+}
+.graphic-team .professional-copy h3 {
+  font-size: clamp(26px, 2.5vw, 36px);
+}
+@media (max-width: 900px) {
+  .graphic-team .professional-team {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .graphic-team .professional-selector {
+    width: min(100%, 34svh, 360px);
+  }
+  .graphic-team .professional-detail-content {
+    min-height: 28svh;
+  }
+  .graphic-team .professional-photo {
+    min-height: 28svh;
+  }
+  .graphic-team .professional-copy {
+    padding: 18px;
+  }
+  .graphic-team
+    .professional-card
+    > span:not(.professional-portrait):not(.professional-number) {
+    font-size: 9px;
+    height: 34px;
+    min-height: 34px;
+  }
+}
+@media (max-width: 480px) {
+  .graphic-team .professional-copy {
+    padding: 12px;
+  }
+  .graphic-team .professional-copy h3 {
+    font-size: 22px;
+  }
+  .graphic-team .professional-copy .eyebrow {
+    font-size: 10px;
+  }
+  .graphic-team .professional-copy p {
+    font-size: 13px;
+  }
+}
