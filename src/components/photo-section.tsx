@@ -1,4 +1,3 @@
-import { ArrowDown } from "@untitledui/icons";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 export function PhotoSection({
   id,
@@ -6,9 +5,6 @@ export function PhotoSection({
   image,
   children,
   priority = false,
-  nextId,
-  nextLabel,
-  continueLabel,
 }: {
   id?: string;
   className?: string;
@@ -75,15 +71,6 @@ export function PhotoSection({
         </svg>
       </div>
       {children}
-      {nextId && (
-        <div className="container chapter-continuation">
-          <a href={`#${nextId}`}>
-            <span>{continueLabel}</span>
-            {nextLabel}
-            <ArrowDown size={18} aria-hidden="true" />
-          </a>
-        </div>
-      )}
     </section>
   );
 }

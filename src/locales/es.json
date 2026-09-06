@@ -279,5 +279,11 @@
     "Conexión con socios e instituciones públicas.",
     "Marca y experiencia del cliente durante la jornada.",
     "Organización de costos y análisis de riesgos financieros."
-  ]
+  ],
+  "whoLabel": "Quiénes somos",
+  "whoTitle": "Inteligencia estratégica. Conexiones humanas.",
+  "whoText": "Somos siete estudiantes de Ciencias Contables que reunieron distintas perspectivas para estructurar una consultoría de entrada y expansión en Brasil. Partimos de comprender cada negocio y conectamos planificación, contexto brasileño y especialistas.",
+  "sectionNavigation": "Navegación entre secciones",
+  "previousSection": "Sección anterior",
+  "nextSection": "Siguiente sección"
 }

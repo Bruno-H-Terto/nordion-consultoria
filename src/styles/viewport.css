@@ -1,0 +1,387 @@
+:root {
+  --chapter-gutter: clamp(24px, 4vw, 64px);
+}
+main > .photo-section {
+  height: 100svh;
+  min-height: 100svh;
+  max-height: 100svh;
+  padding: clamp(28px, 6vh, 64px) 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ad6438 #252d35;
+  scroll-margin: 0;
+}
+main > .photo-section .container {
+  width: calc(100% - var(--chapter-gutter) * 2 - 48px);
+  max-width: 1280px;
+  margin-inline: auto;
+}
+.section-navigation {
+  position: fixed;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 35;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px;
+  border: 1px solid #cdc5bd55;
+  border-radius: 30px;
+  background: #252d35ee;
+  box-shadow: 0 8px 24px #0002;
+}
+.section-navigation a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #f8f3ed;
+}
+.section-navigation a:hover,
+.section-navigation a:focus-visible {
+  background: #ad6438;
+}
+.section-navigation svg {
+  width: 20px;
+  height: 20px;
+}
+main > .hero-section {
+  padding-top: 100px;
+}
+.graphic-hero .hero-grid {
+  min-height: 0;
+  height: 100%;
+  align-content: center;
+}
+.graphic-hero .hero-copy {
+  padding: 0;
+}
+.hero-section .hero-copy h1 {
+  font-size: clamp(32px, min(4.4vw, 6.5vh), 72px);
+}
+.hero-copy > p {
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.7;
+}
+.brand-universe {
+  max-height: 55svh;
+  aspect-ratio: 1;
+}
+.hero-side-note {
+  font-size: 10px;
+}
+.photo-section .section-heading h2,
+.brazil-section h2,
+.cta-section h2,
+.who-layout h2,
+.organization-chart > h2,
+.team-section-heading h2 {
+  font-size: clamp(30px, min(3.6vw, 6vh), 56px);
+  line-height: 1.15;
+}
+.photo-section .section-heading {
+  margin-bottom: 22px;
+}
+.photo-section .section-heading p {
+  font-size: 16px;
+  line-height: 1.65;
+  margin-top: 18px;
+}
+.brazil-grid {
+  gap: 32px;
+}
+.brazil-grid .orbit-scene {
+  height: min(62svh, 560px);
+  min-height: 0;
+}
+.brazil-section .opportunities {
+  margin-top: 22px;
+}
+.graphic-value {
+  padding-inline: var(--chapter-gutter);
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-areas: "value-content value-media";
+  column-gap: 32px;
+}
+main > .graphic-value > .container {
+  width: 100%;
+}
+.business-mosaic {
+  height: min(76svh, 640px);
+  align-self: center;
+}
+.graphic-value .journey {
+  margin-top: 24px;
+  padding-block: 20px;
+}
+.process-section .section-heading {
+  max-width: 900px;
+  margin-inline: auto;
+}
+.process-panel {
+  min-height: 0;
+  padding: 22px 32px;
+  gap: 28px;
+}
+.process-illustration {
+  max-height: 220px;
+}
+.process-tabs button {
+  padding: 16px;
+}
+.process-deliverable {
+  display: none;
+}
+.graphic-services .service-card {
+  min-height: 250px;
+  padding: 24px;
+}
+.graphic-services .card-top {
+  margin-bottom: 20px;
+}
+.graphic-services .service-card h3 {
+  font-size: 21px;
+}
+.graphic-services .service-card p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+.who-layout {
+  gap: 22px 40px;
+}
+.who-story p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.who-layout .purpose-grid p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+.graphic-team .team-section-inner {
+  gap: 20px;
+}
+.graphic-team .professional-selector {
+  width: min(100%, 54svh, 460px);
+}
+.graphic-team .professional-photo {
+  height: min(25svh, 220px);
+}
+.graphic-team .professional-copy {
+  padding: 18px 24px;
+}
+.organization-tier {
+  padding-block: 12px;
+}
+.organization-tier li {
+  padding: 14px;
+}
+.organization-tier span {
+  font-size: 13px;
+}
+.cta-experience .city-loop {
+  max-height: 65svh;
+}
+@media (max-width: 900px) {
+  :root {
+    --chapter-gutter: 20px;
+  }
+  main > .photo-section {
+    padding-block: 32px;
+  }
+  main > .hero-section {
+    padding-top: 90px;
+  }
+  .graphic-hero .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 14px;
+  }
+  .hero-section .hero-copy h1 {
+    font-size: clamp(30px, 4.8vw, 42px);
+  }
+  .hero-copy > p {
+    margin-top: 14px;
+  }
+  .hero-copy .button-row {
+    margin-top: 16px;
+  }
+  .brand-universe {
+    width: min(100%, 26svh);
+    max-height: 26svh;
+    justify-self: center;
+  }
+  .graphic-hero .hero-side-note {
+    display: none;
+  }
+  .graphic-value {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    padding-inline: 0;
+  }
+  main > .graphic-value > .container {
+    width: calc(100% - var(--chapter-gutter) * 2 - 48px);
+  }
+  .business-mosaic {
+    width: calc(100% - var(--chapter-gutter) * 2 - 48px);
+    height: 28svh;
+    min-height: 150px;
+    flex-shrink: 0;
+  }
+  .graphic-team .professional-team {
+    gap: 16px;
+  }
+  .graphic-team .professional-selector {
+    width: min(100%, 30svh);
+  }
+  .graphic-team .professional-detail-content {
+    grid-template-columns: minmax(70px, 0.45fr) minmax(0, 1fr);
+  }
+  .graphic-team .professional-photo {
+    height: auto;
+    min-height: 0;
+  }
+  .graphic-team .professional-copy {
+    padding: 16px;
+  }
+  .graphic-team .professional-copy h3 {
+    font-size: 23px;
+  }
+  .graphic-team .professional-copy p {
+    font-size: 14px;
+  }
+  .organization-tier {
+    gap: 10px;
+    padding-block: 8px;
+  }
+  .organization-tier li {
+    padding: 10px;
+  }
+  .organization-tier span {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+  .organization-chart > p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .who-story p,
+  .who-layout .purpose-grid p {
+    font-size: 14px;
+  }
+  .purpose-grid {
+    gap: 16px;
+  }
+  .section-navigation {
+    right: 6px;
+    padding: 4px;
+  }
+  .section-navigation a {
+    width: 36px;
+    height: 40px;
+  }
+}
+@media (max-height: 550px) {
+  main > .photo-section {
+    justify-content: flex-start;
+  }
+  .brand-universe {
+    display: none;
+  }
+  .graphic-hero .hero-grid {
+    display: block;
+  }
+  .hero-section .hero-copy h1 {
+    font-size: 30px;
+  }
+}
+main > .photo-section > .section-monogram {
+  height: 90%;
+  max-height: 90%;
+  top: 0;
+  bottom: auto;
+}
+main > .photo-section > .section-linework {
+  contain: strict;
+}
+@media (min-width: 901px) and (max-height: 760px) {
+  main > .photo-section:not(.hero-section) {
+    padding-block: 20px;
+  }
+  .graphic-services .split-heading {
+    margin-bottom: 20px;
+  }
+  .graphic-services .partners-note {
+    margin-top: 14px;
+  }
+  .brazil-grid .opportunities > * {
+    padding-block: 12px;
+  }
+}
+@media (max-width: 900px) {
+  .brazil-grid .orbit-scene {
+    height: 24svh;
+    max-height: 24svh;
+    width: 100%;
+  }
+  .brazil-grid {
+    gap: 16px;
+  }
+  .brazil-section .opportunities {
+    margin-top: 16px;
+  }
+  .brazil-section .opportunities > * {
+    padding-block: 10px;
+    font-size: 14px;
+  }
+  .process-panel {
+    gap: 16px;
+    padding: 18px;
+  }
+  .process-illustration {
+    height: 100px;
+    min-height: 0;
+    transform: scale(0.6);
+    transform-origin: center;
+  }
+  .process-panel h3 {
+    font-size: 24px;
+  }
+  .process-panel p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .who-layout {
+    gap: 16px;
+  }
+  .who-story p + p {
+    margin-top: 12px;
+  }
+  .who-layout .purpose-grid article {
+    padding-top: 12px;
+  }
+  .who-layout .purpose-grid p,
+  .who-story p {
+    line-height: 1.55;
+  }
+  .organization-tier {
+    padding-block: 5px;
+    gap: 8px;
+  }
+  .organization-tier li {
+    padding: 8px 10px;
+  }
+  .cta-experience {
+    gap: 16px;
+  }
+  .cta-experience .city-loop {
+    max-height: 25svh;
+  }
+}
+@media (max-width: 900px) {
+  main > .who-section { padding-block: 20px; }
+}

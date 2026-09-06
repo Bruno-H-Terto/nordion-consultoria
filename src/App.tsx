@@ -21,6 +21,7 @@ import {
   Button as AriaButton,
 } from "react-aria-components";
 import { locales, initialLanguage, type Language } from "./locales";
+import { SectionNavigation } from "./components/section-navigation";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { Badge, Button, Heading, Card, FormField } from "./components/ui";
@@ -28,6 +29,7 @@ import { PhotoSection } from "./components/photo-section";
 import { ServicesCarousel } from "./components/services-carousel";
 import { OrbitScene } from "./components/orbit-scene";
 import { PeopleBubbles } from "./components/people-bubbles";
+import { hasWhatsApp, whatsappNumber } from "./config/contact";
 import { OrganizationChart } from "./components/organization-chart";
 import { CityLoop } from "./components/city-loop";
 import { BrandUniverse } from "./components/brand-universe";
@@ -41,6 +43,7 @@ import "./styles/editorial.css";
 import "./styles/graphic.css";
 import "./styles/scenes.css";
 import "./styles/refinements.css";
+import "./styles/viewport.css";
 
 function App() {
   const [language, setLanguage] = useState<Language>(initialLanguage);
@@ -70,6 +73,7 @@ function App() {
       <a className="skip-link" href="#main">
         {t.skip}
       </a>
+      <SectionNavigation t={t} />
       <Header
         t={t}
         language={language}
@@ -213,8 +217,8 @@ function App() {
           </div>
         </PhotoSection>
         <PhotoSection
-          nextId="equipe"
-          nextLabel={t.teamLabel}
+          nextId="quem-somos"
+          nextLabel={t.whoLabel}
           continueLabel={t.continueLabel}
           id="sobre"
           className="about-section surface-ivory graphic-about"
@@ -222,25 +226,40 @@ function App() {
           <div className="container about-experience">
             <div className="about-story">
               <Heading label={t.aboutLabel} title={t.aboutTitle} />
-              <p className="about-text">{t.aboutText}</p>
-              <div className="purpose-grid">
-                <div>
-                  <h3>{t.missionLabel}</h3>
-                  <p>{t.mission}</p>
-                </div>
-                <div>
-                  <h3>{t.visionLabel}</h3>
-                  <p>{t.vision}</p>
-                </div>
-              </div>
               <ValuesExplorer t={t} />
             </div>
           </div>
         </PhotoSection>
 
         <PhotoSection
-          nextId="contato"
-          nextLabel={t.chapters[6]}
+          id="quem-somos"
+          className="who-section"
+          nextId="equipe"
+          nextLabel={t.teamLabel}
+          continueLabel={t.continueLabel}
+        >
+          <div className="container who-layout">
+            <Heading label={t.whoLabel} title={t.whoTitle} />
+            <div className="who-story">
+              <p>{t.aboutText}</p>
+              <p>{t.whoText}</p>
+            </div>
+            <div className="purpose-grid">
+              <article>
+                <h3>{t.missionLabel}</h3>
+                <p>{t.mission}</p>
+              </article>
+              <article>
+                <h3>{t.visionLabel}</h3>
+                <p>{t.vision}</p>
+              </article>
+            </div>
+          </div>
+        </PhotoSection>
+
+        <PhotoSection
+          nextId="organograma"
+          nextLabel={t.orgTitle}
           continueLabel={t.continueLabel}
           id="equipe"
           className="team-section graphic-team"
@@ -251,6 +270,17 @@ function App() {
               <h2>{t.teamTitle}</h2>
             </div>
             <PeopleBubbles t={t} />
+          </div>
+        </PhotoSection>
+
+        <PhotoSection
+          id="organograma"
+          className="organization-section"
+          nextId="contato"
+          nextLabel={t.chapters[6]}
+          continueLabel={t.continueLabel}
+        >
+          <div className="container">
             <OrganizationChart t={t} />
           </div>
         </PhotoSection>
@@ -451,6 +481,16 @@ function App() {
                 >
                   {t.emailAction}: nordinconsultoria@gmail.com
                 </a>
+                {hasWhatsApp && (
+                  <a
+                    className="contact-email"
+                    href={`https://wa.me/${whatsappNumber}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t.whatsappContact}
+                  </a>
+                )}
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();

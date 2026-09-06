@@ -4,7 +4,7 @@ export function OrganizationChart({ t }: { t: Copy }) {
   const members = createTeamMembers(t);
   return (
     <div className="organization-chart" aria-label={t.orgTitle}>
-      <h3>{t.orgTitle}</h3>
+      <h2>{t.orgTitle}</h2>
       <p>{t.orgText}</p>
       {[[0], [1, 2], [6, 3, 4, 5]].map((row, index) => (
         <ul className={`organization-tier tier-${index}`} key={index}>
