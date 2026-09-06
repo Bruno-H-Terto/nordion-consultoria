@@ -223,12 +223,7 @@ function App() {
           id="sobre"
           className="about-section surface-ivory graphic-about"
         >
-          <div className="container about-experience">
-            <div className="about-story">
-              <Heading label={t.aboutLabel} title={t.aboutTitle} />
-              <ValuesExplorer t={t} />
-            </div>
-          </div>
+          <ValuesExplorer t={t} />
         </PhotoSection>
 
         <PhotoSection

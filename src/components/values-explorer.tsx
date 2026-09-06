@@ -73,6 +73,7 @@ export function ValuesExplorer({ t }: { t: Copy }) {
         }
       }}
     >
+      <h2 className="values-section-label">{t.valuesLabel}</h2>
       <div
         className="values-carousel-stage"
         aria-live={paused || reducedMotion ? "polite" : "off"}
