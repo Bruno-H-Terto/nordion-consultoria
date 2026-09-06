@@ -423,3 +423,38 @@ main > .photo-section > .section-linework {
     --control-bottom: max(14px, env(safe-area-inset-bottom));
   }
 }
+
+.graphic-team .professional-card {
+  border-radius: 12px;
+  padding: 5px;
+  width: 100%;
+}
+.graphic-team .professional-card .professional-portrait {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 8px;
+}
+.graphic-team
+  .professional-card
+  > span:not(.professional-portrait):not(.professional-number) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.6em;
+  padding: 5px 1px 0;
+  font-size: clamp(9px, 0.75vw, 11px);
+  line-height: 1.2;
+  overflow-wrap: normal;
+}
+.graphic-team .professional-card .professional-number {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  top: 3px;
+  right: 3px;
+  font-size: 8px;
+  line-height: 1;
+}
