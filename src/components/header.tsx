@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { WhatsAppContact } from "./whatsapp-contact";
-import { hasWhatsApp } from "../config/contact";
 import { Logo } from "./ui";
 import { CountryFlag } from "./country-flag";
 import type { Copy, Language } from "../locales";
@@ -154,8 +152,7 @@ export function Header({
         </Popover>
       </Select>
 
-      {hasWhatsApp && floatingActionsVisible && <WhatsAppContact t={t} />}
-      {!hasWhatsApp && (
+      {floatingActionsVisible && (
         <button
           type="button"
           className={`floating-contact ${floatingActionsVisible ? "is-visible" : ""}`}
@@ -164,18 +161,7 @@ export function Header({
           aria-hidden={!floatingActionsVisible}
           tabIndex={floatingActionsVisible ? 0 : -1}
         >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M7.2 18.3 3.8 20l1.1-3.8A8 8 0 1 1 7.2 18.3Z" />
-            <path d="M8.2 10.1h7.6M8.2 13.6h4.9" />
-          </svg>
+          <img src="/brand/contact.png" width="28" height="28" alt="" />
         </button>
       )}
     </>
