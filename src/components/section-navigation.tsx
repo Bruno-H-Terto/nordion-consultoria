@@ -3,6 +3,7 @@ import { ArrowUp, ArrowDown, Home01 } from "@untitledui/icons";
 import type { Copy } from "../locales";
 export function SectionNavigation({ t }: { t: Copy }) {
   const [active, setActive] = useState(0);
+  const [awake, setAwake] = useState(false);
   const ids = [
     "inicio",
     "brasil",
@@ -41,9 +42,32 @@ export function SectionNavigation({ t }: { t: Copy }) {
       cancelAnimationFrame(frame);
     };
   }, []);
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+    const reveal = () => {
+      setAwake(true);
+      clearTimeout(timeout);
+      timeout = setTimeout(() => setAwake(false), 3000);
+    };
+    const keyboard = (event: KeyboardEvent) => {
+      if (event.key === "Tab") reveal();
+    };
+    window.addEventListener("pointermove", reveal, { passive: true });
+    window.addEventListener("pointerdown", reveal, { passive: true });
+    window.addEventListener("keydown", keyboard);
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("pointermove", reveal);
+      window.removeEventListener("pointerdown", reveal);
+      window.removeEventListener("keydown", keyboard);
+    };
+  }, []);
   if (active <= 0) return null;
   return (
-    <nav className="section-navigation" aria-label={t.sectionNavigation}>
+    <nav
+      className={`section-navigation ${awake ? "is-awake" : ""}`}
+      aria-label={t.sectionNavigation}
+    >
       <a href="#inicio" aria-label={t.nav[0]} title={t.nav[0]}>
         <Home01 size={20} />
       </a>

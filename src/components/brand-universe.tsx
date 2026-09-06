@@ -121,6 +121,17 @@ export function BrandUniverse({ t }: { t: Copy }) {
   return (
     <div className="brand-universe" ref={ref}>
       <div className="universe-halo" aria-hidden="true" />
+      <svg
+        className="orion-signature"
+        viewBox="0 0 100 40"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path d="M18 28 50 20 82 12" />
+        <circle cx="18" cy="28" r="2.5" />
+        <circle cx="50" cy="20" r="3" />
+        <circle cx="82" cy="12" r="2.5" />
+      </svg>
       <div className="universe-rings" aria-hidden="true">
         <i />
         <i />
