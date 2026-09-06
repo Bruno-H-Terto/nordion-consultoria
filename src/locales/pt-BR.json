@@ -39,7 +39,11 @@
   "valueTitle": "Sua empresa conhece o negócio. A Nordion conhece o Brasil.",
   "valueText": "Cruzamos essas duas realidades para desenvolver um planejamento personalizado de entrada e expansão no país.",
   "valueQuote": "Como o Brasil se aplica ao seu negócio?",
-  "journey": ["Sua empresa", "Nordion", "Operação no Brasil"],
+  "journey": [
+    "Sua empresa",
+    "Nordion",
+    "Operação no Brasil"
+  ],
   "processLabel": "CLAREZA EM CADA ETAPA",
   "processTitle": "Um novo mercado. Um caminho claro.",
   "processText": "Compreendemos o negócio, interpretamos o ambiente brasileiro e conectamos os especialistas necessários.",
@@ -100,7 +104,13 @@
   "differenceText": "Em vez de descobrir sozinho quem procurar em cada etapa, você conta com um único ponto de referência durante todo o processo.",
   "traditional": "Modelo tradicional",
   "integrated": "Com a Nordion",
-  "suppliers": ["Jurídico", "Contabilidade", "RH", "Banco", "Consultores"],
+  "suppliers": [
+    "Jurídico",
+    "Contabilidade",
+    "RH",
+    "Banco",
+    "Consultores"
+  ],
   "fragmented": "Diferentes fornecedores, processos separados",
   "coordinated": "Especialistas conectados. Estratégia integrada.",
   "brazilLabel": "UM MERCADO DE POSSIBILIDADES",
@@ -192,12 +202,18 @@
   "peopleIntro": "Explore as conexões que aproximam sua empresa do Brasil.",
   "portraitNote": "Retratos ilustrativos.",
   "people": [
-    ["Visão global", "Sua estratégia de expansão começa com uma conversa."],
+    [
+      "Visão global",
+      "Sua estratégia de expansão começa com uma conversa."
+    ],
     [
       "Contexto local",
       "Transformamos o contexto brasileiro em próximos passos claros."
     ],
-    ["Proximidade", "Acompanhamento humano durante toda a jornada."]
+    [
+      "Proximidade",
+      "Acompanhamento humano durante toda a jornada."
+    ]
   ],
   "processFocus": "CADA ETAPA TEM UM PROPÓSITO",
   "deliverables": [
@@ -260,22 +276,22 @@
   "orgText": "Direção geral, duas diretorias e quatro gerências conectadas para integrar estratégia e execução.",
   "emailAction": "Enviar e-mail",
   "teamRoles": [
-    "CEO — Direção geral",
-    "Diretoria de Inteligência e Estratégia",
-    "Diretoria de Operações e Implantação",
-    "Gerência Jurídico-Regulatória",
-    "Gerência de Relações Institucionais e Parcerias",
-    "Gerência de Marketing e Experiência do Cliente",
-    "Gerência Financeira e de Riscos"
+    "CEO / Diretor-Geral",
+    "Diretor de Inteligência e Estratégia",
+    "Diretor de Operações e Implantação",
+    "Gerente Jurídico-Regulatório",
+    "Gerente de Relações Institucionais e Parcerias",
+    "Gerente de Marketing e Experiência do Cliente",
+    "Gerente Financeiro e de Riscos"
   ],
   "teamBios": [
-    "Direção geral e integração das áreas da Nordion.",
-    "Decisões e dados estratégicos para o planejamento.",
-    "Coordenação da execução e entrega dos projetos.",
-    "Conformidade e identificação de riscos legais.",
-    "Conexão com parceiros e órgãos públicos.",
-    "Marca e experiência do cliente durante a jornada.",
-    "Organização de custos e análise de riscos financeiros."
+    "Conduz a estratégia da Nordion, define prioridades e integra as áreas. Supervisiona resultados, aprova projetos estratégicos e representa a empresa junto a clientes e parceiros.",
+    "Coordena diagnósticos, análises de mercado e estudos de viabilidade. Integra informações do negócio e do ambiente brasileiro para orientar estratégias de entrada e decisões do cliente.",
+    "Transforma o planejamento em planos de ação. Coordena cronogramas, especialistas e entregas, acompanha riscos operacionais e apoia a adaptação inicial do cliente no Brasil.",
+    "Coordena a análise de requisitos legais, documentação e riscos regulatórios. Articula profissionais jurídicos habilitados quando necessário e apoia a viabilidade jurídica das decisões.",
+    "Constrói relacionamentos com instituições, órgãos públicos e parceiros. Identifica oportunidades e facilita a articulação necessária à implantação dos projetos dos clientes.",
+    "Coordena comunicação, posicionamento da marca e experiência do cliente. Acompanha expectativas, satisfação e feedback para aprimorar a jornada e conectar demandas às demais áreas.",
+    "Analisa custos, projeções e viabilidade econômica dos projetos. Avalia riscos financeiros, acompanha orçamentos e contribui com informações para decisões e planos de contingência."
   ],
   "whoLabel": "Quem somos",
   "whoTitle": "Inteligência estratégica. Conexões humanas.",

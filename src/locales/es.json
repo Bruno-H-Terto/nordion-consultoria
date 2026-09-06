@@ -39,7 +39,11 @@
   "valueTitle": "Tu empresa conoce su negocio. Nordion conoce Brasil.",
   "valueText": "Conectamos estas dos realidades para desarrollar un plan personalizado de entrada y expansión en el país.",
   "valueQuote": "¿Cómo se aplica Brasil a tu negocio?",
-  "journey": ["Tu empresa", "Nordion", "Operación en Brasil"],
+  "journey": [
+    "Tu empresa",
+    "Nordion",
+    "Operación en Brasil"
+  ],
   "processLabel": "CLARIDAD EN CADA ETAPA",
   "processTitle": "Un nuevo mercado. Un camino claro.",
   "processText": "Comprendemos el negocio, interpretamos el entorno brasileño y conectamos a los especialistas necesarios.",
@@ -100,7 +104,13 @@
   "differenceText": "En lugar de descubrir por tu cuenta a quién acudir en cada etapa, cuentas con un único punto de referencia durante todo el proceso.",
   "traditional": "Modelo tradicional",
   "integrated": "Con Nordion",
-  "suppliers": ["Jurídico", "Contabilidad", "RR. HH.", "Banco", "Consultores"],
+  "suppliers": [
+    "Jurídico",
+    "Contabilidad",
+    "RR. HH.",
+    "Banco",
+    "Consultores"
+  ],
   "fragmented": "Diferentes proveedores, procesos separados",
   "coordinated": "Especialistas conectados. Estrategia integrada.",
   "brazilLabel": "UN MERCADO DE POSIBILIDADES",
@@ -200,7 +210,10 @@
       "Contexto local",
       "Transformamos el contexto brasileño en próximos pasos claros."
     ],
-    ["Cercanía", "Acompañamiento humano durante todo el recorrido."]
+    [
+      "Cercanía",
+      "Acompañamiento humano durante todo el recorrido."
+    ]
   ],
   "processFocus": "CADA ETAPA TIENE UN PROPÓSITO",
   "deliverables": [
@@ -272,13 +285,13 @@
     "Gerencia Financiera y de Riesgos"
   ],
   "teamBios": [
-    "Dirección general e integración de las áreas de Nordion.",
-    "Decisiones y datos estratégicos para la planificación.",
-    "Coordinación de la ejecución y entrega de proyectos.",
-    "Conformidad e identificación de riesgos legales.",
-    "Conexión con socios e instituciones públicas.",
-    "Marca y experiencia del cliente durante la jornada.",
-    "Organización de costos y análisis de riesgos financieros."
+    "Dirige la estrategia de Nordion, define prioridades e integra las áreas. Supervisa resultados, aprueba proyectos estratégicos y representa a la empresa ante clientes y socios.",
+    "Coordina diagnósticos, análisis de mercado y estudios de viabilidad. Integra información del negocio y del entorno brasileño para orientar estrategias de entrada y decisiones del cliente.",
+    "Transforma la planificación en planes de acción. Coordina cronogramas, especialistas y entregas, supervisa riesgos operativos y acompaña la adaptación inicial del cliente en Brasil.",
+    "Coordina el análisis de requisitos legales, documentación y riesgos regulatorios. Articula profesionales jurídicos habilitados cuando corresponde y apoya la viabilidad jurídica de las decisiones.",
+    "Construye relaciones con instituciones, organismos públicos y socios. Identifica oportunidades y facilita la articulación necesaria para implementar los proyectos de los clientes.",
+    "Coordina comunicación, posicionamiento de marca y experiencia del cliente. Evalúa expectativas, satisfacción y comentarios para mejorar la jornada y compartir necesidades con las demás áreas.",
+    "Analiza costos, proyecciones y viabilidad económica de los proyectos. Evalúa riesgos financieros, supervisa presupuestos y aporta información para decisiones y planes de contingencia."
   ],
   "whoLabel": "Quiénes somos",
   "whoTitle": "Inteligencia estratégica. Conexiones humanas.",

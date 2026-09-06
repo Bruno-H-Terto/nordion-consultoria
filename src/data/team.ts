@@ -11,12 +11,12 @@ export type TeamMember = {
 
 const names = [
   "Camila Delfino",
-  "Faby",
-  "Fernando",
+  "Fabyane Brasil",
+  "Fernando Linhares",
   "Ana Carolina Lage",
-  "Ricardo",
-  "Eliza",
-  "Camilla",
+  "Ricardo Melo",
+  "Eliza Santos",
+  "Camilla Miranda",
 ];
 const photoNames = [
   "camila-d-nortion",

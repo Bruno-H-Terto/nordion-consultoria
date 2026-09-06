@@ -39,7 +39,11 @@
   "valueTitle": "You know your business. Nordion knows Brazil.",
   "valueText": "We connect these two realities to develop a tailored plan for entering and expanding in Brazil.",
   "valueQuote": "How does Brazil apply to your business?",
-  "journey": ["Your company", "Nordion", "Operations in Brazil"],
+  "journey": [
+    "Your company",
+    "Nordion",
+    "Operations in Brazil"
+  ],
   "processLabel": "CLARITY AT EVERY STAGE",
   "processTitle": "A new market. A clear path.",
   "processText": "We understand the business, interpret the Brazilian environment and connect the required specialists.",
@@ -100,7 +104,13 @@
   "differenceText": "Instead of figuring out who to contact at every stage, you have a single point of reference throughout the process.",
   "traditional": "Traditional model",
   "integrated": "With Nordion",
-  "suppliers": ["Legal", "Accounting", "HR", "Banking", "Consultants"],
+  "suppliers": [
+    "Legal",
+    "Accounting",
+    "HR",
+    "Banking",
+    "Consultants"
+  ],
   "fragmented": "Different providers, separate processes",
   "coordinated": "Connected specialists. Integrated strategy.",
   "brazilLabel": "A MARKET OF POSSIBILITIES",
@@ -192,9 +202,18 @@
   "peopleIntro": "Explore the connections that bring your company closer to Brazil.",
   "portraitNote": "Illustrative portraits.",
   "people": [
-    ["Global vision", "Your expansion strategy starts with a conversation."],
-    ["Local context", "We turn the Brazilian context into clear next steps."],
-    ["Close support", "Human guidance throughout your journey."]
+    [
+      "Global vision",
+      "Your expansion strategy starts with a conversation."
+    ],
+    [
+      "Local context",
+      "We turn the Brazilian context into clear next steps."
+    ],
+    [
+      "Close support",
+      "Human guidance throughout your journey."
+    ]
   ],
   "processFocus": "EVERY STAGE HAS A PURPOSE",
   "deliverables": [
@@ -266,13 +285,13 @@
     "Finance and Risk Manager"
   ],
   "teamBios": [
-    "General leadership and integration of Nordion’s disciplines.",
-    "Strategic decisions and data for planning.",
-    "Coordination of project execution and delivery.",
-    "Compliance and identification of legal risks.",
-    "Connections with partners and public institutions.",
-    "Brand and customer experience throughout the journey.",
-    "Cost planning and financial risk analysis."
+    "Leads Nordion’s strategy, sets priorities and connects its disciplines. Oversees results, approves strategic projects and represents the company with clients and partners.",
+    "Coordinates business diagnosis, market analysis and feasibility studies. Integrates business and Brazilian market information to guide entry strategies and client decisions.",
+    "Turns planning into action plans. Coordinates schedules, specialists and deliverables, monitors operational risks and supports the client’s initial adaptation in Brazil.",
+    "Coordinates analysis of legal requirements, documentation and regulatory risks. Engages qualified legal professionals when needed and supports legally viable decisions.",
+    "Builds relationships with institutions, public bodies and partners. Identifies opportunities and facilitates the institutional coordination needed to implement client projects.",
+    "Coordinates communications, brand positioning and customer experience. Tracks expectations, satisfaction and feedback to improve the journey and share client needs across disciplines.",
+    "Analyzes project costs, forecasts and economic feasibility. Assesses financial risks, monitors budgets and provides information for decisions and contingency plans."
   ],
   "whoLabel": "Who we are",
   "whoTitle": "Strategic intelligence. Human connections.",
