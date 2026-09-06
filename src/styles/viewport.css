@@ -492,3 +492,51 @@ main > .photo-section > .section-linework {
     transition: none;
   }
 }
+
+.graphic-team .professional-team {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 32px;
+}
+.graphic-team .professional-detail {
+  max-width: 580px;
+}
+.graphic-team .professional-photo {
+  height: clamp(220px, 38svh, 360px);
+}
+.graphic-team .professional-copy {
+  padding: 22px 28px;
+}
+@media (max-width: 900px) {
+  .graphic-team .professional-team {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .graphic-team .professional-detail {
+    max-width: 580px;
+  }
+  .graphic-team .professional-detail-content {
+    grid-template-columns: minmax(100px, 0.85fr) minmax(0, 1fr);
+  }
+  .graphic-team .professional-photo {
+    height: auto;
+    min-height: 250px;
+  }
+  .graphic-team .professional-copy {
+    padding: 20px;
+  }
+}
+@media (max-width: 540px) {
+  .graphic-team .professional-detail-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .graphic-team .professional-photo {
+    height: 24svh;
+    min-height: 170px;
+  }
+  .graphic-team .professional-selector {
+    width: min(100%, 25svh);
+  }
+  .graphic-team .professional-copy {
+    padding: 16px 20px;
+  }
+}
