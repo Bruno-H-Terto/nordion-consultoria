@@ -383,5 +383,43 @@ main > .photo-section > .section-linework {
   }
 }
 @media (max-width: 900px) {
-  main > .who-section { padding-block: 20px; }
+  main > .who-section {
+    padding-block: 20px;
+  }
+}
+
+:root {
+  --control-right: max(14px, env(safe-area-inset-right));
+  --control-size: 54px;
+  --control-bottom: max(18px, env(safe-area-inset-bottom));
+  --control-gap: 12px;
+}
+.section-navigation,
+.floating-language,
+.floating-contact {
+  right: var(--control-right);
+  width: var(--control-size);
+}
+.section-navigation {
+  align-items: center;
+}
+.floating-language-trigger,
+.floating-contact {
+  width: var(--control-size);
+  height: var(--control-size);
+}
+.floating-contact {
+  bottom: var(--control-bottom);
+}
+.floating-language {
+  bottom: calc(
+    var(--control-bottom) + var(--control-size) + var(--control-gap)
+  );
+}
+@media (max-width: 900px) {
+  :root {
+    --control-right: max(6px, env(safe-area-inset-right));
+    --control-size: 46px;
+    --control-bottom: max(14px, env(safe-area-inset-bottom));
+  }
 }
