@@ -729,4 +729,21 @@ main > .graphic-about {
     display: none;
   }
 }
-main > .photo-section.graphic-about { padding: 0; }
+main > .photo-section.graphic-about {
+  padding: 0;
+  border: 0;
+  background: #252d35;
+}
+.graphic-about > .values-carousel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.graphic-about .values-carousel-stage {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+}
