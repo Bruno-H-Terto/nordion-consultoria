@@ -30,6 +30,13 @@ main > .graphic-value > .business-mosaic {
   left: var(--page-inset);
   right: var(--page-inset);
 }
+
+.process-section.surface-ivory {
+  background:
+    radial-gradient(circle at 80% 35%, #d77b4736, transparent 26%),
+    linear-gradient(135deg, #7d432b 0%, #92502c 50%, #60301e 100%);
+}
+
 @media (max-width: 900px) {
   .section-navigation {
     display: none !important;
