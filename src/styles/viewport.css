@@ -2,51 +2,16 @@
   --chapter-gutter: clamp(24px, 4vw, 64px);
 }
 main > .photo-section {
-  height: 100svh;
+  height: auto;
   min-height: 100svh;
-  max-height: 100svh;
   padding: clamp(28px, 6vh, 64px) 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #ad6438 #252d35;
+  overflow: visible;
   scroll-margin: 0;
 }
 main > .photo-section .container {
   width: calc(100% - var(--chapter-gutter) * 2 - 48px);
   max-width: 1280px;
   margin-inline: auto;
-}
-.section-navigation {
-  position: fixed;
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 35;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 6px;
-  border: 1px solid #cdc5bd55;
-  border-radius: 30px;
-  background: #252d35ee;
-  box-shadow: 0 8px 24px #0002;
-}
-.section-navigation a {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: #f8f3ed;
-}
-.section-navigation a:hover,
-.section-navigation a:focus-visible {
-  background: #ad6438;
-}
-.section-navigation svg {
-  width: 20px;
-  height: 20px;
 }
 main > .hero-section {
   padding-top: 100px;
@@ -276,14 +241,6 @@ main > .graphic-value > .container {
   .purpose-grid {
     gap: 16px;
   }
-  .section-navigation {
-    right: 6px;
-    padding: 4px;
-  }
-  .section-navigation a {
-    width: 36px;
-    height: 40px;
-  }
 }
 @media (max-height: 550px) {
   main > .photo-section {
@@ -387,34 +344,11 @@ main > .photo-section > .section-linework {
     padding-block: 20px;
   }
 }
-
 :root {
   --control-right: max(14px, env(safe-area-inset-right));
   --control-size: 54px;
   --control-bottom: max(18px, env(safe-area-inset-bottom));
   --control-gap: 12px;
-}
-.section-navigation,
-.floating-language,
-.floating-contact {
-  right: var(--control-right);
-  width: var(--control-size);
-}
-.section-navigation {
-  align-items: center;
-}
-.floating-language-trigger,
-.floating-contact {
-  width: var(--control-size);
-  height: var(--control-size);
-}
-.floating-contact {
-  bottom: var(--control-bottom);
-}
-.floating-language {
-  bottom: calc(
-    var(--control-bottom) + var(--control-size) + var(--control-gap)
-  );
 }
 @media (max-width: 900px) {
   :root {
@@ -423,7 +357,6 @@ main > .photo-section > .section-linework {
     --control-bottom: max(14px, env(safe-area-inset-bottom));
   }
 }
-
 .graphic-team .professional-card {
   border-radius: 12px;
   padding: 5px;
@@ -435,9 +368,7 @@ main > .photo-section > .section-linework {
   aspect-ratio: 1;
   border-radius: 8px;
 }
-.graphic-team
-  .professional-card
-  > span:not(.professional-portrait):not(.professional-number) {
+.graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -458,17 +389,6 @@ main > .photo-section > .section-linework {
   font-size: 8px;
   line-height: 1;
 }
-
-.section-navigation {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 240ms ease;
-}
-.section-navigation.is-awake,
-.section-navigation:focus-within {
-  opacity: 1;
-  pointer-events: auto;
-}
 .orion-signature {
   position: absolute;
   width: 24%;
@@ -488,11 +408,7 @@ main > .photo-section > .section-linework {
   filter: drop-shadow(0 0 3px #ad6438);
 }
 @media (prefers-reduced-motion: reduce) {
-  .section-navigation {
-    transition: none;
-  }
 }
-
 .graphic-team .professional-team {
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
   gap: 32px;
@@ -540,7 +456,6 @@ main > .photo-section > .section-linework {
     padding: 16px 20px;
   }
 }
-
 .graphic-team .team-section-heading {
   display: flex;
   flex-direction: column;
@@ -574,9 +489,7 @@ main > .photo-section > .section-linework {
 .graphic-team .professional-card {
   min-height: 0;
 }
-.graphic-team
-  .professional-card
-  > span:not(.professional-portrait):not(.professional-number) {
+.graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number) {
   height: 42px;
   min-height: 42px;
   font-size: 11px;
@@ -621,9 +534,7 @@ main > .photo-section > .section-linework {
   .graphic-team .professional-copy {
     padding: 18px;
   }
-  .graphic-team
-    .professional-card
-    > span:not(.professional-portrait):not(.professional-number) {
+  .graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number) {
     font-size: 9px;
     height: 34px;
     min-height: 34px;
@@ -643,7 +554,6 @@ main > .photo-section > .section-linework {
     font-size: 13px;
   }
 }
-
 main > .graphic-about {
   padding: 0;
   overflow: hidden;
@@ -747,7 +657,6 @@ main > .photo-section.graphic-about {
   max-height: none;
   margin: 0;
 }
-
 .graphic-team .professional-float {
   width: 22%;
 }
@@ -763,12 +672,102 @@ main > .photo-section.graphic-about {
   min-height: 0;
   aspect-ratio: auto;
 }
-.graphic-team
-  .professional-card
-  > span:not(.professional-portrait):not(.professional-number) {
+.graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number) {
   height: 100%;
   min-height: 0;
   padding: 3px 0 0;
   font-size: clamp(8px, 0.7vw, 10px);
   line-height: 1.1;
+}
+
+/* Compact team selector on phones: pure circular portraits, no competing labels. */
+@media (max-width: 480px) {
+  .graphic-team .professional-selector {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-content: center !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    margin-inline: auto !important;
+    padding-block: 4px !important;
+    column-gap: 10px !important;
+    row-gap: 14px !important;
+  }
+
+  .graphic-team .professional-float {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px !important;
+    min-height: 64px !important;
+    flex: 0 0 64px !important;
+  }
+
+  .graphic-team .professional-card {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr !important;
+    place-items: center !important;
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px !important;
+    min-height: 64px !important;
+    padding: 3px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+  }
+
+  .graphic-team .professional-card .professional-portrait {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+  }
+
+  .graphic-team .professional-card .professional-portrait img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: 50% 28% !important;
+    border-radius: 50% !important;
+  }
+
+  .graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number),
+  .graphic-team .professional-card .professional-number {
+    display: none !important;
+  }
+
+  .graphic-team .professional-team {
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .graphic-team .professional-float,
+  .graphic-team .professional-card {
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+    min-height: 58px !important;
+    flex-basis: 58px !important;
+  }
+
+  .graphic-team .professional-selector {
+    column-gap: 9px !important;
+    row-gap: 12px !important;
+  }
 }

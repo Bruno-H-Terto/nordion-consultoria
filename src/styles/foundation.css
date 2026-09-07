@@ -17,131 +17,13 @@
     opacity 0.24s ease;
   will-change: transform;
 }
-
 .header.header-hidden {
   transform: translateY(calc(-100% - 2px));
   opacity: 0;
   pointer-events: none;
 }
-
-.floating-language {
-  position: fixed;
-  right: clamp(23px, 2.6vw, 45px);
-  bottom: max(94px, calc(env(safe-area-inset-bottom) + 90px));
-  z-index: 29;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(14px) scale(0.88);
-  transition:
-    opacity 0.24s ease,
-    visibility 0s linear 0.24s,
-    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.floating-language.is-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0) scale(1);
-  transition-delay: 0s;
-}
-
-.floating-language-trigger {
-  display: grid;
-  place-items: center;
-  width: 54px;
-  height: 54px;
-  padding: 0;
-  border: 1px solid #f8f3ed30;
-  border-radius: 50%;
-  background: #252d35e8;
-  color: #f8f3ed;
-  box-shadow:
-    0 12px 30px #1018203d,
-    0 3px 10px #10182026;
-  backdrop-filter: blur(12px);
-  cursor: pointer;
-  transition:
-    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
-    background 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.floating-language-trigger .country-flag {
-  width: 28px;
-  height: 19px;
-  border-radius: 4px;
-}
-
-.floating-language-trigger:hover {
-  background: #34414d;
-  transform: translateY(-3px) scale(1.03);
-  box-shadow:
-    0 16px 36px #1018204a,
-    0 5px 12px #10182030;
-}
-
-.floating-language-trigger:active {
-  transform: translateY(0) scale(0.97);
-}
-
 .floating-language-popover {
   margin-bottom: 8px;
-}
-
-.floating-contact {
-  position: fixed;
-  right: clamp(20px, 2.6vw, 42px);
-  bottom: max(22px, calc(env(safe-area-inset-bottom) + 18px));
-  z-index: 29;
-  display: grid;
-  place-items: center;
-  width: 60px;
-  height: 60px;
-  padding: 0;
-  border: 1px solid #f8f3ed30;
-  border-radius: 50%;
-  background: var(--color-secondary, #ad6438);
-  color: #fff;
-  box-shadow:
-    0 14px 36px #1018204a,
-    0 4px 12px #1018202e;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(16px) scale(0.88);
-  transition:
-    opacity 0.24s ease,
-    visibility 0s linear 0.24s,
-    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-    background 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.floating-contact.is-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0) scale(1);
-  transition-delay: 0s;
-}
-
-.floating-contact svg {
-  width: 27px;
-  height: 27px;
-}
-
-.floating-contact:hover {
-  background: #884c28;
-  transform: translateY(-3px) scale(1.03);
-  box-shadow:
-    0 18px 42px #10182057,
-    0 6px 14px #10182038;
-}
-
-.floating-contact:active {
-  transform: translateY(0) scale(0.97);
 }
 .navbar {
   height: 90px;
@@ -206,9 +88,7 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 1.5;
-  transition:
-    background 0.25s,
-    transform 0.25s;
+  transition: background 0.25s, transform 0.25s;
 }
 .button:hover {
   background: #884c28;
@@ -236,13 +116,13 @@
 .photo-section {
   position: relative;
   isolation: isolate;
-  min-height: 100vh;
+  height: auto;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 130px 0 80px;
-  overflow: clip;
+  padding: clamp(80px, 12vh, 130px) 0 clamp(20px, 3vh, 80px);
+  overflow: visible;
   background: #252d35;
   color: #f8f3ed;
   border-bottom: 1px solid #cdc5bd30;
@@ -275,9 +155,7 @@
 }
 .photo-section > .container {
   position: relative;
-  transition:
-    opacity 0.85s,
-    translate 0.85s;
+  transition: opacity 0.85s, translate 0.85s;
 }
 .photo-section:not(.is-visible) > .container {
   opacity: 0.08;
@@ -288,8 +166,8 @@
   translate: 0 0;
 }
 .hero-section {
-  padding-top: 135px;
-  padding-bottom: 65px;
+  padding-top: clamp(110px, 16vh, 135px);
+  padding-bottom: clamp(30px, 4vh, 65px);
 }
 .hero-section .section-photo img {
   object-position: 38% 30%;
@@ -297,13 +175,7 @@
 }
 .hero-section .photo-shade {
   background:
-    linear-gradient(
-      90deg,
-      #252d3528 15%,
-      #252d353d 36%,
-      #252d35c7 57%,
-      #252d35f2 100%
-    ),
+    linear-gradient(90deg, #252d3528 15%, #252d353d 36%, #252d35c7 57%, #252d35f2 100%),
     linear-gradient(0deg, #252d35cb, transparent 45%);
 }
 .hero-grid {
@@ -332,7 +204,7 @@
   background: #ad6438;
 }
 .hero-copy h1 {
-  font-size: clamp(46px, 4.5vw, 70px);
+  font-size: clamp(36px, 4.5vw, 70px);
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.055em;
@@ -342,8 +214,8 @@
   color: #e0b08e;
 }
 .hero-copy > p {
-  font-size: 16px;
-  line-height: 1.85;
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.7;
   max-width: 570px;
 }
 .button-row {
@@ -394,7 +266,7 @@
   margin-bottom: 40px;
 }
 .section-heading h2 {
-  font-size: clamp(38px, 3.5vw, 56px);
+  font-size: clamp(32px, 3.5vw, 56px);
   line-height: 1.12;
   font-weight: 400;
 }
@@ -1043,27 +915,6 @@
   background: none;
   padding: 8px;
 }
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 17px;
-}
-.form-field label {
-  font-size: 14px;
-}
-.form-field input,
-.form-field textarea {
-  width: 100%;
-  border: 1px solid #cdc5bd;
-  border-radius: 3px;
-  background: #fff;
-  padding: 12px;
-  font-size: 16px;
-}
-.form-field textarea {
-  resize: vertical;
-}
 .form-note {
   font-size: 12px;
   margin-block: 20px;
@@ -1074,6 +925,7 @@
   padding: 15px;
   margin-top: 16px;
 }
+
 @media (min-width: 1600px) {
   .container {
     width: min(1480px, calc(100% - 160px));
@@ -1082,6 +934,7 @@
     font-size: 76px;
   }
 }
+
 @media (max-width: 1200px) {
   .container {
     width: calc(100% - 72px);
@@ -1136,6 +989,16 @@
     gap: 30px;
   }
 }
+
+/* Evita overflow horizontal */
+
+body {
+    overflow-x: hidden !important;
+  }
+
+main {
+    overflow-x: hidden !important;
+  }
 @media (max-width: 800px) {
   .container {
     width: calc(100% - 48px);
@@ -1306,353 +1169,460 @@
 }
 @media (max-width: 600px) {
   .container {
-    width: calc(100% - 40px);
+    width: calc(100% - 32px);
   }
   .photo-section {
-    padding: 110px 0 60px;
+    padding: clamp(70px, 12vh, 100px) 0 clamp(16px, 2vh, 50px);
     min-height: 100svh;
+    overflow: visible;
   }
   .hero-section {
-    padding-top: 310px;
-    padding-bottom: 65px;
+    padding-top: clamp(70px, 14vh, 90px);
+    padding-bottom: clamp(16px, 2vh, 40px);
   }
   .hero-section .section-photo img {
     object-position: 35% top;
   }
   .hero-section .photo-shade {
-    background: linear-gradient(
-      0deg,
-      #252d35 0%,
-      #252d35eb 35%,
-      #252d35b0 58%,
-      #252d3530 88%
-    );
+    background: linear-gradient(0deg, #252d35 0%, #252d35eb 35%, #252d35b0 58%, #252d3530 88%);
   }
   .hero-grid {
     min-height: 0;
     display: block;
+    height: auto;
   }
   .hero-copy {
     width: 100%;
-    padding: 10px 0 65px;
+    padding: 10px 0 30px;
   }
   .hero-copy h1 {
-    font-size: 45px;
-    margin: 22px 0;
+    font-size: clamp(28px, 8vw, 38px);
+    margin: 14px 0;
     line-height: 1.08;
   }
   .hero-copy > p {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.6;
   }
   .hero-copy .button-row {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 22px;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .hero-copy .button-row .hero-button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: 13px;
   }
   .button {
-    font-size: 14px;
-    padding: 15px 20px;
+    font-size: 13px;
+    padding: 12px 16px;
   }
   .hero-side-note {
-    font-size: 9px;
-    gap: 20px;
-    align-items: center;
-    padding-top: 15px;
-  }
-  .hero-side-note > span:last-child {
-    max-width: 190px;
-    text-align: right;
+    display: none !important;
   }
   .badge {
-    font-size: 8px;
-    letter-spacing: 1.4px;
+    font-size: 7px;
+    letter-spacing: 1px;
   }
   .section-heading h2,
   .brazil-grid .section-heading h2 {
-    font-size: 37px;
+    font-size: clamp(26px, 6vw, 32px);
   }
   .section-heading p,
   .split-heading > p {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.6;
   }
   .eyebrow {
-    font-size: 9px;
-    letter-spacing: 1.7px;
+    font-size: 8px;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
   }
   .section-heading {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
   }
   .split-heading {
-    gap: 23px;
+    gap: 12px;
+    margin-bottom: 20px;
   }
   .four {
-    gap: 12px;
+    gap: 8px;
   }
   .problem-card {
-    min-height: 176px;
-    padding: 22px 16px;
+    min-height: 110px;
+    padding: 14px;
   }
   .problem-card h3 {
-    font-size: 15px;
+    font-size: 13px;
   }
   .problem-card > svg {
-    margin-bottom: 24px;
-  }
-  .small-arrow {
-    right: 15px;
-    top: 17px;
+    margin-bottom: 12px;
   }
   .value-grid {
-    gap: 35px;
+    gap: 16px;
   }
   .value-quote {
-    font-size: 17px;
+    font-size: 14px;
+    padding-left: 12px;
   }
   .journey {
-    padding: 23px 10px;
+    padding: 14px 10px;
+    gap: 6px;
+    flex-direction: column;
+    border-radius: 30px;
+  }
+  .journey-node {
+    flex-direction: row;
     gap: 10px;
+    width: 100%;
+    text-align: left;
+    align-items: center;
   }
   .journey-node > span {
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
   }
   .node-1 > span {
-    width: 61px;
-    height: 61px;
+    width: 46px;
+    height: 46px;
   }
   .journey-node strong {
     font-size: 11px;
   }
   .journey-arrow {
-    width: 14px;
-    right: -12px;
-    top: 20px;
+    display: none;
+  }
+  .value-section .section-photo,
+  .value-section .photo-shade,
+  .business-mosaic {
+    display: none !important;
+  }
+  .value-section .value-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .value-section .container {
+    padding-inline: 12px;
   }
   .timeline {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 10px;
+    margin-top: 16px;
   }
   .timeline-step {
-    padding: 22px 20px 22px 78px;
+    padding: 12px 12px 12px 48px;
+    min-height: 60px;
   }
   .step-number {
     position: absolute;
-    left: 20px;
-    top: 23px;
-    font-size: 29px;
+    left: 10px;
+    top: 12px;
+    font-size: 20px;
+    margin: 0;
   }
   .timeline-step h3 {
-    font-size: 19px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    margin-bottom: 4px;
   }
   .timeline-step p {
-    font-size: 15px;
-  }
-  .process-section .section-photo img {
-    object-position: 60% center;
+    font-size: 12px;
   }
   .carousel-slide {
     flex-basis: 100%;
   }
   .carousel-track {
-    gap: 16px;
+    gap: 10px;
   }
   .service-card {
-    min-height: 340px;
-    padding: 28px;
+    min-height: 240px;
+    padding: 16px;
   }
   .photo-section .service-card h3 {
-    font-size: 24px;
+    font-size: 18px;
   }
   .photo-section .service-card p {
-    font-size: 17px;
-  }
-  .carousel-dots {
-    gap: 4px;
-  }
-  .carousel-dots button {
-    width: 17px;
+    font-size: 14px;
   }
   .carousel-controls {
-    gap: 12px;
-  }
-  .carousel-arrows {
     gap: 8px;
+    margin-top: 14px;
   }
   .carousel-arrows button {
-    width: 44px;
-    height: 44px;
+    width: 34px;
+    height: 34px;
   }
   .carousel-controls > span {
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
   }
   .comparison {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
   .comparison > .card {
-    padding: 24px 17px;
-  }
-  .traditional .supplier-grid {
-    margin-top: 18px;
+    padding: 14px 12px;
   }
   .supplier-grid span {
-    font-size: 11px;
-  }
-  .comparison p {
-    font-size: 12px;
+    font-size: 9px;
+    padding: 4px 6px;
   }
   .brazil-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 0;
   }
   .brazil-grid > div:last-child {
     grid-row: 1;
   }
   .orbit-scene {
-    height: 300px;
+    height: 150px;
+    margin-top: 6px;
   }
   .opportunities li {
-    font-size: 16px;
-    padding: 16px 0;
+    font-size: 13px;
+    padding: 10px 0;
   }
   .audiences .card {
-    padding: 25px 20px;
-    gap: 12px;
-    min-height: 160px;
+    padding: 16px 12px;
+    gap: 10px;
+    min-height: 90px;
   }
   .audiences h3 {
-    font-size: 18px;
-    padding-right: 20px;
-  }
-  .audiences a {
-    right: 10px;
-    top: 10px;
-  }
-  .audiences a svg {
-    width: 18px;
+    font-size: 14px;
   }
   .scenario-box {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 16px;
   }
   .scenario-box p {
-    font-size: 16px;
+    font-size: 13px;
   }
   .scenario-path li {
-    font-size: 16px;
-    padding: 15px;
-  }
-  .scenario-section .section-photo img {
-    object-position: 60% center;
+    font-size: 13px;
+    padding: 10px;
+    gap: 6px;
   }
   .about-text {
-    font-size: 17px;
-  }
-  .about-section .photo-shade {
-    background: #252d35d9;
+    font-size: 14px;
   }
   .values {
-    gap: 9px;
+    gap: 4px;
   }
   .values > span {
-    font-size: 12px;
+    font-size: 10px;
+    padding: 4px 8px;
   }
   .cta-inner h2 {
-    font-size: 47px;
+    font-size: clamp(28px, 8vw, 38px);
   }
   .cta-inner p {
-    font-size: 18px;
+    font-size: 14px;
   }
   .cta-inner .button-row {
     flex-direction: column;
     align-items: stretch;
-    gap: 13px;
-  }
-  .cta-section .photo-shade {
-    background: #252d35d9;
+    gap: 8px;
   }
   .footer {
-    padding-top: 45px;
+    padding-top: 24px;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 30px 20px;
-    padding-bottom: 35px;
+    gap: 16px 12px;
+    padding-bottom: 20px;
   }
   .footer-grid > div:first-child,
   .footer-grid > div:last-child {
     grid-column: 1/-1;
   }
   .footer-grid p {
-    font-size: 14px;
+    font-size: 12px;
   }
   .footer-grid a,
   .footer-grid button {
-    overflow-wrap: anywhere;
+    font-size: 11px;
+    margin-block: 6px;
   }
   .footer-bottom {
     flex-direction: column;
-    gap: 14px;
-    font-size: 11px;
+    gap: 8px;
+    font-size: 9px;
+    padding-block: 12px;
   }
   .footer-bottom > div {
-    gap: 20px;
+    gap: 12px;
   }
   .modal-overlay {
-    padding: 14px;
+    padding: 10px;
   }
   .modal {
-    max-height: calc(100dvh - 28px);
+    max-height: calc(100dvh - 20px);
   }
   .dialog {
-    padding: 30px 22px;
+    padding: 20px 14px;
   }
   .dialog h2 {
-    font-size: 27px;
+    font-size: 20px;
+  }
+  .section-monogram,
+  .section-linework {
+    display: none !important;
+  }
+  /* Ajustes para a seção equipe em mobile */
+  .graphic-team .professional-team {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+  .graphic-team .professional-selector {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-content: center !important;
+    column-gap: 10px !important;
+    row-gap: 14px !important;
+    padding: 6px 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    overflow: visible;
+  }
+  .graphic-team .professional-float {
+    position: relative !important;
+    width: 72px !important;
+    min-width: 64px !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 0 !important;
+    flex: 0 0 auto;
+  }
+  .graphic-team .professional-card {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr !important;
+    place-items: center !important;
+    padding: 3px !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1 / 1 !important;
+    background: #303c45 !important;
+    border: 1px solid #cdc5bd40 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0;
+    overflow: hidden !important;
+  }
+  .graphic-team .professional-card .professional-portrait {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+  }
+  .graphic-team .professional-card .professional-portrait img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number) {
+    display: none !important;
+  }
+  .graphic-team .professional-card .professional-number {
+    display: none !important;
+  }
+  .graphic-team .professional-detail {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .graphic-team .professional-detail-content {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  .graphic-team .professional-photo {
+    height: 140px !important;
+    min-height: 140px !important;
+  }
+  .graphic-team .professional-photo .professional-portrait {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .graphic-team .professional-photo .professional-portrait img {
+    object-fit: cover !important;
+    object-position: 50% 28% !important;
+  }
+  .graphic-team .professional-copy {
+    padding: 12px !important;
+  }
+  .graphic-team .professional-copy h3 {
+    font-size: 16px !important;
+    margin: 4px 0 8px !important;
+  }
+  .graphic-team .professional-copy p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    max-height: 4.5em !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease !important;
+  }
+  .graphic-team .professional-copy p.expanded {
+    max-height: 20em !important;
+  }
+  .graphic-team .read-more-btn {
+    display: inline-block !important;
+    margin-top: 4px !important;
+    font-size: 10px !important;
+    color: #e0b08e !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    text-decoration: underline !important;
+  }
+  .constellation-links,
+  .constellation-logo {
+    display: none !important;
   }
 }
-@media (max-width: 600px) {
-  .floating-language {
-    right: 20px;
-    bottom: max(82px, calc(env(safe-area-inset-bottom) + 78px));
+@media (max-width: 400px) {
+  .graphic-team .professional-float {
+    width: 58px !important;
+    min-width: 50px !important;
   }
-
-  .floating-language-trigger {
-    width: 50px;
-    height: 50px;
+  .graphic-team .professional-card .professional-portrait {
+    width: 100% !important;
+    height: 100% !important;
   }
-
-  .floating-language-trigger .country-flag {
-    width: 26px;
-    height: 17px;
+  .graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number),
+  .graphic-team .professional-card .professional-number {
+    display: none !important;
   }
-
-  .floating-contact {
-    right: 18px;
-    bottom: max(18px, calc(env(safe-area-inset-bottom) + 14px));
-    width: 54px;
-    height: 54px;
+  .hero-copy h1 {
+    font-size: 24px !important;
   }
-
-  .floating-contact svg {
-    width: 24px;
-    height: 24px;
+  .hero-copy > p {
+    font-size: 12px !important;
+  }
+  .button {
+    font-size: 12px !important;
+    padding: 10px 14px !important;
+  }
+  .section-heading h2 {
+    font-size: 22px !important;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
-  .header,
-  .floating-language,
-  .floating-language-trigger,
-  .floating-contact {
+  .header {
     transition: none;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
   .photo-section:not(.is-visible) > .container {
     opacity: 1;
     translate: none;
@@ -1878,8 +1848,8 @@
 }
 @media (max-width: 600px) {
   .chapter-details {
-    width: calc(100% - 40px);
-    margin-top: 25px;
+    width: calc(100% - 32px);
+    margin-top: 12px;
   }
   .chapter-position {
     position: absolute;
@@ -1887,88 +1857,88 @@
     left: 0;
     right: 0;
     background: #252d35e8;
-    height: 32px;
-    padding-inline: 20px;
+    height: 26px;
+    padding-inline: 12px;
     justify-content: space-between;
-    font-size: 10px;
+    font-size: 8px;
     border-top: 1px solid #cdc5bd22;
   }
   .reading-progress {
-    bottom: -33px;
+    bottom: -27px;
   }
   .navbar {
     height: 76px;
   }
   .nav-actions {
-    gap: 9px;
+    gap: 6px;
   }
   .header-contact {
-    font-size: 12px;
-    padding: 10px 12px;
+    font-size: 10px;
+    padding: 6px 10px;
   }
   .photo-section {
-    padding-top: 138px;
+    padding-top: 80px;
   }
   .hero-section {
-    padding-top: 320px;
+    padding-top: 68px;
   }
   .chapter-continuation {
-    margin-top: 30px;
-    padding-top: 15px;
+    margin-top: 16px;
+    padding-top: 10px;
   }
   .chapter-continuation a {
-    font-size: 14px;
-    gap: 12px;
+    font-size: 12px;
+    gap: 8px;
     flex-wrap: wrap;
   }
   .chapter-continuation a > span {
-    font-size: 9px;
+    font-size: 7px;
   }
   .chapter-details summary {
-    padding: 18px;
-    font-size: 14px;
-    line-height: 1.6;
+    padding: 12px 14px;
+    font-size: 12px;
+    line-height: 1.4;
   }
   .disclosure-content {
-    padding: 20px 16px;
+    padding: 14px 10px;
   }
   .detail-inner .split-heading {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 10px;
   }
   .detail-inner .split-heading h3,
   .detail-inner > h3,
   .scenario-box h3 {
-    font-size: 23px;
+    font-size: 18px;
   }
   .disclosure-content .four {
     grid-template-columns: 1fr;
   }
   .disclosure-content .problem-card {
     display: flex;
-    gap: 20px;
+    gap: 12px;
     align-items: center;
-    min-height: 85px;
-    padding: 18px;
+    min-height: 60px;
+    padding: 12px;
   }
   .disclosure-content .problem-card > svg {
     margin: 0;
   }
   .disclosure-content .problem-card h3 {
-    font-size: 16px;
+    font-size: 13px;
   }
   .disclosure-content .scenario-box {
     grid-template-columns: 1fr;
   }
   .disclosure-content .audiences .card {
-    min-height: 120px;
-    padding: 20px 14px;
+    min-height: 80px;
+    padding: 12px 10px;
   }
   .disclosure-content .audiences h3 {
-    font-size: 16px;
+    font-size: 13px;
   }
   .carousel-track-progress {
-    max-width: 110px;
+    max-width: 60px;
   }
 }
 /* Photographic art direction: open compositions and expressive typography. */
@@ -1981,7 +1951,7 @@
   padding-block: 25px 75px;
 }
 .hero-copy h1 {
-  font-size: clamp(64px, 6.3vw, 96px);
+  font-size: clamp(52px, 6.3vw, 96px);
   line-height: 1.04;
   max-width: 1080px;
   font-weight: 400;
@@ -2006,7 +1976,7 @@
   letter-spacing: 2.6px;
 }
 .section-heading h2 {
-  font-size: clamp(44px, 4.1vw, 66px);
+  font-size: clamp(38px, 4.1vw, 66px);
   line-height: 1.09;
 }
 .section-heading p,
@@ -2044,7 +2014,7 @@
   object-position: center 42%;
 }
 .cta-inner h2 {
-  font-size: clamp(52px, 6.1vw, 94px);
+  font-size: clamp(44px, 6.1vw, 94px);
   max-width: 1100px;
 }
 .brazil-section .section-photo img {
@@ -2059,7 +2029,7 @@
   gap: 45px;
 }
 .brazil-grid .section-heading h2 {
-  font-size: clamp(42px, 3.7vw, 60px);
+  font-size: clamp(36px, 3.7vw, 60px);
 }
 .orbit-scene {
   height: 560px;
@@ -2101,7 +2071,7 @@
     width: 92%;
   }
   .hero-copy h1 {
-    font-size: 76px;
+    font-size: 68px;
   }
   .brazil-grid {
     gap: 20px;
@@ -2115,13 +2085,13 @@
     width: 100%;
   }
   .hero-copy h1 {
-    font-size: 64px;
+    font-size: 52px;
   }
   .hero-copy > p {
-    font-size: 17px;
+    font-size: 16px;
   }
   .section-heading h2 {
-    font-size: 46px;
+    font-size: 40px;
   }
   .brazil-grid {
     grid-template-columns: 1fr;
@@ -2133,46 +2103,44 @@
     max-width: 680px;
   }
   .brazil-grid .section-heading h2 {
-    font-size: 46px;
+    font-size: 40px;
   }
   .orbit-scene {
-    height: 400px;
+    height: 320px;
     max-width: 600px;
     width: 100%;
     margin: auto;
   }
   .about-text {
-    font-size: 19px;
+    font-size: 18px;
   }
   .cta-inner h2 {
-    font-size: 64px;
+    font-size: 54px;
   }
 }
 @media (max-width: 600px) {
   .photo-section {
-    padding-top: 110px;
+    padding-top: 70px;
   }
   .hero-section {
-    padding-top: 115px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 24px;
   }
   .hero-copy {
-    padding: 15px 0 85px;
+    padding: 8px 0 20px;
   }
   .hero-copy h1 {
-    font-size: clamp(42px, 12vw, 60px);
-    line-height: 1.075;
-    margin: 24px 0;
+    font-size: clamp(28px, 8vw, 38px);
+    margin: 12px 0;
   }
   .hero-copy > p {
-    font-size: 17px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.6;
   }
   .hero-section .badge {
-    font-size: 9px;
-    letter-spacing: 1.6px;
-    line-height: 1.7;
-    max-width: 300px;
+    font-size: 7px;
+    letter-spacing: 1px;
+    max-width: 200px;
   }
   .hero-section .photo-shade {
     background:
@@ -2184,37 +2152,37 @@
   }
   .section-heading h2,
   .brazil-grid .section-heading h2 {
-    font-size: 40px;
+    font-size: clamp(26px, 6vw, 32px);
   }
   .section-heading p,
   .split-heading > p {
-    font-size: 17px;
+    font-size: 14px;
   }
   .hero-grid {
-    min-height: calc(100svh - 165px);
-  }
-  .hero-side-note {
-    bottom: 0;
+    min-height: auto;
   }
   .brazil-grid {
     gap: 0;
   }
   .orbit-scene {
-    height: 330px;
+    height: 150px;
   }
   .cta-inner h2 {
-    font-size: 49px;
+    font-size: 30px;
   }
   .about-text {
-    font-size: 18px;
+    font-size: 15px;
   }
   .photo-section .service-card h3 {
-    font-size: 25px;
+    font-size: 18px;
   }
   .chapter-details {
-    margin-top: 22px;
+    margin-top: 8px;
   }
   .nav-actions {
-    gap: 12px;
+    gap: 6px;
+  }
+  .hero-side-note {
+    display: none !important;
   }
 }

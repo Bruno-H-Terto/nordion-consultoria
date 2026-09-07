@@ -65,13 +65,19 @@ export function SectionNavigation({ t }: { t: Copy }) {
   if (active <= 0) return null;
   return (
     <nav
-      className={`section-navigation ${awake ? "is-awake" : ""}`}
+      className={`section-navigation fixed right-[var(--control-right)] top-1/2 z-35 flex w-[var(--control-size)] -translate-y-1/2 flex-col items-center gap-1.5 rounded-[30px] border border-[#cdc5bd55] bg-[#252d35ee] p-1.5 shadow-lg transition-opacity duration-200 focus-within:pointer-events-auto focus-within:opacity-100 motion-reduce:transition-none ${awake ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       aria-label={t.sectionNavigation}
     >
-      <a href="#inicio" aria-label={t.nav[0]} title={t.nav[0]}>
+      <a
+        className="grid size-10 shrink-0 place-items-center rounded-full text-[#f8f3ed]! hover:bg-[#ad6438] focus-visible:bg-[#ad6438]"
+        href="#inicio"
+        aria-label={t.nav[0]}
+        title={t.nav[0]}
+      >
         <Home01 size={20} />
       </a>
       <a
+        className="grid size-10 shrink-0 place-items-center rounded-full text-[#f8f3ed]! hover:bg-[#ad6438] focus-visible:bg-[#ad6438]"
         href={`#${ids[active - 1]}`}
         aria-label={t.previousSection}
         title={t.previousSection}
@@ -80,6 +86,7 @@ export function SectionNavigation({ t }: { t: Copy }) {
       </a>
       {active < ids.length - 1 && (
         <a
+          className="grid size-10 shrink-0 place-items-center rounded-full text-[#f8f3ed]! hover:bg-[#ad6438] focus-visible:bg-[#ad6438]"
           href={`#${ids[active + 1]}`}
           aria-label={t.nextSection}
           title={t.nextSection}

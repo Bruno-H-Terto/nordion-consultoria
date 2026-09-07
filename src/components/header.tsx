@@ -31,18 +31,13 @@ export function Header({
 
   useEffect(() => {
     let frame = 0;
-
     const updateHeader = () => {
-      // The navbar is tied to the page position, not the scroll direction.
-      // Once the user leaves the top area it stays hidden until they return.
       setHidden(Math.max(window.scrollY, 0) > 96);
       frame = 0;
     };
-
     const onScroll = () => {
       if (!frame) frame = window.requestAnimationFrame(updateHeader);
     };
-
     updateHeader();
     window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -115,7 +110,7 @@ export function Header({
       </header>
 
       <Select
-        className={`floating-language ${floatingActionsVisible ? "is-visible" : ""}`}
+        className={`floating-language fixed right-[var(--control-right)] bottom-[calc(var(--control-bottom)+var(--control-size)+var(--control-gap))] z-40 w-[var(--control-size)] transition-opacity motion-reduce:transition-none ${floatingActionsVisible ? "visible opacity-100" : "invisible pointer-events-none opacity-0"}`}
         aria-label="Idioma / Language / Idioma"
         selectedKey={language}
         isDisabled={!floatingActionsVisible}
@@ -124,7 +119,7 @@ export function Header({
         }}
       >
         <Button
-          className="floating-language-trigger"
+          className="floating-language-trigger grid size-[var(--control-size)] place-items-center rounded-full border border-[#f8f3ed30] bg-[#252d35e8] p-0 text-[#f8f3ed]! shadow-lg backdrop-blur-md hover:bg-[#34414d] [&_.country-flag]:h-[19px] [&_.country-flag]:w-7"
           aria-hidden={!floatingActionsVisible}
           aria-label={languages.find((item) => item.id === language)?.name}
         >
@@ -155,13 +150,19 @@ export function Header({
       {floatingActionsVisible && (
         <button
           type="button"
-          className={`floating-contact ${floatingActionsVisible ? "is-visible" : ""}`}
+          className="floating-contact fixed right-[var(--control-right)] bottom-[var(--control-bottom)] z-40 grid size-[var(--control-size)] place-items-center rounded-full border border-[#f8f3ed30] bg-[#ad6438] p-0 shadow-lg hover:bg-[#884c28]"
           onClick={onContact}
           aria-label={t.contactShort}
           aria-hidden={!floatingActionsVisible}
           tabIndex={floatingActionsVisible ? 0 : -1}
         >
-          <img src="/brand/contact.png" width="28" height="28" alt="" />
+          <img
+            className="block size-7 object-contain"
+            src="/brand/contact.png"
+            width="28"
+            height="28"
+            alt=""
+          />
         </button>
       )}
     </>

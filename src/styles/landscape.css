@@ -1,0 +1,94 @@
+@reference "tailwindcss";
+
+@media (orientation: landscape) and (max-height: 540px) {
+  :root {
+    --control-size: 44px;
+    --control-right: max(8px, env(safe-area-inset-right));
+    --control-bottom: max(8px, env(safe-area-inset-bottom));
+    --control-gap: 8px;
+  }
+  main > .photo-section {
+    @apply justify-start overflow-y-auto;
+    padding-block: 24px;
+    overscroll-behavior-y: auto;
+  }
+  main > .photo-section > .container {
+    @apply min-w-0 shrink-0;
+    width: calc(100% - 112px);
+  }
+  main > .hero-section {
+    padding-top: 84px;
+  }
+  .graphic-hero .hero-grid {
+    @apply block h-auto;
+  }
+  .graphic-hero .hero-copy {
+    @apply w-full pr-0;
+  }
+  .graphic-hero .hero-copy h1 {
+    font-size: clamp(28px, 4vw, 38px);
+  }
+  .graphic-hero .brand-universe,
+  .hero-side-note {
+    @apply hidden;
+  }
+  .photo-section .section-heading h2 {
+    font-size: 30px;
+  }
+  .brazil-grid,
+  .graphic-team .professional-team,
+  .cta-experience {
+    @apply grid items-center gap-5;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .brazil-grid .orbit-scene {
+    height: 62svh;
+    max-height: 62svh;
+  }
+  .graphic-team .professional-selector {
+    width: min(100%, 230px);
+  }
+  .graphic-team .professional-detail-content {
+    @apply grid;
+    grid-template-columns: minmax(80px, 0.7fr) minmax(0, 1fr);
+    min-height: 240px;
+  }
+  .graphic-team .professional-photo {
+    min-height: 240px;
+  }
+  .graphic-team .professional-copy {
+    @apply p-3;
+  }
+  .graphic-team .professional-copy h3 {
+    font-size: 22px;
+  }
+  .graphic-team .professional-copy p {
+    font-size: 13px;
+  }
+  .process-panel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .process-illustration {
+    @apply hidden;
+  }
+  .dialog {
+    max-height: calc(100dvh - 24px);
+    overflow-y: auto;
+  }
+  main > .photo-section.graphic-about {
+    @apply p-0;
+  }
+  .graphic-about .value-slide {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  .graphic-about .value-slide h3 {
+    font-size: 32px;
+  }
+  .graphic-about .values-section-label {
+    top: 20px;
+  }
+  .graphic-about .value-slide p {
+    font-size: 14px;
+  }
+}

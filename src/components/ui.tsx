@@ -144,9 +144,21 @@ export function FormField({
   type?: "text" | "email";
 }) {
   return (
-    <TextField name={name} type={type} isRequired className="form-field">
-      <Label>{label}</Label>
-      {multiline ? <TextArea rows={4} /> : <Input />}
+    <TextField
+      name={name}
+      type={type}
+      isRequired
+      className="mt-[17px] flex flex-col gap-1.5"
+    >
+      <Label className="text-sm">{label}</Label>
+      {multiline ? (
+        <TextArea
+          className="w-full resize-y rounded-[3px] border border-[#cdc5bd] bg-white p-3 text-base"
+          rows={4}
+        />
+      ) : (
+        <Input className="w-full rounded-[3px] border border-[#cdc5bd] bg-white p-3 text-base" />
+      )}
     </TextField>
   );
 }

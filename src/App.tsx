@@ -29,7 +29,7 @@ import { PhotoSection } from "./components/photo-section";
 import { ServicesCarousel } from "./components/services-carousel";
 import { OrbitScene } from "./components/orbit-scene";
 import { PeopleBubbles } from "./components/people-bubbles";
-import { hasWhatsApp, whatsappNumber } from "./config/contact";
+import { hasWhatsApp, whatsappUrl } from "./config/contact";
 import { OrganizationChart } from "./components/organization-chart";
 import { CityLoop } from "./components/city-loop";
 import { BrandUniverse } from "./components/brand-universe";
@@ -38,12 +38,8 @@ import { JourneyIcon } from "./components/journey-icon";
 import { Typewriter } from "./components/typewriter";
 import { ProcessExplorer } from "./components/process-explorer";
 import { ValuesExplorer } from "./components/values-explorer";
-import "./App.css";
-import "./styles/editorial.css";
-import "./styles/graphic.css";
-import "./styles/scenes.css";
-import "./styles/refinements.css";
-import "./styles/viewport.css";
+
+import "./styles/app.css";
 
 function App() {
   const [language, setLanguage] = useState<Language>(initialLanguage);
@@ -94,7 +90,7 @@ function App() {
               </h1>
               <p>{t.intro}</p>
               <div className="button-row">
-                <a className="button" href="#brasil">
+                <a className="button hero-button" href="#brasil">
                   {t.explore}
                   <ArrowDown size={18} aria-hidden="true" />
                 </a>
@@ -111,14 +107,7 @@ function App() {
             </div>
           </div>
         </PhotoSection>
-        <PhotoSection
-          nextId="abordagem"
-          nextLabel={t.chapters[2]}
-          continueLabel={t.continueLabel}
-          id="brasil"
-          className="brazil-section"
-          image="skyline"
-        >
+        <PhotoSection id="brasil" className="brazil-section" image="skyline">
           <div className="container brazil-grid">
             <OrbitScene />
             <div>
@@ -138,13 +127,7 @@ function App() {
             </div>
           </div>
         </PhotoSection>
-        <PhotoSection
-          nextId="como-funciona"
-          nextLabel={t.chapters[3]}
-          continueLabel={t.continueLabel}
-          id="abordagem"
-          className="value-section graphic-value"
-        >
+        <PhotoSection id="abordagem" className="value-section graphic-value">
           <div className="container value-grid">
             <div>
               <Heading
@@ -179,9 +162,6 @@ function App() {
           <BusinessMosaic t={t} />
         </PhotoSection>
         <PhotoSection
-          nextId="servicos"
-          nextLabel={t.chapters[4]}
-          continueLabel={t.continueLabel}
           id="como-funciona"
           className="process-section surface-ivory"
         >
@@ -196,9 +176,6 @@ function App() {
           </div>
         </PhotoSection>
         <PhotoSection
-          nextId="sobre"
-          nextLabel={t.chapters[5]}
-          continueLabel={t.continueLabel}
           id="servicos"
           className="services-section graphic-services"
         >
@@ -215,22 +192,13 @@ function App() {
           </div>
         </PhotoSection>
         <PhotoSection
-          nextId="quem-somos"
-          nextLabel={t.whoLabel}
-          continueLabel={t.continueLabel}
           id="sobre"
           className="about-section surface-ivory graphic-about"
         >
           <ValuesExplorer t={t} />
         </PhotoSection>
 
-        <PhotoSection
-          id="quem-somos"
-          className="who-section"
-          nextId="equipe"
-          nextLabel={t.teamLabel}
-          continueLabel={t.continueLabel}
-        >
+        <PhotoSection id="quem-somos" className="who-section">
           <div className="container who-layout">
             <Heading label={t.whoLabel} title={t.whoTitle} />
             <div className="who-story">
@@ -250,13 +218,7 @@ function App() {
           </div>
         </PhotoSection>
 
-        <PhotoSection
-          nextId="organograma"
-          nextLabel={t.orgTitle}
-          continueLabel={t.continueLabel}
-          id="equipe"
-          className="team-section graphic-team"
-        >
+        <PhotoSection id="equipe" className="team-section graphic-team">
           <div className="container team-section-inner">
             <div className="team-section-heading">
               <span className="eyebrow">{t.teamLabel}</span>
@@ -266,25 +228,13 @@ function App() {
           </div>
         </PhotoSection>
 
-        <PhotoSection
-          id="organograma"
-          className="organization-section"
-          nextId="contato"
-          nextLabel={t.chapters[6]}
-          continueLabel={t.continueLabel}
-        >
+        <PhotoSection id="organograma" className="organization-section">
           <div className="container">
             <OrganizationChart t={t} />
           </div>
         </PhotoSection>
 
-        <PhotoSection
-          id="contato"
-          className="cta-section graphic-cta"
-          nextId="faq"
-          nextLabel={t.faqTitle}
-          continueLabel={t.continueLabel}
-        >
+        <PhotoSection id="contato" className="cta-section graphic-cta">
           <div className="container cta-experience">
             <div className="cta-copy">
               <span className="eyebrow">{t.ctaLabel}</span>
@@ -474,67 +424,32 @@ function App() {
                 >
                   {t.emailAction}: nordinconsultoria@gmail.com
                 </a>
-                {hasWhatsApp && (
-                  <a
-                    className="contact-email"
-                    href={`https://wa.me/${whatsappNumber}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {t.whatsappContact}
-                  </a>
-                )}
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
-
                     const data = new FormData(e.currentTarget);
-                    const phone = String(whatsappNumber ?? "").replace(/\D/g, "");
-
-                    if (!phone) {
-                      window.alert("WhatsApp contact number is not configured.");
-                      return;
-                    }
-
+                    const name = String(data.get("name") ?? "").trim();
+                    const email = String(data.get("email") ?? "").trim();
+                    const business = String(data.get("business") ?? "").trim();
                     const message = [
                       `*${t.contactTitle}*`,
                       "",
-                      `${t.name}: ${String(data.get("name") ?? "").trim()}`,
-                      `${t.email}: ${String(data.get("email") ?? "").trim()}`,
-                      `${t.business}: ${String(data.get("business") ?? "").trim()}`,
-                      "",
-                      `${t.message}:`,
-                      String(data.get("message") ?? "").trim(),
+                      `${t.name}: ${name}`,
+                      `${t.email}: ${email}`,
+                      `${t.business}: ${business}`,
                     ].join("\n");
-
-                    const whatsappForm = document.createElement("form");
-                    whatsappForm.method = "GET";
-                    whatsappForm.action = "https://web.whatsapp.com/send";
-                    whatsappForm.target = "_blank";
-                    whatsappForm.style.display = "none";
-
-                    const phoneField = document.createElement("input");
-                    phoneField.type = "hidden";
-                    phoneField.name = "phone";
-                    phoneField.value = phone;
-
-                    const textField = document.createElement("input");
-                    textField.type = "hidden";
-                    textField.name = "text";
-                    textField.value = message;
-
-                    whatsappForm.append(phoneField, textField);
-                    document.body.appendChild(whatsappForm);
-                    whatsappForm.submit();
-                    whatsappForm.remove();
+                    const url = whatsappUrl(message);
+                    window.location.assign(
+                      url ??
+                        `mailto:nordinconsultoria@gmail.com?subject=${encodeURIComponent(t.contactTitle)}&body=${encodeURIComponent(message)}`,
+                    );
                   }}
                 >
                   <FormField name="name" label={t.name} />
                   <FormField name="email" label={t.email} type="email" />
                   <FormField name="business" label={t.business} />
-                  <FormField name="message" label={t.message} multiline />
                   <button className="button my-6 w-full" type="submit">
-                    {t.send}
+                    {hasWhatsApp ? t.whatsappContact : t.emailAction}
                     <ArrowUpRight size={18} />
                   </button>
                 </form>
