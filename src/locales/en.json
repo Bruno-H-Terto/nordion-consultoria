@@ -172,7 +172,7 @@
   "email": "Business email",
   "business": "Company and home country",
   "message": "How can we help?",
-  "send": "Download overview",
+  "send": "Send message",
   "contactNote": "Download your overview or contact us by email. The form does not send data automatically.",
   "success": "Overview generated for download. Your data stays on your device.",
   "privacyText": "This portfolio project does not send form data to servers. The overview is generated locally and your language preference is stored in this browser.",

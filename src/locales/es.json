@@ -172,7 +172,7 @@
   "email": "Correo profesional",
   "business": "Empresa y país de origen",
   "message": "¿Cómo podemos ayudarte?",
-  "send": "Descargar resumen",
+  "send": "Enviar mensaje",
   "contactNote": "Descarga tu resumen o contáctanos por correo. El formulario no envía datos automáticamente.",
   "success": "Resumen generado para descargar. Tus datos permanecen en tu dispositivo.",
   "privacyText": "Este proyecto de portafolio no envía datos del formulario a servidores. El resumen se genera localmente y la preferencia de idioma se almacena en este navegador.",

@@ -50,10 +50,8 @@ function App() {
   const [modal, setModal] = useState<"contact" | "privacy" | "terms" | null>(
     null,
   );
-  const [prepared, setPrepared] = useState(false);
   const t = locales[language];
   const openContact = () => {
-    setPrepared(false);
     setModal("contact");
   };
   useEffect(() => {
@@ -489,40 +487,56 @@ function App() {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
+
                     const data = new FormData(e.currentTarget);
-                    const summary = [
-                      [t.name, "name"],
-                      [t.email, "email"],
-                      [t.business, "business"],
-                      [t.message, "message"],
-                    ]
-                      .map(([label, key]) => `${label}: ${data.get(key) ?? ""}`)
-                      .join("\n\n");
-                    const url = URL.createObjectURL(
-                      new Blob([summary], { type: "text/plain;charset=utf-8" }),
-                    );
-                    const link = document.createElement("a");
-                    link.href = url;
-                    link.download = "nordion-briefing.txt";
-                    link.click();
-                    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-                    setPrepared(true);
+                    const phone = String(whatsappNumber ?? "").replace(/\D/g, "");
+
+                    if (!phone) {
+                      window.alert("WhatsApp contact number is not configured.");
+                      return;
+                    }
+
+                    const message = [
+                      `*${t.contactTitle}*`,
+                      "",
+                      `${t.name}: ${String(data.get("name") ?? "").trim()}`,
+                      `${t.email}: ${String(data.get("email") ?? "").trim()}`,
+                      `${t.business}: ${String(data.get("business") ?? "").trim()}`,
+                      "",
+                      `${t.message}:`,
+                      String(data.get("message") ?? "").trim(),
+                    ].join("\n");
+
+                    const whatsappForm = document.createElement("form");
+                    whatsappForm.method = "GET";
+                    whatsappForm.action = "https://web.whatsapp.com/send";
+                    whatsappForm.target = "_blank";
+                    whatsappForm.style.display = "none";
+
+                    const phoneField = document.createElement("input");
+                    phoneField.type = "hidden";
+                    phoneField.name = "phone";
+                    phoneField.value = phone;
+
+                    const textField = document.createElement("input");
+                    textField.type = "hidden";
+                    textField.name = "text";
+                    textField.value = message;
+
+                    whatsappForm.append(phoneField, textField);
+                    document.body.appendChild(whatsappForm);
+                    whatsappForm.submit();
+                    whatsappForm.remove();
                   }}
                 >
                   <FormField name="name" label={t.name} />
                   <FormField name="email" label={t.email} type="email" />
                   <FormField name="business" label={t.business} />
                   <FormField name="message" label={t.message} multiline />
-                  <p className="form-note">{t.contactNote}</p>
-                  <button className="button" type="submit">
+                  <button className="button my-6 w-full" type="submit">
                     {t.send}
                     <ArrowUpRight size={18} />
                   </button>
-                  {prepared && (
-                    <p role="status" className="success-message">
-                      {t.success}
-                    </p>
-                  )}
                 </form>
               </>
             ) : (

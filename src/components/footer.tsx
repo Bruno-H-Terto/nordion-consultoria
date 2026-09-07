@@ -4,10 +4,10 @@ import { Logo } from "./ui";
 
 import type { Copy } from "../locales";
 
-export const instagramLink =
+const instagramLink =
   import.meta.env.VITE_INSTAGRAM ?? "https://www.instagram.com/nordionconsultoria/";
 
-export const linkedinLink =
+const linkedinLink =
   import.meta.env.VITE_LINKEDIN ?? "https://www.linkedin.com/in/nordion-consultoria/";
 
 export function Footer({
