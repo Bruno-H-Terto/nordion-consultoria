@@ -11,9 +11,6 @@ export function PhotoSection({
   image?: string;
   children: ReactNode;
   priority?: boolean;
-  nextId?: string;
-  nextLabel?: string;
-  continueLabel?: string;
 }) {
   const ref = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
