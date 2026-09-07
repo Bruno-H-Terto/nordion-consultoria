@@ -1472,93 +1472,6 @@ main {
     display: none !important;
   }
   /* Ajustes para a seção equipe em mobile */
-  .graphic-team .professional-team {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: auto;
-  }
-  .graphic-team .professional-selector {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    align-content: center !important;
-    column-gap: 10px !important;
-    row-gap: 14px !important;
-    padding: 6px 0 !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-    aspect-ratio: auto !important;
-    overflow: visible;
-  }
-  .graphic-team .professional-float {
-    position: relative !important;
-    width: 72px !important;
-    min-width: 64px !important;
-    left: auto !important;
-    top: auto !important;
-    margin: 0 !important;
-    flex: 0 0 auto;
-  }
-  .graphic-team .professional-card {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    grid-template-rows: 1fr !important;
-    place-items: center !important;
-    padding: 3px !important;
-    border-radius: 50% !important;
-    aspect-ratio: 1 / 1 !important;
-    background: #303c45 !important;
-    border: 1px solid #cdc5bd40 !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 0;
-    overflow: hidden !important;
-  }
-  .graphic-team .professional-card .professional-portrait {
-    width: 100% !important;
-    height: 100% !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 50% !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-  }
-  .graphic-team .professional-card .professional-portrait img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-  }
-  .graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number) {
-    display: none !important;
-  }
-  .graphic-team .professional-card .professional-number {
-    display: none !important;
-  }
-  .graphic-team .professional-detail {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  .graphic-team .professional-detail-content {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 0 !important;
-  }
-  .graphic-team .professional-photo {
-    height: 140px !important;
-    min-height: 140px !important;
-  }
-  .graphic-team .professional-photo .professional-portrait {
-    width: 100% !important;
-    height: 100% !important;
-  }
-  .graphic-team .professional-photo .professional-portrait img {
-    object-fit: cover !important;
-    object-position: 50% 28% !important;
-  }
   .graphic-team .professional-copy {
     padding: 12px !important;
   }
@@ -1593,18 +1506,6 @@ main {
   }
 }
 @media (max-width: 400px) {
-  .graphic-team .professional-float {
-    width: 58px !important;
-    min-width: 50px !important;
-  }
-  .graphic-team .professional-card .professional-portrait {
-    width: 100% !important;
-    height: 100% !important;
-  }
-  .graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number),
-  .graphic-team .professional-card .professional-number {
-    display: none !important;
-  }
   .hero-copy h1 {
     font-size: 24px !important;
   }

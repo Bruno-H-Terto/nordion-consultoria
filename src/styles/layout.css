@@ -1,0 +1,50 @@
+@reference "tailwindcss";
+
+:root {
+  --page-gutter: clamp(44px, 5vw, 88px);
+  --page-inset: max(var(--page-gutter), calc((100% - 1280px) / 2));
+}
+main > .photo-section .container,
+.header .container,
+.footer .container {
+  width: calc(100% - 2 * var(--page-gutter));
+  max-width: 1280px;
+  margin-inline: auto;
+  min-width: 0;
+}
+main > .graphic-value {
+  padding-inline: var(--page-inset);
+}
+main > .graphic-value > .container,
+main > .graphic-value > .business-mosaic {
+  width: 100%;
+  min-width: 0;
+}
+.graphic-about .value-slide {
+  padding-inline: var(--page-inset);
+}
+.graphic-about .values-section-label {
+  left: var(--page-inset);
+}
+.graphic-about .values-carousel-footer {
+  left: var(--page-inset);
+  right: var(--page-inset);
+}
+@media (max-width: 900px) {
+  .photo-section .eyebrow::before {
+    content: none;
+    display: none;
+  }
+  .photo-section .eyebrow {
+    gap: 0;
+  }
+}
+@media (orientation: landscape) and (max-height: 540px) {
+  :root {
+    --page-gutter: max(
+      56px,
+      env(safe-area-inset-left),
+      env(safe-area-inset-right)
+    );
+  }
+}

@@ -172,22 +172,6 @@
     transition: none;
   }
 }
-
-.professional-team {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: clamp(28px, 4vw, 60px);
-  align-items: center;
-  padding: 24px 0 40px;
-}
-.professional-selector {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px 18px;
-  padding: 16px;
-  isolation: isolate;
-}
 .professional-orbit {
   position: absolute;
   inset: 5% -3%;
@@ -196,54 +180,12 @@
   transform: rotate(-18deg);
   z-index: -1;
 }
-.professional-float {
-  animation: professional-drift 9s ease-in-out infinite;
-  animation-delay: var(--delay);
-}
-.professional-float:last-child {
-  grid-column: 2;
-}
-.professional-float:has(button:hover),
-.professional-float:focus-within {
-  animation-play-state: paused;
-}
-.professional-card {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  padding: 6px 6px 12px;
-  border: 1px solid #cdc5bd40;
-  border-radius: 18px;
-  background: #303c45;
-  color: #f8f3ed;
-  text-align: left;
-  transition:
-    border-color 0.25s,
-    box-shadow 0.25s;
-}
-.professional-card[aria-pressed="true"] {
-  border-color: #d5a17a;
-  box-shadow: 0 0 0 3px #ad643820;
-}
-.professional-card:hover {
-  border-color: #d5a17a;
-}
-.professional-card > span:not(.professional-portrait) {
-  display: block;
-  padding: 9px 6px 0;
-  font-size: 12px;
-}
 .professional-portrait {
   display: block;
   width: 100%;
   height: 100%;
   overflow: hidden;
   background: linear-gradient(145deg, #6b777b, #35434c);
-}
-.professional-card .professional-portrait {
-  aspect-ratio: 1.25;
-  height: auto;
-  border-radius: 12px;
 }
 .professional-portrait img {
   width: 100%;
@@ -255,28 +197,6 @@
   width: 100%;
   height: 100%;
   fill: #cdc5bd70;
-}
-.professional-card .professional-number {
-  position: absolute;
-  right: 12px;
-  top: 7px;
-  color: #f8f3ed;
-  font-size: 10px;
-}
-.professional-detail {
-  overflow: hidden;
-  border: 1px solid #cdc5bd35;
-  border-radius: 24px;
-  background: #303c45;
-}
-.professional-detail-content {
-  animation: professional-reveal 0.3s ease-out;
-}
-.professional-photo {
-  height: clamp(240px, 24vw, 350px);
-}
-.professional-photo .professional-portrait {
-  background: linear-gradient(135deg, #5d6266, #252d35);
 }
 .professional-copy {
   padding: 28px;
@@ -308,33 +228,13 @@
   }
 }
 @media (max-width: 900px) {
-  .professional-team {
-    grid-template-columns: 1fr;
-  }
-  .professional-selector {
-    max-width: 640px;
-    width: 100%;
-    margin: auto;
-  }
 }
 @media (max-width: 600px) {
-  .professional-selector {
-    gap: 16px 10px;
-    padding: 8px 0;
-  }
-  .professional-card > span:not(.professional-portrait) {
-    font-size: 10px;
-    padding-inline: 2px;
-  }
   .professional-copy {
     padding: 24px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .professional-float,
-  .professional-detail-content {
-    animation: none;
-  }
 }
 
 /* Do not swap between two different map projections during WebGL startup. */
@@ -353,12 +253,6 @@
 }
 
 /* Seven selectable stars, with the supplied brand symbol at the center. */
-.professional-selector {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1;
-  padding: 0;
-}
 .constellation-links {
   position: absolute;
   inset: 0;
@@ -390,35 +284,6 @@
   top: -50%;
   object-fit: contain;
   mix-blend-mode: screen;
-}
-.professional-float {
-  position: absolute;
-  width: 20%;
-  left: var(--star-x);
-  top: var(--star-y);
-  margin-left: -10%;
-  margin-top: -10%;
-}
-.professional-card {
-  border-radius: 50% 50% 14px 14px;
-  padding: 4px 4px 10px;
-}
-.professional-card .professional-portrait {
-  border-radius: 50%;
-  aspect-ratio: 1;
-}
-.professional-card > span:not(.professional-portrait) {
-  text-align: center;
-  font-size: 10px;
-  padding: 7px 1px 0;
-}
-.professional-card .professional-number {
-  right: 5px;
-  top: 1px;
-  background: #252d35;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
 }
 
 .hero-slideshow {
@@ -552,9 +417,6 @@
   .graphic-hero .hero-copy {
     margin-bottom: 380px;
   }
-  .professional-selector {
-    max-width: 580px;
-  }
 }
 @media (max-width: 600px) {
   .hero-slideshow {
@@ -569,14 +431,6 @@
   .hero-image-controls {
     left: 18px;
     bottom: 18px;
-  }
-  .professional-card > span:not(.professional-portrait) {
-    font-size: 8px;
-  }
-  .professional-card .professional-number {
-    width: 19px;
-    height: 19px;
-    font-size: 8px;
   }
   .faq-item summary {
     font-size: 18px;

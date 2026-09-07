@@ -36,7 +36,6 @@
     font-size: 30px;
   }
   .brazil-grid,
-  .graphic-team .professional-team,
   .cta-experience {
     @apply grid items-center gap-5;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -44,17 +43,6 @@
   .brazil-grid .orbit-scene {
     height: 62svh;
     max-height: 62svh;
-  }
-  .graphic-team .professional-selector {
-    width: min(100%, 230px);
-  }
-  .graphic-team .professional-detail-content {
-    @apply grid;
-    grid-template-columns: minmax(80px, 0.7fr) minmax(0, 1fr);
-    min-height: 240px;
-  }
-  .graphic-team .professional-photo {
-    min-height: 240px;
   }
   .graphic-team .professional-copy {
     @apply p-3;
@@ -90,5 +78,26 @@
   }
   .graphic-about .value-slide p {
     font-size: 14px;
+  }
+}
+
+/* Contain transformed decoration and iOS horizontal rubber-banding. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+main {
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+.photo-section {
+  overscroll-behavior-x: none;
+}
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
   }
 }

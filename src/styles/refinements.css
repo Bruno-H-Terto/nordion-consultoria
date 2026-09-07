@@ -462,17 +462,6 @@ main > .photo-section {
   flex-direction: column;
   gap: 32px;
 }
-.graphic-team .professional-selector {
-  width: min(100%, 490px);
-}
-.graphic-team .professional-team {
-  height: auto;
-  max-height: none;
-}
-.graphic-team .professional-detail {
-  max-height: none;
-  height: auto;
-}
 .organization-chart {
   width: 100%;
   text-align: center;
@@ -586,9 +575,6 @@ main > .photo-section {
   .hero-section .hero-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-  .graphic-team .professional-selector {
-    width: min(100%, 420px);
-  }
   .organization-tier {
     flex-wrap: wrap;
   }
@@ -606,9 +592,6 @@ main > .photo-section {
   }
   .hero-copy h1 {
     font-size: 38px;
-  }
-  .graphic-team .professional-detail {
-    grid-template-columns: minmax(0, 1fr);
   }
   .graphic-team .professional-copy {
     padding: 18px;
@@ -708,34 +691,6 @@ main > .photo-section {
 .graphic-team .team-section-heading .eyebrow {
   justify-content: center;
 }
-.graphic-team .professional-team {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-rows: auto;
-  align-items: center;
-  gap: 48px;
-}
-.graphic-team .professional-selector {
-  height: auto;
-  width: min(100%, 460px);
-  aspect-ratio: 1;
-  justify-self: center;
-}
-.graphic-team .professional-detail {
-  height: auto;
-  width: 100%;
-  max-width: 480px;
-  justify-self: center;
-}
-.graphic-team .professional-detail-content {
-  display: grid;
-  height: auto;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-}
-.graphic-team .professional-photo {
-  height: clamp(160px, 19vw, 240px);
-}
 .graphic-team .professional-copy {
   min-height: 0;
   padding: 24px;
@@ -761,34 +716,11 @@ main > .photo-section {
     grid-template-columns: minmax(0, 1fr);
     gap: 28px;
   }
-  .graphic-team .professional-team {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto auto;
-    gap: 28px;
-  }
-  .graphic-team .professional-detail-content {
-    grid-template-columns: minmax(100px, 0.7fr) minmax(0, 1fr);
-    grid-template-rows: auto;
-  }
-  .graphic-team .professional-photo {
-    height: auto;
-    min-height: 220px;
-  }
   .organization-tier:not(.tier-0)::after {
     display: none;
   }
 }
 @media (max-width: 540px) {
-  .graphic-team .professional-detail-content {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .graphic-team .professional-photo {
-    height: 180px;
-    min-height: 0;
-  }
-  .graphic-team .professional-selector {
-    width: 100%;
-  }
   .organization-tier {
     flex-direction: column;
     padding-left: 20px;

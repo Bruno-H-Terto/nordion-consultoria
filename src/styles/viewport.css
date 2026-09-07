@@ -128,12 +128,6 @@ main > .graphic-value > .container {
 .graphic-team .team-section-inner {
   gap: 20px;
 }
-.graphic-team .professional-selector {
-  width: min(100%, 54svh, 460px);
-}
-.graphic-team .professional-photo {
-  height: min(25svh, 220px);
-}
 .graphic-team .professional-copy {
   padding: 18px 24px;
 }
@@ -196,19 +190,6 @@ main > .graphic-value > .container {
     height: 28svh;
     min-height: 150px;
     flex-shrink: 0;
-  }
-  .graphic-team .professional-team {
-    gap: 16px;
-  }
-  .graphic-team .professional-selector {
-    width: min(100%, 30svh);
-  }
-  .graphic-team .professional-detail-content {
-    grid-template-columns: minmax(70px, 0.45fr) minmax(0, 1fr);
-  }
-  .graphic-team .professional-photo {
-    height: auto;
-    min-height: 0;
   }
   .graphic-team .professional-copy {
     padding: 16px;
@@ -357,38 +338,6 @@ main > .photo-section > .section-linework {
     --control-bottom: max(14px, env(safe-area-inset-bottom));
   }
 }
-.graphic-team .professional-card {
-  border-radius: 12px;
-  padding: 5px;
-  width: 100%;
-}
-.graphic-team .professional-card .professional-portrait {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
-  border-radius: 8px;
-}
-.graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 3.6em;
-  padding: 5px 1px 0;
-  font-size: clamp(9px, 0.75vw, 11px);
-  line-height: 1.2;
-  overflow-wrap: normal;
-}
-.graphic-team .professional-card .professional-number {
-  display: grid;
-  place-items: center;
-  width: 18px;
-  height: 18px;
-  padding: 0;
-  top: 3px;
-  right: 3px;
-  font-size: 8px;
-  line-height: 1;
-}
 .orion-signature {
   position: absolute;
   width: 24%;
@@ -409,49 +358,15 @@ main > .photo-section > .section-linework {
 }
 @media (prefers-reduced-motion: reduce) {
 }
-.graphic-team .professional-team {
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: 32px;
-}
-.graphic-team .professional-detail {
-  max-width: 580px;
-}
-.graphic-team .professional-photo {
-  height: clamp(220px, 38svh, 360px);
-}
 .graphic-team .professional-copy {
   padding: 22px 28px;
 }
 @media (max-width: 900px) {
-  .graphic-team .professional-team {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
-  }
-  .graphic-team .professional-detail {
-    max-width: 580px;
-  }
-  .graphic-team .professional-detail-content {
-    grid-template-columns: minmax(100px, 0.85fr) minmax(0, 1fr);
-  }
-  .graphic-team .professional-photo {
-    height: auto;
-    min-height: 250px;
-  }
   .graphic-team .professional-copy {
     padding: 20px;
   }
 }
 @media (max-width: 540px) {
-  .graphic-team .professional-detail-content {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .graphic-team .professional-photo {
-    height: 24svh;
-    min-height: 170px;
-  }
-  .graphic-team .professional-selector {
-    width: min(100%, 25svh);
-  }
   .graphic-team .professional-copy {
     padding: 16px 20px;
   }
@@ -468,47 +383,8 @@ main > .photo-section > .section-linework {
   margin: 0;
   max-width: 100%;
 }
-.graphic-team .professional-team {
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: clamp(24px, 3vw, 48px);
-}
-.graphic-team .professional-selector {
-  width: min(100%, 65svh, 470px);
-  margin: 0;
-  padding: 0;
-}
-.graphic-team .professional-float {
-  width: 21%;
-  margin: 0;
-  transform: translate(-50%, -50%);
-  animation: none;
-}
 .graphic-team .constellation-logo {
   top: 40%;
-}
-.graphic-team .professional-card {
-  min-height: 0;
-}
-.graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number) {
-  height: 42px;
-  min-height: 42px;
-  font-size: 11px;
-}
-.graphic-team .professional-detail {
-  max-width: 680px;
-  width: 100%;
-}
-.graphic-team .professional-detail-content {
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  grid-template-rows: auto;
-  min-height: min(65svh, 500px);
-}
-.graphic-team .professional-photo {
-  height: 100%;
-  min-height: min(65svh, 500px);
-}
-.graphic-team .professional-photo img {
-  object-position: 50% 32%;
 }
 .graphic-team .professional-copy {
   align-self: center;
@@ -518,26 +394,8 @@ main > .photo-section > .section-linework {
   font-size: clamp(26px, 2.5vw, 36px);
 }
 @media (max-width: 900px) {
-  .graphic-team .professional-team {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
-  }
-  .graphic-team .professional-selector {
-    width: min(100%, 34svh, 360px);
-  }
-  .graphic-team .professional-detail-content {
-    min-height: 28svh;
-  }
-  .graphic-team .professional-photo {
-    min-height: 28svh;
-  }
   .graphic-team .professional-copy {
     padding: 18px;
-  }
-  .graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number) {
-    font-size: 9px;
-    height: 34px;
-    min-height: 34px;
   }
 }
 @media (max-width: 480px) {
@@ -657,117 +515,10 @@ main > .photo-section.graphic-about {
   max-height: none;
   margin: 0;
 }
-.graphic-team .professional-float {
-  width: 22%;
-}
-.graphic-team .professional-card {
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) 32%;
-  aspect-ratio: 1;
-  height: auto;
-  padding: 5px;
-}
-.graphic-team .professional-card .professional-portrait {
-  height: 100%;
-  min-height: 0;
-  aspect-ratio: auto;
-}
-.graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number) {
-  height: 100%;
-  min-height: 0;
-  padding: 3px 0 0;
-  font-size: clamp(8px, 0.7vw, 10px);
-  line-height: 1.1;
-}
 
 /* Compact team selector on phones: pure circular portraits, no competing labels. */
 @media (max-width: 480px) {
-  .graphic-team .professional-selector {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    align-content: center !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-    aspect-ratio: auto !important;
-    margin-inline: auto !important;
-    padding-block: 4px !important;
-    column-gap: 10px !important;
-    row-gap: 14px !important;
-  }
-
-  .graphic-team .professional-float {
-    position: relative !important;
-    left: auto !important;
-    top: auto !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 64px !important;
-    height: 64px !important;
-    min-width: 64px !important;
-    min-height: 64px !important;
-    flex: 0 0 64px !important;
-  }
-
-  .graphic-team .professional-card {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    grid-template-rows: 1fr !important;
-    place-items: center !important;
-    width: 64px !important;
-    height: 64px !important;
-    min-width: 64px !important;
-    min-height: 64px !important;
-    padding: 3px !important;
-    border-radius: 50% !important;
-    overflow: hidden !important;
-  }
-
-  .graphic-team .professional-card .professional-portrait {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    aspect-ratio: 1 / 1 !important;
-    margin: 0 !important;
-    border-radius: 50% !important;
-    overflow: hidden !important;
-  }
-
-  .graphic-team .professional-card .professional-portrait img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: 50% 28% !important;
-    border-radius: 50% !important;
-  }
-
-  .graphic-team .professional-card > span:not(.professional-portrait):not(.professional-number),
-  .graphic-team .professional-card .professional-number {
-    display: none !important;
-  }
-
-  .graphic-team .professional-team {
-    gap: 14px !important;
-  }
 }
 
 @media (max-width: 400px) {
-  .graphic-team .professional-float,
-  .graphic-team .professional-card {
-    width: 58px !important;
-    height: 58px !important;
-    min-width: 58px !important;
-    min-height: 58px !important;
-    flex-basis: 58px !important;
-  }
-
-  .graphic-team .professional-selector {
-    column-gap: 9px !important;
-    row-gap: 12px !important;
-  }
 }
