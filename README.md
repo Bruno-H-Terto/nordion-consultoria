@@ -83,7 +83,9 @@ The opening constellation supports pointer and keyboard interaction. The Brazil 
 
 The team section includes seven named roles and a responsive organizational chart. Company email and Instagram links are available in the contact interface and footer. The floating contact control uses a single local PNG and always opens the contact dialog. WhatsApp, when configured, is a link inside that dialog. Floating contact controls appear after scrolling and hide when the contact section or footer is visible.
 
-The briefing form validates required fields and exports their values as `nordion-briefing.txt`. File generation runs in the browser through the Blob API; it does not require an API endpoint.
+The contact form validates required fields and opens a `wa.me` link with the entered information when a valid phone number is configured. It uses same-tab navigation to avoid popup blockers on mobile. Without a valid number, it opens an email draft. No message is sent automatically.
+
+See [styling architecture](docs/styling.md) for the controlled Tailwind migration and stylesheet order.
 
 ## Environment Variables
 
