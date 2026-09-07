@@ -13,6 +13,8 @@ const bodies = [
   "es",
   "fr",
   "jp",
+  "ar",
+  "cn",
   "planet",
   "planet",
   "star",
@@ -34,9 +36,9 @@ export function BrandUniverse({ t }: { t: Copy }) {
     function draw() {
       nodes.forEach((node, i) => {
         const angle =
-          (elapsed / (i < 5 ? 46000 : 62000)) * Math.PI * 2 +
-          (i < 5 ? (i * Math.PI * 2) / 5 : ((i - 5) * Math.PI * 2) / 4 + 0.2);
-        const radius = i < 5 ? 39 : 27;
+          (elapsed / (i < 7 ? 46000 : 62000)) * Math.PI * 2 +
+          (i < 7 ? (i * Math.PI * 2) / 7 : ((i - 7) * Math.PI * 2) / 4 + 0.2);
+        const radius = i < 7 ? 39 : 27;
         const x = Math.cos(angle) * radius,
           y = Math.sin(angle) * radius * 0.48;
         const tilt = -0.27;
@@ -150,6 +152,32 @@ export function BrandUniverse({ t }: { t: Copy }) {
               <path fill="#fff" d="M0 0h30v20H0z" />
               <path fill="#203c8c" d="M0 0h10v20H0z" />
               <path fill="#d44343" d="M20 0h10v20H20z" />
+            </svg>
+          ) : body === "ar" ? (
+            <svg viewBox="0 0 30 20">
+              <path fill="#74acdf" d="M0 0h30v20H0z" />
+              <path fill="#fff" d="M0 6.67h30v6.66H0z" />
+              <circle cx="15" cy="10" r="2" fill="#f6b40e" />
+            </svg>
+          ) : body === "cn" ? (
+            <svg viewBox="0 0 30 20">
+              <path fill="#de2910" d="M0 0h30v20H0z" />
+              <path
+                fill="#ffde00"
+                d="m6 3 1 3h3L7.5 8l1 3L6 9l-2.5 2 1-3L2 6h3z"
+              />
+              {[
+                [12, 3],
+                [15, 5],
+                [15, 9],
+                [12, 12],
+              ].map(([x, y]) => (
+                <path
+                  key={y}
+                  fill="#ffde00"
+                  d={`M${x} ${y - 1.3}l.4 1h1.1l-.9.7.4 1.1-1-.7-1 .7.4-1.1-.9-.7h1.1z`}
+                />
+              ))}
             </svg>
           ) : body === "jp" ? (
             <svg viewBox="0 0 30 20">
