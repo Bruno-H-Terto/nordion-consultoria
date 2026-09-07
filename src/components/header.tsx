@@ -27,6 +27,7 @@ export function Header({
   onContact: () => void;
 }) {
   const [hidden, setHidden] = useState(false);
+  const [footerVisible, setFooterVisible] = useState(false);
 
   useEffect(() => {
     let frame = 0;
@@ -40,13 +41,23 @@ export function Header({
     updateHeader();
     window.addEventListener("scroll", onScroll, { passive: true });
 
+    const footer = document.querySelector("footer.footer");
+    const footerObserver = footer
+      ? new IntersectionObserver(
+          ([entry]) => setFooterVisible(entry?.isIntersecting ?? false),
+          { threshold: 0.01 },
+        )
+      : null;
+    if (footer) footerObserver?.observe(footer);
+
     return () => {
       window.removeEventListener("scroll", onScroll);
       if (frame) window.cancelAnimationFrame(frame);
+      footerObserver?.disconnect();
     };
   }, []);
 
-  const floatingActionsVisible = hidden;
+  const floatingActionsVisible = hidden && !footerVisible;
 
   return (
     <>

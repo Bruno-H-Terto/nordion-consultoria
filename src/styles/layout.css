@@ -31,12 +31,22 @@ main > .graphic-value > .business-mosaic {
   right: var(--page-inset);
 }
 @media (max-width: 900px) {
+  .section-navigation {
+    display: none !important;
+  }
+
   .photo-section .eyebrow::before {
     content: none;
     display: none;
   }
   .photo-section .eyebrow {
     gap: 0;
+  }
+
+  .journey-tooltip {
+    width: min(190px, calc(100vw - 2 * var(--page-gutter)));
+    max-width: calc(100vw - 24px);
+    box-sizing: border-box;
   }
 }
 @media (orientation: landscape) and (max-height: 540px) {
