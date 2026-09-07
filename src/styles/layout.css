@@ -37,6 +37,11 @@ main > .graphic-value > .business-mosaic {
     linear-gradient(135deg, #7d432b 0%, #92502c 50%, #60301e 100%);
 }
 
+.process-section.surface-ivory .section-heading h2 {
+  color: #fff8f2;
+  font-weight: 500;
+}
+
 @media (max-width: 900px) {
   .section-navigation {
     display: none !important;

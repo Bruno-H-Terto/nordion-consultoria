@@ -114,7 +114,7 @@ export function Header({
         }}
       >
         <Button
-          className="floating-language-trigger grid size-[var(--control-size)] place-items-center rounded-full border border-[#f8f3ed30] bg-[#252d35e8] p-0 text-[#f8f3ed]! shadow-lg backdrop-blur-md hover:bg-[#34414d] [&_.country-flag]:h-[19px] [&_.country-flag]:w-7"
+          className="floating-language-trigger grid size-[var(--control-size)] place-items-center rounded-full border border-[#cdc5bd99] bg-[#252d35e8] p-0 text-[#f8f3ed]! shadow-[0_0_0_1px_#cdc5bd1f,0_8px_24px_#00000038] backdrop-blur-md hover:border-[#f8f3edcc] hover:bg-[#34414d] [&_.country-flag]:h-[19px] [&_.country-flag]:w-7"
           aria-hidden={!floatingActionsVisible}
           aria-label={languages.find((item) => item.id === language)?.name}
         >
