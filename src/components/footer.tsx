@@ -57,9 +57,9 @@ export function Footer({
 
             <a
               className="footer-item"
-              href="mailto:nordinconsultoria@gmail.com"
+              href="mailto:nordionconsultoria@gmail.com"
             >
-              nordinconsultoria@gmail.com
+              nordionconsultoria@gmail.com
             </a>
 
             <a

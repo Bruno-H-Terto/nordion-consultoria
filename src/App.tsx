@@ -244,9 +244,9 @@ function App() {
                 <Button onClick={openContact}>{t.ctaPrimary}</Button>
                 <a
                   className="contact-email"
-                  href="mailto:nordinconsultoria@gmail.com"
+                  href="mailto:nordionconsultoria@gmail.com"
                 >
-                  nordinconsultoria@gmail.com
+                  nordionconsultoria@gmail.com
                 </a>
               </div>
               <span className="cta-decoration" aria-hidden="true">
@@ -420,9 +420,9 @@ function App() {
                 <p>{t.contactText}</p>
                 <a
                   className="contact-email"
-                  href="mailto:nordinconsultoria@gmail.com"
+                  href="mailto:nordionconsultoria@gmail.com"
                 >
-                  {t.emailAction}: nordinconsultoria@gmail.com
+                  {t.emailAction}: nordionconsultoria@gmail.com
                 </a>
                 <form
                   onSubmit={(e) => {
@@ -441,7 +441,7 @@ function App() {
                     const url = whatsappUrl(message);
                     window.location.assign(
                       url ??
-                        `mailto:nordinconsultoria@gmail.com?subject=${encodeURIComponent(t.contactTitle)}&body=${encodeURIComponent(message)}`,
+                        `mailto:nordionconsultoria@gmail.com?subject=${encodeURIComponent(t.contactTitle)}&body=${encodeURIComponent(message)}`,
                     );
                   }}
                 >

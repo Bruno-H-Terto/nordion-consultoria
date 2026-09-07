@@ -35,7 +35,7 @@ The team section uses the seven names and roles supplied for Nordion, with silho
 
 ## Supplied brand symbol
 
-`public/brand/nordion-symbol.png` is the user's supplied `logo-nordin-simplificado.png`, copied unchanged. CSS provides the central constellation framing. The opening uses a code-native orbital constellation instead of a photographic slideshow.
+`public/brand/nordion-symbol.png` is the user's supplied `logo-nordion-simplificado.png`, copied unchanged. CSS provides the central constellation framing. The opening uses a code-native orbital constellation instead of a photographic slideshow.
 
 ## Business mosaic — 2026-09-05
 
