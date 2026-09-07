@@ -747,3 +747,28 @@ main > .photo-section.graphic-about {
   max-height: none;
   margin: 0;
 }
+
+.graphic-team .professional-float {
+  width: 22%;
+}
+.graphic-team .professional-card {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) 32%;
+  aspect-ratio: 1;
+  height: auto;
+  padding: 5px;
+}
+.graphic-team .professional-card .professional-portrait {
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: auto;
+}
+.graphic-team
+  .professional-card
+  > span:not(.professional-portrait):not(.professional-number) {
+  height: 100%;
+  min-height: 0;
+  padding: 3px 0 0;
+  font-size: clamp(8px, 0.7vw, 10px);
+  line-height: 1.1;
+}

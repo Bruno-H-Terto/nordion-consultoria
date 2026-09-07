@@ -40,18 +40,16 @@ export function PeopleBubbles({
           fill="none"
           aria-hidden="true"
         >
-          <circle cx="300" cy="300" r="225" />
-          {[
-            [-0.0, -225],
-            [176, -140],
-            [219, 50],
-            [98, 203],
-            [-98, 203],
-            [-219, 50],
-            [-176, -140],
-          ].map(([x, y], i) => (
-            <path key={i} d={`M300 300L${300 + x} ${300 + y}`} />
-          ))}
+          <circle cx="300" cy="300" r="228" />
+          {Array.from({ length: 7 }, (_, i) => {
+            const angle = (i * Math.PI * 2) / 7;
+            return (
+              <path
+                key={i}
+                d={`M300 300L${300 + Math.sin(angle) * 228} ${300 - Math.cos(angle) * 228}`}
+              />
+            );
+          })}
         </svg>
         <span className="constellation-logo" aria-hidden="true">
           <img src="/brand/nordion-symbol.png" alt="" />
@@ -63,8 +61,8 @@ export function PeopleBubbles({
             style={
               {
                 "--delay": `${index * -1.4}s`,
-                "--star-x": `${50 + Math.sin((index * Math.PI * 2) / 7) * 36}%`,
-                "--star-y": `${50 - Math.cos((index * Math.PI * 2) / 7) * 36}%`,
+                "--star-x": `${50 + Math.sin((index * Math.PI * 2) / 7) * 38}%`,
+                "--star-y": `${50 - Math.cos((index * Math.PI * 2) / 7) * 38}%`,
               } as CSSProperties
             }
           >
