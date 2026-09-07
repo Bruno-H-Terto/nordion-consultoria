@@ -27,7 +27,6 @@ export function Header({
   onContact: () => void;
 }) {
   const [hidden, setHidden] = useState(false);
-  const [footerVisible, setFooterVisible] = useState(false);
 
   useEffect(() => {
     let frame = 0;
@@ -41,28 +40,13 @@ export function Header({
     updateHeader();
     window.addEventListener("scroll", onScroll, { passive: true });
 
-    const contactAreas = document.querySelectorAll("#contato, footer.footer");
-    const visibleAreas = new Set<Element>();
-    const footerObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) visibleAreas.add(entry.target);
-          else visibleAreas.delete(entry.target);
-        });
-        setFooterVisible(visibleAreas.size > 0);
-      },
-      { threshold: 0.01 },
-    );
-    contactAreas.forEach((area) => footerObserver.observe(area));
-
     return () => {
       window.removeEventListener("scroll", onScroll);
       if (frame) window.cancelAnimationFrame(frame);
-      footerObserver?.disconnect();
     };
   }, []);
 
-  const floatingActionsVisible = hidden && !footerVisible;
+  const floatingActionsVisible = hidden;
 
   return (
     <>
