@@ -280,8 +280,8 @@
   width: 200%;
   max-width: none;
   height: 200%;
-  left: -50%;
-  top: -50%;
+  left: -47.5%;
+  top: -46%;
   object-fit: contain;
   mix-blend-mode: screen;
 }
