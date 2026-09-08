@@ -773,7 +773,9 @@ main > .photo-section {
   min-width: 0;
 }
 .process-tabs button > strong {
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 .problem-card h3 {
   overflow-wrap: anywhere;
@@ -837,7 +839,9 @@ main > .photo-section {
     padding: 14px 12px;
   }
   .process-tabs button > strong {
-    font-size: 13px;
+    font-size: clamp(10px, 3vw, 12px);
+    line-height: 1.45;
+    text-wrap: balance;
   }
   .graphic-hero .hero-side-note {
     flex-wrap: wrap;
