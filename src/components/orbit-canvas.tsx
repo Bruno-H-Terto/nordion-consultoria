@@ -24,26 +24,29 @@ const cities = [
   project(-47.88, -15.79),
   project(-34.88, -8.05),
 ];
-const destinations = [
-  new Vector3(-3, 0.8, -2.5),
-  new Vector3(3, 1, -2),
-  new Vector3(3.1, 0.65, 1.1),
-];
+const destinations = {
+  unitedStates: new Vector3(-3, 0.8, -2.5),
+  europe: new Vector3(3, 1, -2),
+  africa: new Vector3(3.1, 0.65, 1.1),
+};
 const routes = [
+  // São Paulo → United States
   new QuadraticBezierCurve3(
     cities[0],
     new Vector3(-1.5, 2.8, -0.5),
-    destinations[0],
+    destinations.unitedStates,
   ),
+  // Brasília → Europe
   new QuadraticBezierCurve3(
     cities[1],
     new Vector3(1.4, 2.7, -1.8),
-    destinations[1],
+    destinations.europe,
   ),
+  // Recife → Africa
   new QuadraticBezierCurve3(
     cities[2],
     new Vector3(2.75, 0.9, 1.93),
-    destinations[2],
+    destinations.africa,
   ),
 ];
 const forward = new Vector3(0, 0, -1);
