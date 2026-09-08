@@ -26,7 +26,6 @@ export function PeopleBubbles({
   members?: TeamMember[];
 }) {
   const [active, setActive] = useState(0);
-  const [expanded, setExpanded] = useState(false);
   const selected = members[active] ?? members[0];
   if (!selected) return null;
 
@@ -74,10 +73,7 @@ export function PeopleBubbles({
               className="professional-card"
               aria-pressed={index === active}
               aria-controls="professional-detail"
-              onClick={() => {
-                setActive(index);
-                setExpanded(false);
-              }}
+              onClick={() => setActive(index)}
               aria-label={`${member.name} — ${member.role}`}
             >
               <Portrait
@@ -107,14 +103,7 @@ export function PeopleBubbles({
           <div className="professional-copy">
             <span className="eyebrow">{selected.role}</span>
             <h3>{selected.name}</h3>
-            <p className={expanded ? "expanded" : ""}>{selected.bio}</p>
-            <button
-              className="read-more-btn"
-              onClick={() => setExpanded(!expanded)}
-              aria-expanded={expanded}
-            >
-              {expanded ? t.readLess : t.readMore}
-            </button>
+            <p>{selected.bio}</p>
           </div>
         </div>
       </article>
