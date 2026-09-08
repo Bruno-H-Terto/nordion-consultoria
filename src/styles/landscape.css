@@ -58,6 +58,18 @@
   .process-panel {
     grid-template-columns: minmax(0, 1fr);
   }
+  .process-tabs button {
+    @apply min-w-0 gap-1 px-2;
+  }
+  .process-tabs button > span {
+    @apply shrink-0;
+    font-size: 10px;
+  }
+  .process-tabs button > strong {
+    @apply min-w-0;
+    font-size: clamp(10px, 1.8vw, 12px);
+    line-height: 1.4;
+  }
   .process-illustration {
     @apply hidden;
   }
