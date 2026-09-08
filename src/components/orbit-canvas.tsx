@@ -39,13 +39,13 @@ const routes = [
   // Brasília → Europe
   new QuadraticBezierCurve3(
     cities[1],
-    new Vector3(1.4, 2.7, -1.8),
+    new Vector3(2, 2, -1.8),
     destinations.europe,
   ),
   // Recife → Africa
   new QuadraticBezierCurve3(
     cities[2],
-    new Vector3(2.75, 0.9, 1.93),
+    new Vector3(2.745, 0.9, 0.2),
     destinations.africa,
   ),
 ];
@@ -120,12 +120,18 @@ function Airplane({
     const opacity =
       smootherStep(t / fadeWindow) * smootherStep((1 - t) / fadeWindow);
     const tangent = curve.getTangent(t);
-    if (keepLevel) tangent.y = 0;
     ref.current.position.copy(curve.getPoint(t));
-    ref.current.quaternion.setFromUnitVectors(
-      forward,
-      tangent.normalize(),
-    );
+    if (keepLevel) {
+      tangent.y = 0;
+      tangent.normalize();
+      ref.current.rotation.set(
+        0,
+        Math.atan2(-tangent.x, -tangent.z),
+        0,
+      );
+    } else {
+      ref.current.quaternion.setFromUnitVectors(forward, tangent.normalize());
+    }
     if (bodyMaterial.current) bodyMaterial.current.opacity = opacity;
     if (detailMaterial.current) detailMaterial.current.opacity = opacity;
   });
