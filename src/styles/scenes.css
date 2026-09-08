@@ -372,19 +372,34 @@
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  padding: 25px 0;
+  padding: 25px 18px;
   cursor: pointer;
   list-style: none;
   font-size: 21px;
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    box-shadow 250ms ease;
 }
 .faq-item summary::-webkit-details-marker {
   display: none;
+}
+.faq-item:not([open]) summary:hover,
+.faq-item:not([open]) summary:focus-visible {
+  color: #f8f3ed;
+  background: #cdc5bd0f;
+  box-shadow: inset 3px 0 0 #d5a17a70;
 }
 .faq-item summary > span {
   color: #d5a17a;
 }
 .faq-item[open] summary > span {
   transform: rotate(45deg);
+}
+.faq-item[open] summary {
+  color: #f0b58e;
+  background: #ad643821;
+  box-shadow: inset 3px 0 0 #c97949;
 }
 .faq-item .disclosure-content {
   padding: 12px 0 35px;
