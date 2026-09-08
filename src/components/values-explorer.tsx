@@ -55,31 +55,9 @@ export function ValuesExplorer({ t }: { t: Copy }) {
 
   if (!count) return null;
 
-  const previous = () =>
-    setActive((current) => (current - 1 + count) % count);
-
-  const next = () =>
-    setActive((current) => (current + 1) % count);
-
   return (
-    <section
-      className="values-carousel"
-      aria-label={t.valuesLabel}
-      onKeyDown={(event) => {
-        if (event.key === "ArrowLeft") {
-          event.preventDefault();
-          previous();
-        }
-
-        if (event.key === "ArrowRight") {
-          event.preventDefault();
-          next();
-        }
-      }}
-    >
-      <h2 className="values-section-label">
-        {t.valuesLabel}
-      </h2>
+    <section className="values-carousel" aria-label={t.valuesLabel}>
+      <h2 className="values-section-label">{t.valuesLabel}</h2>
 
       <div
         className="values-carousel-stage"
@@ -87,9 +65,7 @@ export function ValuesExplorer({ t }: { t: Copy }) {
       >
         {slides.map((slide, index) => (
           <article
-            className={`value-slide ${
-              index === active ? "is-active" : ""
-            }`}
+            className={`value-slide ${index === active ? "is-active" : ""}`}
             aria-hidden={index !== active}
             key={slide.value}
           >
@@ -127,17 +103,12 @@ export function ValuesExplorer({ t }: { t: Copy }) {
               key={slide.value}
               onClick={() => setActive(index)}
             >
-              <span>
-                {String(index + 1).padStart(2, "0")}
-              </span>
+              <span>{String(index + 1).padStart(2, "0")}</span>
             </button>
           ))}
         </div>
 
-        <div
-          className="value-autoplay-track"
-          aria-hidden="true"
-        >
+        <div className="value-autoplay-track" aria-hidden="true">
           <span
             key={`${active}-${reducedMotion}`}
             className={reducedMotion ? "is-paused" : ""}

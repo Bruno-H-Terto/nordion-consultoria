@@ -466,18 +466,8 @@ main > .graphic-about {
   z-index: 4;
   margin: 0;
 }
-.graphic-about .value-carousel-arrow {
-  top: auto;
-  bottom: 34px;
-}
-.graphic-about .value-carousel-next {
-  right: calc(var(--chapter-gutter) + 64px);
-}
-.graphic-about .value-carousel-prev {
-  right: calc(var(--chapter-gutter) + 116px);
-}
 .graphic-about .values-carousel-footer {
-  padding-right: 120px;
+  padding-right: 0;
 }
 @media (max-width: 600px) {
   .graphic-about .value-slide {
@@ -489,9 +479,6 @@ main > .graphic-about {
   .graphic-about .values-carousel-footer {
     bottom: 80px;
     padding-right: 0;
-  }
-  .graphic-about .value-carousel-arrow {
-    bottom: 22px;
   }
   .graphic-about .value-autoplay-track {
     display: none;
