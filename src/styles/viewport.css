@@ -384,7 +384,7 @@ main > .photo-section > .section-linework {
   max-width: 100%;
 }
 .graphic-team .constellation-logo {
-  top: 40%;
+  top: calc(40% - 25px);
 }
 .graphic-team .professional-copy {
   align-self: center;
