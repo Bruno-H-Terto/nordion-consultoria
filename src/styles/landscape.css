@@ -10,11 +10,13 @@
   main > .photo-section {
     @apply justify-start overflow-y-auto;
     padding-block: 24px;
+    overflow-x: hidden;
     overscroll-behavior-y: auto;
   }
   main > .photo-section > .container {
     @apply min-w-0 shrink-0;
-    width: calc(100% - 112px);
+    width: calc(100% - 2 * var(--page-gutter));
+    max-width: calc(100% - 2 * var(--page-gutter));
   }
   main > .hero-section {
     padding-top: 84px;

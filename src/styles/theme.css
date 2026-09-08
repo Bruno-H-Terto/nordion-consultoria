@@ -7,3 +7,13 @@
   --color-support: #74828c;
   --font-sans: "Poppins", sans-serif;
 }
+
+:root {
+  --content-max: 1280px;
+  --page-gutter: clamp(24px, 5vw, 80px);
+  --page-inset: max(var(--page-gutter), calc((100% - var(--content-max)) / 2));
+  --section-title-size: clamp(30px, min(3.6vw, 6vh), 56px);
+  --section-title-leading: 1.15;
+  --body-size: 16px;
+  --body-leading: 1.65;
+}

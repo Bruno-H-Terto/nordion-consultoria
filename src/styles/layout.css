@@ -1,16 +1,27 @@
 @reference "tailwindcss";
 
-:root {
-  --page-gutter: clamp(44px, 5vw, 88px);
-  --page-inset: max(var(--page-gutter), calc((100% - 1280px) / 2));
-}
 main > .photo-section .container,
 .header .container,
 .footer .container {
+  @apply mx-auto min-w-0;
   width: calc(100% - 2 * var(--page-gutter));
-  max-width: 1280px;
-  margin-inline: auto;
-  min-width: 0;
+  max-width: var(--content-max);
+}
+
+.photo-section .section-heading h2,
+.brazil-section h2,
+.cta-section h2,
+.who-layout h2,
+.organization-chart > h2,
+.team-section-heading h2 {
+  @apply font-medium;
+  font-size: var(--section-title-size);
+  line-height: var(--section-title-leading);
+}
+
+.photo-section .section-heading p {
+  font-size: var(--body-size);
+  line-height: var(--body-leading);
 }
 main > .graphic-value {
   padding-inline: var(--page-inset);
@@ -43,9 +54,7 @@ main > .graphic-value > .business-mosaic {
 }
 
 .organization-tier li {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @apply flex flex-col justify-center;
 }
 
 .organization-tier strong {
@@ -85,14 +94,5 @@ main > .graphic-value > .business-mosaic {
     width: min(190px, calc(100vw - 2 * var(--page-gutter)));
     max-width: calc(100vw - 24px);
     box-sizing: border-box;
-  }
-}
-@media (orientation: landscape) and (max-height: 540px) {
-  :root {
-    --page-gutter: max(
-      56px,
-      env(safe-area-inset-left),
-      env(safe-area-inset-right)
-    );
   }
 }

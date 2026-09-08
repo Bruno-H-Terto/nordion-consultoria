@@ -1,17 +1,9 @@
-:root {
-  --chapter-gutter: clamp(24px, 4vw, 64px);
-}
 main > .photo-section {
   height: auto;
   min-height: 100svh;
   padding: clamp(28px, 6vh, 64px) 0;
   overflow: visible;
   scroll-margin: 0;
-}
-main > .photo-section .container {
-  width: calc(100% - var(--chapter-gutter) * 2 - 48px);
-  max-width: 1280px;
-  margin-inline: auto;
 }
 main > .hero-section {
   padding-top: 100px;
@@ -38,21 +30,10 @@ main > .hero-section {
 .hero-side-note {
   font-size: 10px;
 }
-.photo-section .section-heading h2,
-.brazil-section h2,
-.cta-section h2,
-.who-layout h2,
-.organization-chart > h2,
-.team-section-heading h2 {
-  font-size: clamp(30px, min(3.6vw, 6vh), 56px);
-  line-height: 1.15;
-}
 .photo-section .section-heading {
   margin-bottom: 22px;
 }
 .photo-section .section-heading p {
-  font-size: 16px;
-  line-height: 1.65;
   margin-top: 18px;
 }
 .brazil-grid {
@@ -66,7 +47,7 @@ main > .hero-section {
   margin-top: 22px;
 }
 .graphic-value {
-  padding-inline: var(--chapter-gutter);
+  padding-inline: var(--page-gutter);
   grid-template-rows: minmax(0, 1fr);
   grid-template-areas: "value-content value-media";
   column-gap: 32px;
@@ -144,9 +125,6 @@ main > .graphic-value > .container {
   max-height: 65svh;
 }
 @media (max-width: 900px) {
-  :root {
-    --chapter-gutter: 20px;
-  }
   main > .photo-section {
     padding-block: 32px;
   }
@@ -183,10 +161,10 @@ main > .graphic-value > .container {
     padding-inline: 0;
   }
   main > .graphic-value > .container {
-    width: calc(100% - var(--chapter-gutter) * 2 - 48px);
+    width: calc(100% - var(--page-gutter) * 2);
   }
   .business-mosaic {
-    width: calc(100% - var(--chapter-gutter) * 2 - 48px);
+    width: calc(100% - var(--page-gutter) * 2);
     height: 28svh;
     min-height: 150px;
     flex-shrink: 0;
@@ -433,13 +411,13 @@ main > .graphic-about {
   position: absolute;
   z-index: 3;
   top: clamp(28px, 7vh, 64px);
-  left: var(--chapter-gutter);
+  left: var(--page-gutter);
   color: #f8f3ed;
   font-size: 16px;
   letter-spacing: 0.12em;
 }
 .graphic-about .value-slide {
-  padding: 100px calc(var(--chapter-gutter) + 64px) 110px var(--chapter-gutter);
+  padding: 100px calc(var(--page-gutter) + 64px) 110px var(--page-gutter);
   align-items: flex-end;
 }
 .graphic-about .value-slide-copy {
@@ -461,8 +439,8 @@ main > .graphic-about {
 .graphic-about .values-carousel-footer {
   position: absolute;
   bottom: 28px;
-  left: var(--chapter-gutter);
-  right: calc(var(--chapter-gutter) + 64px);
+  left: var(--page-gutter);
+  right: calc(var(--page-gutter) + 64px);
   z-index: 4;
   margin: 0;
 }

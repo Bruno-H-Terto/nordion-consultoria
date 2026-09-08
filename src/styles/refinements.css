@@ -435,19 +435,12 @@ body,
   width: 100%;
   min-width: 0;
 }
-.container {
-  width: min(1320px, calc(100% - 64px));
-  max-width: 100%;
-  margin-inline: auto;
-}
 main > .photo-section {
   height: auto;
   min-height: 100svh;
   max-height: none;
 }
 .hero-section .hero-grid {
-  width: min(1320px, calc(100% - 64px));
-  margin-inline: auto;
   min-width: 0;
 }
 .hero-copy {
