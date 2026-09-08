@@ -8,6 +8,8 @@ import {
   Line,
   LineBasicMaterial,
   LineDashedMaterial,
+  MeshBasicMaterial,
+  MeshStandardMaterial,
   QuadraticBezierCurve3,
   Shape,
   Vector3,
@@ -20,7 +22,6 @@ const project = (lon: number, lat: number) =>
 const cities = [
   project(-46.63, -23.55),
   project(-47.88, -15.79),
-  project(-60.02, -3.12),
   project(-34.88, -8.05),
 ];
 const destinations = [
@@ -40,13 +41,16 @@ const routes = [
     destinations[1],
   ),
   new QuadraticBezierCurve3(
-    cities[3],
-    new Vector3(2.5, 1.9, -0.5),
+    cities[2],
+    new Vector3(2.75, 0.9, 1.93),
     destinations[2],
   ),
-  new QuadraticBezierCurve3(cities[2], new Vector3(-0.6, 0.9, 0.3), cities[0]),
 ];
 const forward = new Vector3(0, 0, -1);
+const smootherStep = (value: number) => {
+  const clamped = Math.min(1, Math.max(0, value));
+  return clamped * clamped * clamped * (clamped * (clamped * 6 - 15) + 10);
+};
 
 function Route({ curve }: { curve: QuadraticBezierCurve3 }) {
   const line = useMemo(() => {
@@ -72,11 +76,15 @@ function Route({ curve }: { curve: QuadraticBezierCurve3 }) {
 function Airplane({
   curve,
   offset,
+  keepLevel = false,
 }: {
   curve: QuadraticBezierCurve3;
   offset: number;
+  keepLevel?: boolean;
 }) {
   const ref = useRef<Group>(null);
+  const bodyMaterial = useRef<MeshStandardMaterial>(null);
+  const detailMaterial = useRef<MeshBasicMaterial>(null);
   const shape = useMemo(() => {
     const s = new Shape();
     [
@@ -105,27 +113,36 @@ function Airplane({
   useFrame(({ clock }) => {
     if (!ref.current) return;
     const t = (clock.elapsedTime * 0.035 + offset) % 1;
+    const fadeWindow = 0.1;
+    const opacity =
+      smootherStep(t / fadeWindow) * smootherStep((1 - t) / fadeWindow);
+    const tangent = curve.getTangent(t);
+    if (keepLevel) tangent.y = 0;
     ref.current.position.copy(curve.getPoint(t));
     ref.current.quaternion.setFromUnitVectors(
       forward,
-      curve.getTangent(t).normalize(),
+      tangent.normalize(),
     );
+    if (bodyMaterial.current) bodyMaterial.current.opacity = opacity;
+    if (detailMaterial.current) detailMaterial.current.opacity = opacity;
   });
   return (
-    <group ref={ref} name="route-airplane">
+    <group ref={ref} name="route-airplane" position={curve.getPoint(offset)}>
       <mesh rotation={[-Math.PI / 2, 0, 0]}>
         <extrudeGeometry
           args={[shape, { depth: 0.035, bevelEnabled: false }]}
         />
         <meshStandardMaterial
+          ref={bodyMaterial}
           color="#F8F3ED"
           metalness={0.25}
           roughness={0.35}
+          transparent
         />
       </mesh>
       <mesh position={[0, 0.038, -0.13]} scale={[0.018, 0.018, 0.07]}>
         <sphereGeometry args={[1, 10, 8]} />
-        <meshBasicMaterial color="#5D6266" />
+        <meshBasicMaterial ref={detailMaterial} color="#5D6266" transparent />
       </mesh>
     </group>
   );
@@ -284,7 +301,7 @@ export default function OrbitCanvas({ onReady }: { onReady: () => void }) {
         ))}
         <Airplane curve={routes[0]} offset={0.12} />
         <Airplane curve={routes[1]} offset={0.56} />
-        <Airplane curve={routes[2]} offset={0.8} />
+        <Airplane curve={routes[2]} offset={0.8} keepLevel />
         <SoftClouds />
       </group>
     </Canvas>
