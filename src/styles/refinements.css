@@ -673,10 +673,6 @@ main > .photo-section {
   left: 12.5%;
   right: 12.5%;
 }
-.organization-tier.tier-1::after {
-  left: calc(50% - 162px);
-  right: calc(50% - 162px);
-}
 .graphic-team {
   display: flex;
   flex-direction: column;

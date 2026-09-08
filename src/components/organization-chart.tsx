@@ -6,12 +6,13 @@ export function OrganizationChart({ t }: { t: Copy }) {
     <div className="organization-chart" aria-label={t.orgTitle}>
       <h2>{t.orgTitle}</h2>
       <p>{t.orgText}</p>
-      {[[0], [1, 2], [6, 3, 4, 5]].map((row, index) => (
+      {[[0], [1, 2, 4], [3, 6, 5]].map((row, index) => (
         <ul className={`organization-tier tier-${index}`} key={index}>
           {row.map((i) => (
             <li key={members[i].id}>
-              <strong>{members[i].name}</strong>
-              <span>{members[i].role}</span>
+              <strong>{members[i].role}</strong>
+              <span className="organization-member">{members[i].name}</span>
+              <p>{t.orgRoleDescriptions[i]}</p>
             </li>
           ))}
         </ul>

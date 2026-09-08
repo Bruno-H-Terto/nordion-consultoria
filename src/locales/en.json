@@ -39,11 +39,7 @@
   "valueTitle": "You know your business. Nordion knows Brazil.",
   "valueText": "We connect these two realities to develop a tailored plan for entering and expanding in Brazil.",
   "valueQuote": "How does Brazil apply to your business?",
-  "journey": [
-    "Your company",
-    "Nordion",
-    "Operations in Brazil"
-  ],
+  "journey": ["Your company", "Nordion", "Operations in Brazil"],
   "processLabel": "CLARITY AT EVERY STAGE",
   "processTitle": "A new market. A clear path.",
   "processText": "We understand the business, interpret the Brazilian environment and connect the required specialists.",
@@ -104,13 +100,7 @@
   "differenceText": "Instead of figuring out who to contact at every stage, you have a single point of reference throughout the process.",
   "traditional": "Traditional model",
   "integrated": "With Nordion",
-  "suppliers": [
-    "Legal",
-    "Accounting",
-    "HR",
-    "Banking",
-    "Consultants"
-  ],
+  "suppliers": ["Legal", "Accounting", "HR", "Banking", "Consultants"],
   "fragmented": "Different providers, separate processes",
   "coordinated": "Connected specialists. Integrated strategy.",
   "brazilLabel": "A MARKET OF POSSIBILITIES",
@@ -202,18 +192,9 @@
   "peopleIntro": "Explore the connections that bring your company closer to Brazil.",
   "portraitNote": "Illustrative portraits.",
   "people": [
-    [
-      "Global vision",
-      "Your expansion strategy starts with a conversation."
-    ],
-    [
-      "Local context",
-      "We turn the Brazilian context into clear next steps."
-    ],
-    [
-      "Close support",
-      "Human guidance throughout your journey."
-    ]
+    ["Global vision", "Your expansion strategy starts with a conversation."],
+    ["Local context", "We turn the Brazilian context into clear next steps."],
+    ["Close support", "Human guidance throughout your journey."]
   ],
   "processFocus": "EVERY STAGE HAS A PURPOSE",
   "deliverables": [
@@ -273,24 +254,33 @@
   "visionLabel": "Vision",
   "vision": "Become a reference in integrated management of foreign business entry and expansion projects in Brazil.",
   "orgTitle": "Organizational structure",
-  "orgText": "General management, two directorates and four management functions connect strategy and execution.",
+  "orgText": "General management, three coordination functions and three specialized management functions connect strategy and execution.",
+  "orgRoleDescriptions": [
+    "Strategic direction and company integration.",
+    "Diagnosis, analysis and strategic planning.",
+    "Project coordination and delivery.",
+    "Legal assurance and compliance.",
+    "Consultative analysis and solution integration.",
+    "Relationships, communications and customer experience.",
+    "Economic feasibility and risk management."
+  ],
   "emailAction": "Send an email",
   "teamRoles": [
     "CEO — General Management",
     "Director of Intelligence and Strategy",
-    "Director of Operations and Implementation",
+    "Project and Implementation Manager",
     "Legal and Regulatory Manager",
-    "Institutional Relations and Partnerships Manager",
-    "Marketing and Customer Experience Manager",
+    "Senior Consultant",
+    "Relations, Marketing and Customer Experience Manager",
     "Finance and Risk Manager"
   ],
   "teamBios": [
     "Leads Nordion’s strategy, sets priorities and connects its disciplines. Oversees results, approves strategic projects and represents the company with clients and partners.",
     "Coordinates business diagnosis, market analysis and feasibility studies. Integrates business and Brazilian market information to guide entry strategies and client decisions.",
-    "Turns planning into action plans. Coordinates schedules, specialists and deliverables, monitors operational risks and supports the client’s initial adaptation in Brazil.",
+    "Coordinates project planning, schedules and delivery. Integrates teams and specialists, oversees implementation, manages risks and deadlines and supports the client’s initial adaptation.",
     "Coordinates analysis of legal requirements, documentation and regulatory risks. Engages qualified legal professionals when needed and supports legally viable decisions.",
-    "Builds relationships with institutions, public bodies and partners. Identifies opportunities and facilitates the institutional coordination needed to implement client projects.",
-    "Coordinates communications, brand positioning and customer experience. Tracks expectations, satisfaction and feedback to improve the journey and share client needs across disciplines.",
+    "Analyzes complex contexts, provides technical guidance and integrates the areas involved. Supports decision-making and identifies the external specialists required for each solution.",
+    "Coordinates relationships with clients, partners and stakeholders, as well as institutional communications and marketing. Manages customer experience and post-implementation follow-up.",
     "Analyzes project costs, forecasts and economic feasibility. Assesses financial risks, monitors budgets and provides information for decisions and contingency plans."
   ],
   "whoLabel": "Who we are",

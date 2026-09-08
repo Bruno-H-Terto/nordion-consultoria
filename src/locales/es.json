@@ -39,11 +39,7 @@
   "valueTitle": "Tu empresa conoce su negocio. Nordion conoce Brasil.",
   "valueText": "Conectamos estas dos realidades para desarrollar un plan personalizado de entrada y expansión en el país.",
   "valueQuote": "¿Cómo se aplica Brasil a tu negocio?",
-  "journey": [
-    "Tu empresa",
-    "Nordion",
-    "Operación en Brasil"
-  ],
+  "journey": ["Tu empresa", "Nordion", "Operación en Brasil"],
   "processLabel": "CLARIDAD EN CADA ETAPA",
   "processTitle": "Un nuevo mercado. Un camino claro.",
   "processText": "Comprendemos el negocio, interpretamos el entorno brasileño y conectamos a los especialistas necesarios.",
@@ -104,13 +100,7 @@
   "differenceText": "En lugar de descubrir por tu cuenta a quién acudir en cada etapa, cuentas con un único punto de referencia durante todo el proceso.",
   "traditional": "Modelo tradicional",
   "integrated": "Con Nordion",
-  "suppliers": [
-    "Jurídico",
-    "Contabilidad",
-    "RR. HH.",
-    "Banco",
-    "Consultores"
-  ],
+  "suppliers": ["Jurídico", "Contabilidad", "RR. HH.", "Banco", "Consultores"],
   "fragmented": "Diferentes proveedores, procesos separados",
   "coordinated": "Especialistas conectados. Estrategia integrada.",
   "brazilLabel": "UN MERCADO DE POSIBILIDADES",
@@ -210,10 +200,7 @@
       "Contexto local",
       "Transformamos el contexto brasileño en próximos pasos claros."
     ],
-    [
-      "Cercanía",
-      "Acompañamiento humano durante todo el recorrido."
-    ]
+    ["Cercanía", "Acompañamiento humano durante todo el recorrido."]
   ],
   "processFocus": "CADA ETAPA TIENE UN PROPÓSITO",
   "deliverables": [
@@ -273,24 +260,33 @@
   "visionLabel": "Visión",
   "vision": "Ser una referencia en la gestión integrada de proyectos de entrada y expansión de empresas extranjeras en Brasil.",
   "orgTitle": "Estructura organizacional",
-  "orgText": "Dirección general, dos direcciones y cuatro gerencias conectan estrategia y ejecución.",
+  "orgText": "Dirección general, tres funciones de coordinación y tres gerencias especializadas conectan estrategia y ejecución.",
+  "orgRoleDescriptions": [
+    "Dirección estratégica e integración de la empresa.",
+    "Diagnóstico, análisis y planificación estratégica.",
+    "Coordinación y ejecución de proyectos.",
+    "Seguridad jurídica y cumplimiento.",
+    "Análisis consultivo e integración de soluciones.",
+    "Relaciones, comunicación y experiencia del cliente.",
+    "Viabilidad económica y gestión de riesgos."
+  ],
   "emailAction": "Enviar un correo",
   "teamRoles": [
     "CEO — Dirección general",
     "Dirección de Inteligencia y Estrategia",
-    "Dirección de Operaciones e Implantación",
+    "Gestión de Proyectos e Implantación",
     "Gerencia Jurídico-Regulatoria",
-    "Gerencia de Relaciones Institucionales y Alianzas",
-    "Gerencia de Marketing y Experiencia del Cliente",
+    "Consultoría Sénior",
+    "Gerencia de Relaciones, Marketing y Experiencia del Cliente",
     "Gerencia Financiera y de Riesgos"
   ],
   "teamBios": [
     "Dirige la estrategia de Nordion, define prioridades e integra las áreas. Supervisa resultados, aprueba proyectos estratégicos y representa a la empresa ante clientes y socios.",
     "Coordina diagnósticos, análisis de mercado y estudios de viabilidad. Integra información del negocio y del entorno brasileño para orientar estrategias de entrada y decisiones del cliente.",
-    "Transforma la planificación en planes de acción. Coordina cronogramas, especialistas y entregas, supervisa riesgos operativos y acompaña la adaptación inicial del cliente en Brasil.",
+    "Coordina la planificación, los cronogramas y la ejecución de los proyectos. Integra equipos y especialistas, acompaña la implantación, gestiona riesgos y plazos y apoya la adaptación inicial del cliente.",
     "Coordina el análisis de requisitos legales, documentación y riesgos regulatorios. Articula profesionales jurídicos habilitados cuando corresponde y apoya la viabilidad jurídica de las decisiones.",
-    "Construye relaciones con instituciones, organismos públicos y socios. Identifica oportunidades y facilita la articulación necesaria para implementar los proyectos de los clientes.",
-    "Coordina comunicación, posicionamiento de marca y experiencia del cliente. Evalúa expectativas, satisfacción y comentarios para mejorar la jornada y compartir necesidades con las demás áreas.",
+    "Analiza contextos complejos, ofrece orientación técnica e integra las áreas involucradas. Apoya la toma de decisiones e identifica los especialistas externos necesarios para cada solución.",
+    "Coordina las relaciones con clientes, socios y stakeholders, además de la comunicación institucional y el marketing. Gestiona la experiencia del cliente y el seguimiento posterior a la implantación.",
     "Analiza costos, proyecciones y viabilidad económica de los proyectos. Evalúa riesgos financieros, supervisa presupuestos y aporta información para decisiones y planes de contingencia."
   ],
   "whoLabel": "Quiénes somos",

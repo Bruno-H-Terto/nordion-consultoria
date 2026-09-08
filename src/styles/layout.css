@@ -42,6 +42,32 @@ main > .graphic-value > .business-mosaic {
   font-weight: 500;
 }
 
+.organization-tier li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.organization-tier strong {
+  color: #fff8f2;
+  font-size: clamp(12px, 1vw, 15px);
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.organization-tier .organization-member {
+  color: #e9a078;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.organization-tier li > p {
+  margin-top: 7px;
+  color: #cdc5bd;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 @media (max-width: 900px) {
   .section-navigation {
     display: none !important;
